@@ -33,7 +33,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex md:gap-x-6">
+        <div className="hidden xl:flex xl:gap-x-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -51,13 +51,13 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           {/* Placeholder for future actions */}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+          className="xl:hidden p-2 text-muted-foreground hover:text-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -71,7 +71,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-b bg-background"
+            className="xl:hidden border-b bg-background"
           >
             <div className="flex flex-col space-y-4 p-4">
               {navItems.map((item) => (

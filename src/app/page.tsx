@@ -111,7 +111,7 @@ export default function Home() {
               href="/evenementen-videograaf/"
             />
             <ServiceCard
-              title="Club & Festivals"
+              title="Club & Nightlife"
               description="Specialist in low-light fotografie. De energie van de nacht in haarscherpe beelden."
               icon={<Music className="h-10 w-10 mb-4 text-primary" />}
               href="/clubfotografie/"

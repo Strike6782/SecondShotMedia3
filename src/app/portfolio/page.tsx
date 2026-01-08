@@ -41,7 +41,7 @@ export default async function PortfolioPage() {
             <h2 className="text-2xl font-bold">Evenementen</h2>
             <Button variant="ghost" asChild><Link href="/evenementen-fotograaf">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={eventImages.slice(0, 4)} layout="grid" className="md:grid-cols-4" />
+          <Gallery images={eventImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
         </div>
 
         <div>
@@ -49,7 +49,7 @@ export default async function PortfolioPage() {
             <h2 className="text-2xl font-bold">Zakelijke Evenementen</h2>
             <Button variant="ghost" asChild><Link href="/zakelijke-evenementen">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={corporateImages.slice(0, 4)} layout="grid" className="md:grid-cols-4" />
+          <Gallery images={corporateImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
         </div>
 
         <div>
@@ -57,7 +57,7 @@ export default async function PortfolioPage() {
             <h2 className="text-2xl font-bold">Club & Nightlife</h2>
             <Button variant="ghost" asChild><Link href="/clubfotografie">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={clubImages.slice(0, 4)} layout="grid" className="md:grid-cols-4" />
+          <Gallery images={clubImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
         </div>
 
         <div>
@@ -65,7 +65,7 @@ export default async function PortfolioPage() {
             <h2 className="text-2xl font-bold">Attractieparken</h2>
             <Button variant="ghost" asChild><Link href="/attractieparken">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={themeParkImages.slice(0, 4)} layout="grid" className="md:grid-cols-4" />
+          <Gallery images={themeParkImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
         </div>
 
         <div>
@@ -73,7 +73,7 @@ export default async function PortfolioPage() {
             <h2 className="text-2xl font-bold">Studenten</h2>
             <Button variant="ghost" asChild><Link href="/studentenverenigingen">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={studentImages.slice(0, 4)} layout="grid" className="md:grid-cols-4" />
+          <Gallery images={studentImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
         </div>
 
       </section>

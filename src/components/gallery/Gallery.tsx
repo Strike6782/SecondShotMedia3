@@ -20,9 +20,9 @@ export function Gallery({ images, className, layout = "masonry" }: GalleryProps)
   }
 
   // Masonry default classes
-  const masonryClasses = "columns-1 gap-4 sm:columns-2 md:columns-3 lg:columns-4 space-y-4";
+  const masonryClasses = "columns-1 gap-4 sm:columns-2 md:columns-3 lg:columns-3 space-y-4";
   // Grid default classes
-  const gridClasses = "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+  const gridClasses = "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3";
 
   return (
     <div className={cn(layout === "grid" ? gridClasses : masonryClasses, className)}>

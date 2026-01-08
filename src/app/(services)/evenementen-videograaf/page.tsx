@@ -1,5 +1,6 @@
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { Gallery } from "@/components/gallery/Gallery";
+import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Metadata } from "next";
@@ -12,11 +13,16 @@ export const metadata: Metadata = {
 export default async function EventVideographyPage() {
   const images = await getImagesFromDirectory("video-production");
 
-  // Placeholder clips
+  // Example videos - Replace generic IDs with real ones when available
+  // You need to find actual YouTube video IDs for your channel
   const videos = [
-    { title: "Showreel 2025", id: "PLACEHOLDER_1" },
-    { title: "Festival Aftermovie X", id: "PLACEHOLDER_2" },
-    { title: "Club Event Y", id: "PLACEHOLDER_3" },
+    { title: "World Scout Jamboree - Zuid Korea", subtitle: "", id: "5esMJo_vDig", type: "youtube" as const },
+    { title: "Halloween Vlaardingen", subtitle: "", id: "YEwFVZvs5fg", type: "youtube" as const },
+    { title: "Gala Studentenvereniging", subtitle: "", id: "Z5kD0EZ3_-s", type: "youtube" as const },
+    { title: "Landelijke Scouting Zeilwedstrijden", subtitle: "", id: "85ZkRtoERnM", type: "youtube" as const },
+    { title: "World Scout Moot", subtitle: "", id: "39ALWRfNXAk", type: "youtube" as const },
+    { title: "Halloween Rosmalen", subtitle: "", id: "TpxAfFtekbw", type: "youtube" as const },
+    { title: "Introductievideo Studentenvereniging", subtitle: "", id: "Vc3ixtqtDFs", type: "youtube" as const },
   ];
 
   return (
@@ -44,22 +50,11 @@ export default async function EventVideographyPage() {
             </div>
 
             <div className="space-y-8">
-              <h2 className="text-3xl font-bold tracking-tight">Portfolio Videos</h2>
-              <div className="grid grid-cols-1 gap-8">
-                {videos.map((video, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <h3 className="text-xl font-semibold">{video.title}</h3>
-                    <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-black relative group">
-                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground bg-zinc-900 group-hover:bg-zinc-800 transition-colors cursor-pointer">
-                        [YouTube Embed: {video.title}]
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-3xl font-bold tracking-tight">Portfolio Highlights</h2>
+              <VideoGrid videos={videos} className="lg:grid-cols-2" />
 
               <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-4">Behind the Scenes & Stills</h3>
+                <h3 className="text-2xl font-bold mb-4">Behind the Scenes</h3>
                 <Gallery images={images} />
               </div>
             </div>

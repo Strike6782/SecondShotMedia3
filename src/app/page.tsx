@@ -63,6 +63,11 @@ export default function Home() {
                 <span className="font-bold text-2xl">100+</span>
                 <span className="text-sm text-muted-foreground">Events</span>
               </div>
+              <div className="w-px bg-border h-12" />
+              <div className="flex flex-col gap-1">
+                <span className="font-bold text-2xl">9.000+</span>
+                <span className="text-sm text-muted-foreground">Opgeleverde foto&apos;s</span>
+              </div>
             </div>
           </div>
           <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted">

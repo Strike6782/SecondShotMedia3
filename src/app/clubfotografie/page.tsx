@@ -28,7 +28,7 @@ export default async function ClubPage() {
           <div className="lg:col-span-2 space-y-8">
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
-                Het nachtleven staat nooit stil. Van intieme clubavonden tot massale festivals: ik zorg voor beelden die de hitte van het moment vangen.
+                Het nachtleven staat nooit stil. Van intieme clubavonden tot massale festivals: ik zorg voor beelden die de gezelligheid van het moment vangen.
                 Mijn focus ligt op de leukste emoties pakken en het vastleggen van de pure energie van de nacht.
               </p>
             </div>

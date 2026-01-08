@@ -12,6 +12,61 @@ interface GalleryProps {
   linkTarget?: string;
 }
 
+function GalleryImage({ image, index, layout, linkTarget }: {
+  image: { src: string; alt: string };
+  index: number;
+  layout: "masonry" | "grid";
+  linkTarget?: string;
+}) {
+  const isPriority = index < 10;
+
+  const imageContent = (
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={600}
+      height={400}
+      priority={isPriority}
+      className={cn(
+        "w-full transition-transform duration-500 group-hover:scale-105",
+        layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
+      )}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0 }}
+      transition={{
+        duration: 0.4,
+        delay: (index % 4) * 0.1
+      }}
+      className={cn(
+        "overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl",
+        layout === "masonry" ? "mb-4 break-inside-avoid inline-block w-full" : "h-full"
+      )}
+    >
+      {linkTarget ? (
+        <Link href={linkTarget} prefetch={false} className="block h-full cursor-pointer">
+          <div className="relative group h-full">
+            {imageContent}
+            <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+          </div>
+        </Link>
+      ) : (
+        <div className="relative group h-full">
+          {imageContent}
+          <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
 export function Gallery({ images, className, layout = "masonry", linkTarget }: GalleryProps) {
   if (!images || images.length === 0) {
     return (
@@ -29,52 +84,13 @@ export function Gallery({ images, className, layout = "masonry", linkTarget }: G
   return (
     <div className={cn(layout === "grid" ? gridClasses : masonryClasses, className)}>
       {images.map((image, index) => (
-        <motion.div
+        <GalleryImage
           key={image.src}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.05 }}
-          className={cn(
-            "overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl",
-            layout === "masonry" ? "mb-4 break-inside-avoid inline-block w-full" : "h-full"
-          )}
-        >
-          {linkTarget ? (
-            <Link href={linkTarget} prefetch={false} className="block h-full cursor-pointer">
-              <div className="relative group h-full">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={600}
-                  height={400}
-                  className={cn(
-                    "w-full transition-transform duration-500 group-hover:scale-105",
-                    layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
-                  )}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-              </div>
-            </Link>
-          ) : (
-            <div className="relative group h-full">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={600}
-                height={400}
-                className={cn(
-                  "w-full transition-transform duration-500 group-hover:scale-105",
-                  layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
-                )}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-            </div>
-          )}
-
-        </motion.div>
+          image={image}
+          index={index}
+          layout={layout}
+          linkTarget={linkTarget}
+        />
       ))}
     </div>
   );

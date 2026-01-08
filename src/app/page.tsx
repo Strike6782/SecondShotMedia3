@@ -55,18 +55,23 @@ export default function Home() {
             </div>
             <div className="flex gap-4 pt-4">
               <div className="flex flex-col gap-1">
-                <span className="font-bold text-2xl">5+</span>
+                <span className="font-bold text-2xl">6+</span>
                 <span className="text-sm text-muted-foreground">Jaar Ervaring</span>
               </div>
               <div className="w-px bg-border h-12" />
               <div className="flex flex-col gap-1">
-                <span className="font-bold text-2xl">160+</span>
+                <span className="font-bold text-2xl">220+</span>
                 <span className="text-sm text-muted-foreground">Events</span>
               </div>
               <div className="w-px bg-border h-12" />
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-2xl">9.000+</span>
                 <span className="text-sm text-muted-foreground">Opgeleverde foto&apos;s</span>
+              </div>
+              <div className="w-px bg-border h-12" />
+              <div className="flex flex-col gap-1">
+                <span className="font-bold text-2xl">150+</span>
+                <span className="text-sm text-muted-foreground">Opgeleverde video&apos;s</span>
               </div>
             </div>
           </div>
@@ -155,16 +160,17 @@ export default function Home() {
             </h2>
             <div className="prose dark:prose-invert text-muted-foreground text-lg space-y-6">
               <p>
-                Jaren geleden, op mijn middelbare school, begon mijn passie voor filmen. Er werden door de school professionele camera's aangeschaft, en ik kreeg de kans om dit mezelf aan te leren.
-                Een halfjaar daarna kwamen de lockdowns, en was het ineens geen speelgoed meer, maar waren we hard nodig voor alle online livestreams en video's die opgenomen moesten worden binnen de school.
-                Toen heb ik in een korte tijd erg veel geleerd over dit onderwerp.
+                Jaren geleden, op mijn middelbare school, begon mijn passie voor fotografie en filmen. Er werden door de school professionele camera's aangeschaft, en ik kreeg de kans om dit mezelf aan te leren.
+                Een halfjaar daarna kwamen de lockdowns, en was het ineens geen speelgoed meer, maar waren we hard nodig voor alle online livestreams en video's die opgenomen moesten worden.
+                Zo heb ik in een korte periode erg veel geleerd over dit onderwerp.
               </p>
               <p>
-                Wanneer ik uiteindelijk mijn diploma had en begon met studeren, heb ik mijn eigen camera apparatuur gekocht verder gegaan als freelancer.
+                Wanneer ik uiteindelijk mijn diploma had en begon met studeren, heb ik mijn eigen camera apparatuur gekocht en verder gegaan als freelancer.
                 Dit doe ik nu al enkele jaren naast mijn studie informatica aan de Universiteit Utrecht.
               </p>
               <p>
                 Tegenwoordig heb ik in meerdere mediateams van grote evenementen gezeten tot wel 50.000 bezoekers, en ben ik als freelance fotograaf en videograaf in te huren voor kleinere evenementen.
+                Ook voor grotere projecten waar meer foto- en videografen voor nodig zijn kan je contact opnemen. Ik heb een breed netwerk binnen de foto- en videografie sector en kan zo makkelijk een team vormen.
               </p>
             </div>
             <Button variant="outline" size="lg" asChild>

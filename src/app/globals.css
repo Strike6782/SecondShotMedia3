@@ -58,6 +58,7 @@ body {
 
 /* Global utility for larger side margins */
 .container {
+  margin-inline: auto;
   padding-left: 1.5rem;
   /* 24px */
   padding-right: 1.5rem;

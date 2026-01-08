@@ -24,7 +24,7 @@ export default async function Page() {
     <div className="flex flex-col min-h-screen">
       <Hero
         title="Evenementen fotograaf en videograaf in Utrecht"
-        subtitle="Professionele fotografie en videografie voor evenementen in Utrecht. Van congressen tot festivals."
+        subtitle="Professionele fotografie en videografie voor evenementen in Utrecht. Van congressen in Jaarbeurs Utrecht tot festivals in Park Transwijk."
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}

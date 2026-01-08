@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Second Shot Media",
     default: "Second Shot Media | Evenementen Fotograaf & Videograaf",
   },
-  description: "Professionele evenementenfotografie en videografie in Amersfoort, Utrecht en Midden-Nederland. Ivan Balkenende legt de sfeer van uw event vast.",
+  description: "Professionele evenementenfotografie en videografie in Midden-Nederland. Ivan Balkenende legt de sfeer van uw event vast.",
 };
 
 import { Navbar } from "@/components/layout/Navbar";

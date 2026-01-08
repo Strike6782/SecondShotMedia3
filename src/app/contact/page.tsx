@@ -50,7 +50,7 @@ export default function ContactPage() {
             <div className="text-sm text-muted-foreground">
               <p className="font-semibold text-foreground">Second Shot Media</p>
               <p>Ivan Balkenende</p>
-              <p>Amersfoort & Utrecht</p>
+              <p>Utrecht</p>
               <p className="mt-2 text-xs opacity-70">KVK: 92016421</p>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Evenementen Videograaf | Aftermovies & Sfeervideo's",
-  description: "Professionele aftermovies en evenementenregistratie in Utrecht en Amersfoort. Laat uw festival, feest of congres vastleggen door Second Shot Media.",
+  description: "Professionele aftermovies en evenementenregistratie in Midden-Nederland. Laat uw festival, feest of congres vastleggen door Second Shot Media.",
 };
 
 export default async function EventVideographyPage() {

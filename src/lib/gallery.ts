@@ -18,7 +18,7 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
     return [];
   }
 
-  const fileNames = fs.readdirSync(galleryDirectory);
+  const fileNames = fs.readdirSync(galleryDirectory).sort();
 
   const images = fileNames
     .filter((fileName) => {

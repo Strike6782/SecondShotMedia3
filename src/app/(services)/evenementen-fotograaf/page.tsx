@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Evenementen Fotograaf Amersfoort & Utrecht",
+  title: "Evenementen Fotograaf Midden-Nederland",
   description: "Professionele evenementenfotografie voor festivals, bedrijfsfeesten en evenementen in Midden-Nederland. Ivan Balkenende legt de sfeer en energie vast.",
 };
 
@@ -19,7 +19,7 @@ export default async function EventPhotographyPage() {
     <div className="flex flex-col min-h-screen">
       <Hero
         title="Evenementen Fotograaf"
-        subtitle="Leg de energie, sfeer en hoogtepunten van uw evenement vast met professionele fotografie. Actief in Amersfoort, Utrecht en heel Midden-Nederland."
+        subtitle="Leg de energie, sfeer en hoogtepunten van uw evenement vast met professionele fotografie. Actief in heel Midden-Nederland."
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}

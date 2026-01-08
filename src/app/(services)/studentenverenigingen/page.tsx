@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Studentenvereniging Fotograaf | Gala's & Feesten",
-  description: "De fotograaf voor studentenverenigingen in Utrecht, Amsterdam, Leiden en Delft. Gala's, lustrumfeesten en almanakfoto's.",
+  description: "De fotograaf voor studentenverenigingen in Midden-Nederland. Gala's, lustrumfeesten en almanakfoto's.",
 };
 
 export default async function StudentsPage() {

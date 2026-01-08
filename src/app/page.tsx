@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { ArrowRight, Camera, Video, Users, Building2, Music, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Evenementen Fotograaf & Videograaf Amersfoort & Utrecht",
-  description: "Evenementenfotografie, aftermovies en videografie voor festivals, clubs, gala's en bedrijven in Utrecht en Amersfoort. Second Shot Media.",
+  title: "Evenementen Fotograaf & Videograaf Midden-Nederland",
+  description: "Evenementenfotografie, aftermovies en videografie voor festivals, clubs, gala's en bedrijven in Midden-Nederland. Second Shot Media.",
 };
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
             Second Shot <span className="text-primary">Media</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-zinc-300 sm:text-2xl font-light">
-            Evenementen fotograaf en videograaf in Amersfoort en Utrecht.
+            Evenementen fotograaf en videograaf in Midden-Nederland.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button size="lg" className="text-lg px-8" asChild>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-foreground">
-              Evenementen fotograaf en videograaf in Amersfoort en Utrecht
+              Evenementen fotograaf en videograaf in Midden-Nederland
             </h2>
             <div className="prose dark:prose-invert text-muted-foreground text-lg space-y-6">
               <p>

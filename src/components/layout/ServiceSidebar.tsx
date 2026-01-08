@@ -33,7 +33,7 @@ export function ServiceSidebar({ className, showWorkArea = true }: ServiceSideba
         <div className="rounded-2xl border bg-background p-6">
           <h4 className="font-semibold mb-2">Werkgebied</h4>
           <p className="text-sm text-muted-foreground">
-            Gevestigd in Amersfoort & Utrecht. Actief in heel Midden-Nederland, voor grote opdrachten ook daarbuiten.
+            Actief in heel Midden-Nederland, voor grote opdrachten ook daarbuiten.
           </p>
         </div>
       )}

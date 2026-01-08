@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm">
               <li><Link href="/evenementen-fotograaf" className="hover:text-foreground">Evenementen Fotograaf</Link></li>
               <li><Link href="/evenementen-videograaf" className="hover:text-foreground">Evenementen Videograaf</Link></li>
-              <li><Link href="/clubfotografie" className="hover:text-foreground">Club & Festival</Link></li>
+              <li><Link href="/clubfotografie" className="hover:text-foreground">Club & Nightlife</Link></li>
               <li><Link href="/studentenverenigingen" className="hover:text-foreground">Studentenverenigingen</Link></li>
               <li><Link href="/zakelijke-evenementen" className="hover:text-foreground">Zakelijk</Link></li>
               <li><Link href="/attractieparken" className="hover:text-foreground">Attractieparken</Link></li>

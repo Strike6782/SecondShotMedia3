@@ -1,0 +1,18 @@
+# Cloud86 Deployment Guide
+
+Your Next.js website uses **Static Export** (`output: 'export'`), which is the most reliable way to host on Cloud86 (shared hosting).
+
+## 1. How to Deploy (Recommended)
+You do **not** need to use Git or Node.js on the server.
+
+1.  **Build Locally**:
+    - Open your terminal in VS Code.
+    - Run: `npm run build`
+    - This creates a folder named `out` in your project directory.
+2.  **Upload to Cloud86**:
+    - Log in to your Cloud86 Control Panel (or use FileZilla).
+    - Go to **File Manager** -> `httpdocs` (or `public_html`).
+    - **Delete** the old files in that folder.
+    - **Upload** the contents of the `out` folder (drag and drop all files/folders from `out` into `httpdocs`).
+    - *Tip: You can zip the contents of `out`, upload the zip, and extract it on the server for faster upload.*
+

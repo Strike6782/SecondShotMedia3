@@ -23,6 +23,7 @@ export default async function EventVideographyPage() {
     { title: "World Scout Moot", subtitle: "", id: "39ALWRfNXAk", type: "youtube" as const },
     { title: "Halloween Rosmalen", subtitle: "", id: "TpxAfFtekbw", type: "youtube" as const },
     { title: "Introductievideo Studentenvereniging", subtitle: "", id: "Vc3ixtqtDFs", type: "youtube" as const },
+    { title: "Gala Studentenvereniging", subtitle: "", id: "ozqoEutIqKQ", type: "youtube" as const },
   ];
 
   return (

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-zinc-950 text-white px-4 py-24 text-center">
+      <section className="relative flex min-h-[50vh] flex-col items-center justify-center overflow-hidden bg-zinc-950 text-white px-4 py-16 text-center">
         {/* Background gradient/image placeholder */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-zinc-900 to-zinc-950 z-0" />
 
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
               <div className="w-px bg-border h-12" />
               <div className="flex flex-col gap-1">
-                <span className="font-bold text-2xl">100+</span>
+                <span className="font-bold text-2xl">160+</span>
                 <span className="text-sm text-muted-foreground">Events</span>
               </div>
               <div className="w-px bg-border h-12" />
@@ -97,38 +97,79 @@ export default function Home() {
               title="Evenementen Fotograaf"
               description="Sfeer, details en overzichten. Professionele reportages van uw event."
               icon={<Camera className="h-10 w-10 mb-4 text-primary" />}
-              href="/evenementen-fotograaf"
+              href="/evenementen-fotograaf/"
             />
             <ServiceCard
               title="Evenementen Videograaf"
               description="Aftermovies, showreels en sfeerimpressies. Bewegend beeld dat raakt."
               icon={<Video className="h-10 w-10 mb-4 text-primary" />}
-              href="/evenementen-videograaf"
+              href="/evenementen-videograaf/"
             />
             <ServiceCard
               title="Club & Festivals"
               description="Specialist in low-light fotografie. De energie van de nacht in haarscherpe beelden."
               icon={<Music className="h-10 w-10 mb-4 text-primary" />}
-              href="/clubfotografie"
+              href="/clubfotografie/"
             />
             <ServiceCard
               title="Studentenverenigingen"
               description="Gala's, almanakfoto's en lustrumfeesten. Betaalbaar en professioneel."
               icon={<Users className="h-10 w-10 mb-4 text-primary" />}
-              href="/studentenverenigingen"
+              href="/studentenverenigingen/"
             />
             <ServiceCard
               title="Zakelijke Events"
               description="Congressen, beurzen en bedrijfsevenementen. Representatief en strak."
               icon={<Building2 className="h-10 w-10 mb-4 text-primary" />}
-              href="/zakelijke-evenementen"
+              href="/zakelijke-evenementen/"
             />
             <ServiceCard
               title="Attractieparken"
               description="Sfeer, emotie en actie. De magie van pretparken en kermissen vastgelegd."
               icon={<Sparkles className="h-10 w-10 mb-4 text-primary" />}
-              href="/attractieparken"
+              href="/attractieparken/"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* About Me Section - Image Left, Text Right */}
+      <section className="container py-16 md:py-24 px-4 max-w-screen-xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Image Column (Left) */}
+          <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted order-last md:order-first">
+            <div className="absolute inset-0">
+              <Image
+                src="/images/Ivan_SecondShotMedia_UITweek.jpg"
+                alt="Ivan Balkenende"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Text Column (Right) */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground">
+              Het gezicht achter de camera
+            </h2>
+            <div className="prose dark:prose-invert text-muted-foreground text-lg space-y-6">
+              <p>
+                Jaren geleden, op mijn middelbare school, begon mijn passie voor filmen. Er werden door de school professionele camera's aangeschaft, en ik kreeg de kans om dit mezelf aan te leren.
+                Een halfjaar daarna kwamen de lockdowns, en was het ineens geen speelgoed meer, maar waren we hard nodig voor alle online livestreams en video's die opgenomen moesten worden binnen de school.
+                Toen heb ik in een korte tijd erg veel geleerd over dit onderwerp.
+              </p>
+              <p>
+                Wanneer ik uiteindelijk mijn diploma had en begon met studeren, heb ik mijn eigen camera apparatuur gekocht verder gegaan als freelancer.
+                Dit doe ik nu al enkele jaren naast mijn studie informatica aan de Universiteit Utrecht.
+              </p>
+              <p>
+                Tegenwoordig heb ik in meerdere mediateams van grote evenementen gezeten tot wel 50.000 bezoekers, en ben ik als freelance fotograaf en videograaf in te huren voor kleinere evenementen.
+              </p>
+            </div>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/contact/" prefetch={false}>Kennismaken?</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -141,7 +182,7 @@ export default function Home() {
           Ik reageer doorgaans binnen 24 uur.
         </p>
         <Button size="lg" className="w-full sm:w-auto px-12" asChild>
-          <Link href="/contact">Neem contact op</Link>
+          <Link href="/contact/" prefetch={false}>Neem contact op</Link>
         </Button>
       </section>
     </div>
@@ -150,7 +191,7 @@ export default function Home() {
 
 function ServiceCard({ title, description, icon, href }: { title: string; description: string; icon: React.ReactNode; href: string }) {
   return (
-    <Link href={href} className="group block h-full">
+    <Link href={href} prefetch={false} className="group block h-full">
       <div className="relative h-full overflow-hidden rounded-2xl border bg-background p-8 transition-all hover:bg-muted/50 hover:shadow-lg">
         {icon}
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{title}</h3>

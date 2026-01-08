@@ -9,14 +9,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 
 const navItems = [
-  { name: "Evenementen Foto", href: "/evenementen-fotograaf" },
-  { name: "Evenementen Video", href: "/evenementen-videograaf" },
-  { name: "Club & Nightlife", href: "/clubfotografie" },
-  { name: "Studenten", href: "/studentenverenigingen" },
-  { name: "Zakelijk", href: "/zakelijke-evenementen" },
-  { name: "Attractieparken", href: "/attractieparken" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Contact", href: "/contact" },
+  { name: "Evenementen Foto", href: "/evenementen-fotograaf/" },
+  { name: "Evenementen Video", href: "/evenementen-videograaf/" },
+  { name: "Club & Nightlife", href: "/clubfotografie/" },
+  { name: "Studenten", href: "/studentenverenigingen/" },
+  { name: "Zakelijk", href: "/zakelijke-evenementen/" },
+  { name: "Attractieparken", href: "/attractieparken/" },
+  { name: "Portfolio", href: "/portfolio/" },
+  { name: "Contact", href: "/contact/" },
 ];
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-[9999] w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <span className="text-xl font-bold tracking-tight text-foreground">
@@ -38,8 +38,9 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
+              prefetch={false}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary cursor-pointer",
                 pathname === item.href
                   ? "text-foreground"
                   : "text-muted-foreground"
@@ -77,6 +78,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  prefetch={false}
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-primary",
@@ -89,7 +91,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="w-full mt-4">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>Offerte Aanvragen</Link>
+                <Link href="/contact/" onClick={() => setIsOpen(false)}>Offerte Aanvragen</Link>
               </Button>
             </div>
           </motion.div>

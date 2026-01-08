@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 interface GalleryProps {
   images: { src: string; alt: string }[];
   className?: string;
   layout?: "masonry" | "grid";
+  linkTarget?: string;
 }
 
-export function Gallery({ images, className, layout = "masonry" }: GalleryProps) {
+export function Gallery({ images, className, layout = "masonry", linkTarget }: GalleryProps) {
   if (!images || images.length === 0) {
     return (
       <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed text-muted-foreground">
@@ -38,20 +40,39 @@ export function Gallery({ images, className, layout = "masonry" }: GalleryProps)
             layout === "masonry" ? "mb-4 break-inside-avoid inline-block w-full" : "h-full"
           )}
         >
-          <div className="relative group h-full">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={600}
-              height={400}
-              className={cn(
-                "w-full transition-transform duration-500 group-hover:scale-105",
-                layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
-              )}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-          </div>
+          {linkTarget ? (
+            <Link href={linkTarget} prefetch={false} className="block h-full cursor-pointer">
+              <div className="relative group h-full">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={600}
+                  height={400}
+                  className={cn(
+                    "w-full transition-transform duration-500 group-hover:scale-105",
+                    layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
+                  )}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+              </div>
+            </Link>
+          ) : (
+            <div className="relative group h-full">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={400}
+                className={cn(
+                  "w-full transition-transform duration-500 group-hover:scale-105",
+                  layout === "grid" ? "h-full object-cover aspect-[3/2]" : "h-auto"
+                )}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+            </div>
+          )}
 
         </motion.div>
       ))}

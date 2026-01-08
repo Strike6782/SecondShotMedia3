@@ -26,18 +26,21 @@ export function Hero({
   return (
     <section
       className={cn(
-        "relative flex min-h-[60vh] items-center justify-center overflow-hidden bg-muted/20 px-4 py-24",
+        "relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-zinc-950 text-white px-4 py-16",
         className
       )}
     >
-      {/* Background Image / Overlay */}
+      {/* Background Gradient & Overlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-zinc-900 to-zinc-950" />
+      </div>
+
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay"
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
         </div>
       )}
 
@@ -50,7 +53,7 @@ export function Hero({
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           {title}
         </h1>
-        <p className="max-w-2xl text-lg text-muted-foreground sm:text-xl">
+        <p className="max-w-2xl text-lg text-zinc-300 sm:text-xl">
           {subtitle}
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">

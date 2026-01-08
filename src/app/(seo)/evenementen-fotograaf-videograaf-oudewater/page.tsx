@@ -36,7 +36,7 @@ export default async function Page() {
             <h2 className="text-2xl font-bold">Evenementen in Oudewater</h2>
             <Button variant="ghost" asChild><Link href="/evenementen-fotograaf">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={eventImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
+          <Gallery images={eventImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" linkTarget="/evenementen-fotograaf/" />
         </div>
 
         <div>
@@ -44,7 +44,7 @@ export default async function Page() {
             <h2 className="text-2xl font-bold">Zakelijke Evenementen</h2>
             <Button variant="ghost" asChild><Link href="/zakelijke-evenementen">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={corporateImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
+          <Gallery images={corporateImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" linkTarget="/zakelijke-evenementen/" />
         </div>
 
         <div>
@@ -52,7 +52,7 @@ export default async function Page() {
             <h2 className="text-2xl font-bold">Club & Nightlife</h2>
             <Button variant="ghost" asChild><Link href="/clubfotografie">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={clubImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
+          <Gallery images={clubImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" linkTarget="/clubfotografie/" />
         </div>
 
         <div>
@@ -60,7 +60,7 @@ export default async function Page() {
             <h2 className="text-2xl font-bold">Attractieparken</h2>
             <Button variant="ghost" asChild><Link href="/attractieparken">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={themeParkImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
+          <Gallery images={themeParkImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" linkTarget="/attractieparken/" />
         </div>
 
         <div>
@@ -68,10 +68,19 @@ export default async function Page() {
             <h2 className="text-2xl font-bold">Studenten</h2>
             <Button variant="ghost" asChild><Link href="/studentenverenigingen">Bekijk meer &rarr;</Link></Button>
           </div>
-          <Gallery images={studentImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" />
+          <Gallery images={studentImages.slice(0, 4)} layout="grid" className="md:grid-cols-4 lg:grid-cols-4" linkTarget="/studentenverenigingen/" />
         </div>
 
       </section>
-    </div >
+
+      <section className="container py-12 px-4 max-w-screen-2xl mb-12">
+        <div className="bg-muted/30 rounded-2xl p-8 md:p-12 text-center space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Op zoek naar een videograaf?</h2>
+          <Button size="lg" className="text-lg" asChild>
+            <Link href="/evenementen-videograaf/" prefetch={false}>Bekijk mijn video portfolio hier</Link>
+          </Button>
+        </div>
+      </section>
+    </div>
   );
 }

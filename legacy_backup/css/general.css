@@ -1,0 +1,39 @@
+* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    background-color:rgb(216, 216, 216);
+}
+
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.breedte-article{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 1350px){
+    .breedte-article{
+      width: 80%;
+    }
+  }
+
+.streep{
+    height: 2px;
+    width: 90%;
+    background-color: rgb(255, 138, 88);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

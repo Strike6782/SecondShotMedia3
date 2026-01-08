@@ -1,0 +1,39 @@
+footer{
+  background-color: rgb(255, 138, 88);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+
+}
+
+.footer-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 40px;
+  margin-top: 60px;
+
+}
+
+footer a{
+  color: black;
+
+}
+
+/*
+.footer-flex p a{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+  */
+
+@media only screen and (min-width: 850px) {
+  .footer-flex{
+    flex-direction: row;
+  }
+}

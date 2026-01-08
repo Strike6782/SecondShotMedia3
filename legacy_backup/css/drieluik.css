@@ -1,0 +1,66 @@
+.drieluik{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+.drieluik-onderdeel{
+  width: 90%;
+  height: fit-content;
+  /* background-color: lightblue; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drieluik-onderdeel img {
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.drieluik-onderdeel h1{
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 750px){
+  .drieluik{
+    flex-direction: row;
+  }
+  .drieluik-onderdeel{
+    width: 33%;
+    flex-direction: column;
+  }
+  .drieluik-onderdeel img{
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width:450px) and (max-width: 749px){
+  .drieluik-onderdeel{
+    flex-direction: row;
+  }
+  .drieluik-onderdeel img {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1750px){
+  .drieluik-onderdeel{
+    flex-direction: row;
+  }
+
+  .drieluik-onderdeel img {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+}
+

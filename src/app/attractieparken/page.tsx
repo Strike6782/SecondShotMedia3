@@ -5,7 +5,7 @@ import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Attractiepark & Kermis Fotografie | Second Shot Media",
+  title: "Social Media Management voor Leisure bestemmingen | Second Shot Media",
   description: "Sfeervolle fotografie van attractieparken, kermissen en evenementen. Kleurrijk, dynamisch en vol energie.",
 };
 
@@ -15,8 +15,8 @@ export default async function ThemeParksPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero
-        title="Attractieparken"
-        subtitle="De magie van pretparken en kermissen vastgelegd."
+        title="Social Media Management voor Leisure bestemmingen"
+        subtitle="Wij zorgen voor een betere online aanwezigheid en trekken meer bezoekers aan."
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
@@ -27,15 +27,18 @@ export default async function ThemeParksPage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             <div className="max-w-3xl space-y-6">
-              <h2 className="text-3xl font-bold">Emotie & Actie</h2>
+              <h2 className="text-3xl font-bold">Short content (tiktok en instagram reels) voor attractieparken en themabelevingen</h2>
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-6">
                 <p>
-                  Fotografie in attractieparken en kermissen vraagt om een speciaal oog. De mix van snelheid, details, en de emoties van bezoekers maakt het een unieke discipline waar niet veel fotografen in actief zijn.
-                  Ik leg de sfeer vast voor promotionele doeleinden, persberichten of social media.
+                  De meeste attractieparken en themabelevingen hebben een hele goede website, een goed product, maar de social media kanalen blijven vaak achter. Terwijl juist daar zoveel te halen is. Als elke video duizenden
+                  views krijgt, trek je hierdoor honderden nieuwe bezoekers aan. En dat is is wat wij doen. Wij maken video's die viraal gaan en zorgen voor meer bezoekers in het park met een betere online aanwezigheid.
+                  De investering vanuit het park is relatief laag. We plannen samen een aantal dagen opnamedagen waarin we de content maken voor heel het jaar. Wij pakken het hele proces op; concepting, filmen, editten en posten.
+                  Dit is ook te combineren met andere diensten, zoals drone fotografie en fotografie, of meer uitgebreidere video's voor bijvoorbeeld marketingcampagnes.
                 </p>
                 <p>
-                  Daarnaast ben ik als videograaf ook actief voor het YouTube kanaal Theme Park Science, een groot kanaal wat wetenschappelijke thema&apos;s uitlegt aan een breed publiek aan de hand van pretparkattracties.
-                  Afgelopen jaar zijn we hiermee in de top 25 geëindigd van de Televizier Awards beste online serie.
+                  Dit doen we al bij themabelevingen zoals Halloween Vlaardingen, Theme Park Science, Halloween Rosmalen, en vanaf 2026 ook voor Familiepark Drievliet. Wil jij jouw beleving ook beter op de kaart zetten?
+                  Neem contact op voor de mogelijkheden.
+                  
                 </p>
               </div>
             </div>
@@ -54,6 +57,21 @@ export default async function ThemeParksPage() {
                     allowFullScreen
                   />
                 }
+                
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">Theme Park Science Trailer (edit door Second Shot Media, beelden extern) </h3>
+              <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
+                {
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/CJl2UsZ-_Tc?si=Ymmg5aLep7A_eC0d"
+                    title="Theme Park Science Trailer"
+                    allowFullScreen
+                  />
+                }
+                
               </div>
             </div>
           </div>

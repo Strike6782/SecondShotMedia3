@@ -160,18 +160,15 @@ export default function Home() {
             </h2>
             <div className="prose dark:prose-invert text-muted-foreground text-lg space-y-6">
               <p>
-                Jaren geleden, op mijn middelbare school, begon mijn passie voor fotografie en filmen. Er werden door de school professionele camera's aangeschaft, en ik kreeg de kans om dit mezelf aan te leren.
-                Een halfjaar daarna kwamen de lockdowns, en was het ineens geen speelgoed meer, maar waren we hard nodig voor alle online livestreams en video's die opgenomen moesten worden.
-                Zo heb ik in een korte periode erg veel geleerd over dit onderwerp.
+                Hoi! Ik ben Ivan, evenementen fotograaf en videograaf uit Utrecht. Ik ben iemand met veel te veel hobbies. De meeste vallen af na enkele maanden, maar fotografie en videografie is iets
+                wat is blijven hangen, en wat ik tegenwoordig mijn werk mag noemen. Over de jaren heen heb ik in meerdere mediateams van grote evenementen gezeten tot wel 50.000 bezoekers, en ben ik als
+                freelancer in te huren. Ook heb ik een breed netwerk aan mede-fotografen en -videografen waar ik vaak mee samenwerk bij grotere projecten.
               </p>
               <p>
-                Wanneer ik uiteindelijk mijn diploma had en begon met studeren, heb ik mijn eigen camera apparatuur gekocht en verder gegaan als freelancer.
-                Dit doe ik nu al enkele jaren naast mijn studie informatica aan de Universiteit Utrecht.
+                Dit alles doe ik naast mijn studie informatica aan de Universiteit Utrecht, iets wat ideaal combineerbaar is met elkaar. Naast foto- en videografie doe ik ook nog websiteontwikkeling en social media management.
+                Ik ben leergierig en wil van ieder project iets leren, wat ik weer kan toepassen in volgende klussen. Ik werk graag met je samen! Stuur me een mailtje of dm om te kijken wat de mogelijkheden zijn.
               </p>
-              <p>
-                Tegenwoordig heb ik in meerdere mediateams van grote evenementen gezeten tot wel 50.000 bezoekers, en ben ik als freelance fotograaf en videograaf in te huren voor kleinere evenementen.
-                Ook voor grotere projecten waar meer foto- en videografen voor nodig zijn kan je contact opnemen. Ik heb een breed netwerk binnen de foto- en videografie sector en kan zo makkelijk een team vormen.
-              </p>
+
             </div>
             <Button variant="outline" size="lg" asChild>
               <Link href="/contact/" prefetch={false}>Kennismaken?</Link>

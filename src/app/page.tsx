@@ -3,13 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { ArrowRight, Camera, Video, Users, Building2, Music, Sparkles } from "lucide-react";
+import { getImagesFromDirectory } from "@/lib/gallery";
+import { Gallery } from "@/components/gallery/Gallery";
 
 export const metadata: Metadata = {
   title: "Evenementen Fotograaf & Videograaf Midden-Nederland",
   description: "Evenementenfotografie, aftermovies en videografie voor festivals, clubs, gala's en bedrijven in Midden-Nederland. Second Shot Media.",
 };
 
-export default function Home() {
+const isHorizontal = (img: { width: number; height: number }) => img.width / img.height > 1.2;
+
+export default async function Home() {
+  const eventImages = (await getImagesFromDirectory("events")).filter(isHorizontal).slice(0, 4);
+  const corporateImages = (await getImagesFromDirectory("corporate")).filter(isHorizontal).slice(0, 4);
+  const clubImages = (await getImagesFromDirectory("club")).filter(isHorizontal).slice(0, 4);
+  const themeParkImages = (await getImagesFromDirectory("theme-parks")).filter(isHorizontal).slice(0, 4);
+  const studentImages = (await getImagesFromDirectory("students")).filter(isHorizontal).slice(0, 4);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -17,7 +27,7 @@ export default function Home() {
         {/* Background gradient/image placeholder */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-zinc-900 to-zinc-950 z-0" />
 
-        <div className="relative z-10 max-w-4xl space-y-6">
+          <div className="relative z-10 max-w-4xl space-y-6">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             Second Shot <span className="text-primary">Media</span>
           </h1>
@@ -28,8 +38,13 @@ export default function Home() {
             <Button size="lg" className="text-lg px-8" asChild>
               <Link href="/contact">Neem direct contact op</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-zinc-700 hover:bg-zinc-800 text-white" asChild>
-              <Link href="/portfolio">Bekijk Portfolio</Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 border-zinc-700 hover:bg-zinc-800 text-white"
+              asChild
+            >
+              <Link href="/#mini-portfolio">Bekijk werk</Link>
             </Button>
           </div>
         </div>
@@ -173,6 +188,109 @@ export default function Home() {
             <Button variant="outline" size="lg" asChild>
               <Link href="/contact/" prefetch={false}>Kennismaken?</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini Portfolio Section */}
+      <section
+        id="mini-portfolio"
+        className="container py-16 md:py-24 px-4 max-w-screen-2xl space-y-16"
+      >
+        <div className="text-center max-w-2xl mx-auto space-y-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+            Een selectie van recent werk
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Kleine impressies per categorie. Op de dienstpagina&apos;s vindt u meer voorbeelden en
+            informatie.
+          </p>
+        </div>
+
+        <div className="space-y-12">
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Evenementen</h3>
+              <Button variant="ghost" asChild>
+                <Link href="/evenementen-fotograaf/" prefetch={false}>
+                  Bekijk meer &rarr;
+                </Link>
+              </Button>
+            </div>
+            <Gallery
+              images={eventImages}
+              layout="grid"
+              className="md:grid-cols-4 lg:grid-cols-4"
+              linkTarget="/evenementen-fotograaf/"
+            />
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Zakelijke evenementen</h3>
+              <Button variant="ghost" asChild>
+                <Link href="/zakelijke-evenementen/" prefetch={false}>
+                  Bekijk meer &rarr;
+                </Link>
+              </Button>
+            </div>
+            <Gallery
+              images={corporateImages}
+              layout="grid"
+              className="md:grid-cols-4 lg:grid-cols-4"
+              linkTarget="/zakelijke-evenementen/"
+            />
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Club & nightlife</h3>
+              <Button variant="ghost" asChild>
+                <Link href="/clubfotografie/" prefetch={false}>
+                  Bekijk meer &rarr;
+                </Link>
+              </Button>
+            </div>
+            <Gallery
+              images={clubImages}
+              layout="grid"
+              className="md:grid-cols-4 lg:grid-cols-4"
+              linkTarget="/clubfotografie/"
+            />
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Attractieparken</h3>
+              <Button variant="ghost" asChild>
+                <Link href="/attractieparken/" prefetch={false}>
+                  Bekijk meer &rarr;
+                </Link>
+              </Button>
+            </div>
+            <Gallery
+              images={themeParkImages}
+              layout="grid"
+              className="md:grid-cols-4 lg:grid-cols-4"
+              linkTarget="/attractieparken/"
+            />
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Studenten & gala&apos;s</h3>
+              <Button variant="ghost" asChild>
+                <Link href="/studentenverenigingen/" prefetch={false}>
+                  Bekijk meer &rarr;
+                </Link>
+              </Button>
+            </div>
+            <Gallery
+              images={studentImages}
+              layout="grid"
+              className="md:grid-cols-4 lg:grid-cols-4"
+              linkTarget="/studentenverenigingen/"
+            />
           </div>
         </div>
       </section>

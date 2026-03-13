@@ -29,10 +29,33 @@ export default async function CorporatePage() {
             <h2 className="text-3xl font-bold">Uw business event in beeld</h2>
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
-                Voor zakelijke evenementen is een representatieve uitstraling cruciaal.
-                Mijn beelden zijn geschikt voor persberichten, interne communicatie en marketingmateriaal.
-                Discreet, professioneel en kwalitatief hoogwaardig.
+                Een zakelijk evenement is vaak méér dan een momentopname: het is een
+                visitekaartje voor uw merk, uw mensen en uw boodschap. Of het nu gaat om
+                een congres, beurs, netwerkborrel of bedrijfsviering, u wilt beelden die
+                de energie in de zaal vangen én de professionaliteit uitstralen die bij
+                uw organisatie past.
               </p>
+              <p>
+                Ik werk discreet tussen gasten en sprekers door, anticipeer op key
+                moments en lever een consistente serie beelden die u direct kunt
+                inzetten voor persberichten, interne communicatie, social media en
+                marketingmateriaal. Snel schakelen, heldere afspraken en kwaliteit
+                staan daarbij centraal.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-6">
+                Wat u kunt verwachten
+              </h3>
+              <ul className="list-disc pl-5 space-y-2 mt-4">
+                <li>Reportagefotografie met oog voor sfeer, details en interactie</li>
+                <li>
+                  Sterke content voor LinkedIn, website, aftermovie of eventrecap
+                </li>
+                <li>
+                  Efficiënte selectie en nabewerking in een herkenbare, professionele
+                  stijl
+                </li>
+                <li>Levering van beelden in formaten passend bij uw kanalen</li>
+              </ul>
             </div>
 
             <div className="mt-8">

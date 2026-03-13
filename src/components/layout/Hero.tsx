@@ -62,7 +62,7 @@ export function Hero({
           </Button>
           {showSecondaryBtn && (
             <Button size="lg" variant="outline" asChild className="text-base">
-              <Link href="/portfolio">Bekijk Portfolio</Link>
+              <Link href="/#mini-portfolio">Bekijk werk</Link>
             </Button>
           )}
         </div>

@@ -30,7 +30,7 @@ const navItems: NavItem[] = [
     href: "/evenementen-videograaf/",
   },
   {
-    name: "Social content",
+    name: "Social content voor leisure",
     href: "/social-content-leisure/",
   },
   {

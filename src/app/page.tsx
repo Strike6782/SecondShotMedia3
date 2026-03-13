@@ -93,7 +93,7 @@ export default async function Home() {
           <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted">
             <div className="absolute inset-0">
               <Image
-                src="/images/PF_Ivan_Secondshotmedia1.jpg"
+                src="/images/Ivan-Secondshotmedia-event.jpg"
                 alt="Ivan Balkenende - Second Shot Media"
                 fill
                 className="object-cover"
@@ -144,10 +144,10 @@ export default async function Home() {
               href="/zakelijke-evenementen/"
             />
             <ServiceCard
-              title="Attractieparken"
-              description="Sfeer, emotie en actie. De magie van pretparken en kermissen vastgelegd."
+              title="Social content voor Leisure bestemmingen"
+              description="Breng de sfeer van jouw park of beleving naar je volgers op TikTok en Instagram."
               icon={<Sparkles className="h-10 w-10 mb-4 text-primary" />}
-              href="/attractieparken/"
+              href="/social-content-leisure/"
             />
           </div>
         </div>
@@ -160,7 +160,7 @@ export default async function Home() {
           <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted order-last md:order-first">
             <div className="absolute inset-0">
               <Image
-                src="/images/Ivan_SecondShotMedia_UITweek.jpg"
+                src="/images/Ivan-Secondshotmedia-club.jpg"
                 alt="Ivan Balkenende"
                 fill
                 className="object-cover"
@@ -263,7 +263,7 @@ export default async function Home() {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold">Attractieparken</h3>
               <Button variant="ghost" asChild>
-                <Link href="/attractieparken/" prefetch={false}>
+                <Link href="/social-content-leisure/" prefetch={false}>
                   Bekijk meer &rarr;
                 </Link>
               </Button>
@@ -272,7 +272,7 @@ export default async function Home() {
               images={themeParkImages}
               layout="grid"
               className="md:grid-cols-4 lg:grid-cols-4"
-              linkTarget="/attractieparken/"
+              linkTarget="/social-content-leisure/"
             />
           </div>
 

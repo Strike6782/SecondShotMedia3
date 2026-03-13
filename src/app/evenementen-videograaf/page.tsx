@@ -24,6 +24,8 @@ export default async function EventVideographyPage() {
     { title: "Halloween Rosmalen", subtitle: "", id: "TpxAfFtekbw", type: "youtube" as const },
     { title: "Introductievideo Studentenvereniging", subtitle: "", id: "Vc3ixtqtDFs", type: "youtube" as const },
     { title: "Gala Studentenvereniging", subtitle: "", id: "ozqoEutIqKQ", type: "youtube" as const },
+    { title: "DJ JSPHN op ADE Amsterdam", subtitle: "", id: "i6PQazSqF7Y", type: "youtube" as const },
+    { title: "Rythm Roulette - Verjaardagsfestival", subtitle: "", id: "edf_QUweTEw", type: "youtube" as const },
   ];
 
   return (
@@ -42,10 +44,26 @@ export default async function EventVideographyPage() {
           <div className="lg:col-span-2 space-y-12">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight">Aftermovies & Videografie</h2>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground">
+              <div className="text-lg text-muted-foreground space-y-3">
                 <p>
-                  Video brengt uw evenement echt tot leven. Met een aftermovie herleven uw bezoekers de hoogtepunten en overtuigt u twijfelaars voor de volgende editie.
-                  Ik maak dynamische edits, ritmisch gemonteerd op de muziek, die de kijker direct pakken.
+                  Video brengt uw evenement echt tot leven. Met een aftermovie herleven uw bezoekers de hoogtepunten en
+                  overtuigt u twijfelaars voor de volgende editie. Ik maak dynamische edits, ritmisch gemonteerd op de
+                  muziek, die de kijker direct pakken.
+                </p>
+                <p>
+                  Als festival videograaf focus ik op sfeer, energie en beleving. Van de eerste binnenkomende
+                  bezoekers tot de laatste klap bij de eindshow: een goede festival aftermovie vertelt het
+                  complete verhaal van uw evenement en laat in enkele minuten zien waarom bezoekers erbij moeten zijn.
+                </p>
+                <p>
+                  Ook voor DJ- en artiest video&apos;s kunt u bij mij terecht. Denk aan samenvattingen van
+                  DJ-sets, korte recap video&apos;s voor social media, of een krachtige artiest aftermovie
+                  die inzetbaar is voor boekers, sponsors en promotie van toekomstige optredens.
+                </p>
+                <p>
+                  Iedere recap video wordt afgestemd op het kanaal waar deze op verschijnt: van liggende
+                  aftermovie voor YouTube tot verticale shortform content voor Instagram Reels, TikTok en YouTube Shorts.
+                  Zo haalt u het maximale uit uw evenement en blijft de herinnering nog lang nawerken.
                 </p>
               </div>
             </div>

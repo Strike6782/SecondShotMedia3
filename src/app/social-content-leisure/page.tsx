@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
+import { Gallery } from "@/components/gallery/Gallery";
+import { getImagesFromDirectory } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "Social Content & Reels voor Leisure Bestemmingen | Second Shot Media",
@@ -11,18 +13,28 @@ export const metadata: Metadata = {
 
 const reels = [
   {
-    title: "Halloween-beleving reel",
-    description: "Voorbeeldreel voor een halloween-event met focus op beleving en storytelling.",
-    url: "https://www.instagram.com/", // vervang met echte link
+    title: "Halloween Vlaardingen",
+    description: "Campagnevideo voor Halloween Vlaardingen.",
+    url: "https://www.instagram.com/reel/DPDpMeeiIZA/",
+    videoSrc: "/reels/halloween-vlaardingen.mp4",
   },
   {
-    title: "Dagje in het park",
-    description: "Korte dagreel met attracties, horeca en sfeerbeelden.",
-    url: "https://www.tiktok.com/", // vervang met echte link
+    title: "Familiepark Drievliet",
+    description: "Unieke beelden uit een achtbaan in Drievliet.",
+    url: "https://www.instagram.com/reel/DVRG-QRil8f/",
+    videoSrc: "/reels/drievliet-formule-x.mp4",
+  },
+  {
+    title: "Studentenscouting U.F.O.-Stam",
+    description: "Bij de verbouwing van hun nieuwe gebouw",
+    url: "https://www.instagram.com/reel/DJZL0QqsGql/",
+    videoSrc: "/reels/ufo-gebouw-update.mp4",
   },
 ];
 
-export default function SocialContentLeisurePage() {
+export default async function SocialContentLeisurePage() {
+  const themeParkImages = await getImagesFromDirectory("theme-parks");
+
   return (
     <div className="flex flex-col min-h-screen">
       <Hero
@@ -68,12 +80,6 @@ export default function SocialContentLeisurePage() {
                     <Image src="/logos/tps.jpg" alt="Theme Park Science" width={120} height={120} />
                   </div>
                 </div>
-                {/* 
-                  Als je straks logobestanden hebt (bijv. in /public/logos),
-                  kun je bovenstaande blokken eenvoudig vervangen door <Image />-componenten, bijv.:
-
-                  <Image src="/logos/avonturenpark-hellendoorn.svg" alt="Avonturenpark Hellendoorn" width={120} height={120} />
-                */}
               </div>
             </div>
 
@@ -127,30 +133,36 @@ export default function SocialContentLeisurePage() {
 
             {/* Reels showcase */}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold">Voorbeelden van reels</h2>
-              <p className="text-muted-foreground">
-                Hieronder een aantal voorbeelden van reels. Deze kunnen gelinkt worden naar TikTok, Instagram of
-                YouTube Shorts.
-              </p>
+              <h2 className="text-3xl font-bold">Voorbeelden</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 {reels.map((reel) => (
-                  <a
+                  <div
                     key={reel.title}
-                    href={reel.url}
-                    target="_blank"
-                    rel="noreferrer"
                     className="group rounded-xl border bg-card hover:bg-accent/50 transition-colors p-4 flex flex-col gap-3"
                   >
-                    <div className="aspect-[9/16] w-full rounded-lg bg-muted flex items-center justify-center text-sm text-muted-foreground">
-                      Reel placeholder
+                    <div className="aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
+                      <video
+                        controls
+                        playsInline
+                        className="h-full w-full object-cover"
+                        src={reel.videoSrc}
+                      />
                     </div>
                     <div>
                       <h3 className="font-semibold group-hover:text-primary transition-colors">
                         {reel.title}
                       </h3>
                       <p className="text-sm text-muted-foreground">{reel.description}</p>
+                      <a
+                        href={reel.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-1 inline-flex text-xs text-primary hover:underline"
+                      >
+                        Bekijk op Instagram
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>
@@ -166,6 +178,48 @@ export default function SocialContentLeisurePage() {
                 <p>
                   Zo ontstaat een complete contentmix: van snelle social posts tot verdieping in langere formats.
                 </p>
+              </div>
+            </div>
+
+            {/* Theme Park Science video + galerij (onderaan) */}
+            <div className="space-y-6 pt-8 border-t mt-8">
+              <h2 className="text-2xl font-bold">Overig werk voor attractieparken en themabelevingen</h2>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">
+                  Theme Park Science - Opening nieuw pretpark
+                </h3>
+                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/2PJ1USshijg?si=kRYv-yeUZ5HrOyhZ"
+                    title="Theme Park Science - Opening nieuw pretpark"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">
+                  Theme Park Science Trailer
+                  <span className="text-sm font-normal text-muted-foreground">
+                    {" "}
+                    (edit door Second Shot Media, beelden extern)
+                  </span>
+                </h3>
+                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/CJl2UsZ-_Tc?si=Ymmg5aLep7A_eC0d"
+                    title="Theme Park Science Trailer"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-semibold">Foto-impressie attractieparken</h3>
+                <Gallery images={themeParkImages} />
               </div>
             </div>
           </div>

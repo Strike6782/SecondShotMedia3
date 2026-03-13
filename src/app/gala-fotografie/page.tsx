@@ -17,7 +17,7 @@ export default async function GalaPhotographyPage() {
     <div className="flex flex-col min-h-screen">
       <Hero
         title="Gala Fotografie"
-        subtitle="Elegante beelden van gala's en formele events, perfect voor almanak, socials en herinneringen."
+        subtitle="Elegante beelden van gala's en studentenverenigingen, perfect voor almanak, socials en herinneringen."
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
@@ -26,7 +26,7 @@ export default async function GalaPhotographyPage() {
       <section className="container py-16 px-6 md:px-12 max-w-screen-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
-            <h2 className="text-3xl font-bold">Stijlvolle beelden van uw gala</h2>
+            <h2 className="text-3xl font-bold">Stijlvolle beelden van jullie gala</h2>
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
                 Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer.
@@ -34,7 +34,11 @@ export default async function GalaPhotographyPage() {
               </p>
               <p>
                 Van entreefoto&apos;s en groepsportretten tot sfeerbeelden op de dansvloer: ik zorg voor een
-                complete reportage waar uw leden of collega&apos;s nog lang met plezier op terugkijken.
+                complete reportage waar alle leden nog lang met plezier op terugkijken.
+              </p>
+              <p>
+                Ik raad aan om 3 uur lang te fotograferen; de eerste anderhalf uur bij een photobooth,
+                de laatste anderhalf uur op de dansvloer. Zo heb je een complete coverage van jullie gala.
               </p>
             </div>
 

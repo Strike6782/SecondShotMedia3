@@ -53,7 +53,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden xl:flex xl:items-center xl:gap-x-6">
+        <div className="ml-auto hidden xl:flex xl:items-center xl:gap-x-6">
           {navItems.map((item) =>
             item.children ? (
               <div key={item.href} className="relative group">
@@ -105,10 +105,9 @@ export function Navbar() {
               </Link>
             )
           )}
-        </div>
-
-        <div className="hidden xl:flex items-center gap-4">
-          {/* Placeholder for future actions */}
+          <div className="flex items-center gap-4">
+            {/* Placeholder for future actions */}
+          </div>
         </div>
 
         {/* Mobile Menu Button */}

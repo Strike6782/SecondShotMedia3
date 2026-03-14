@@ -50,8 +50,8 @@ export default function FPVDronePage() {
                   </p>
                   <p>
                     Dit levert unieke perspectieven op voor aftermovies, bedrijfsvideo&apos;s, sportevents, festivals,
-                    horecazaken, showrooms en meer. Denk aan een vloeiende vlucht langs een wachtrij, dwars door een
-                    entree, langs een DJ booth en over het publiek heen in één doorlopend shot.
+                    horecazaken, showrooms en meer. Denk aan een vloeiende vlucht door jouw gebouw om te laten zien hoe 
+                    mooi het van binnen is, allemaal in één doorlopend shot.
                   </p>
                   <p>
                     Uiteraard werk ik altijd volgens de geldende wet- en regelgeving, heb ik een europees vliegbewijs,

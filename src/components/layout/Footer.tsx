@@ -22,7 +22,6 @@ export function Footer() {
               <li><Link href="/evenementen-fotograaf" className="hover:text-foreground">Evenementen Fotograaf</Link></li>
               <li><Link href="/videografie" className="hover:text-foreground">Videografie</Link></li>
               <li><Link href="/clubfotografie" className="hover:text-foreground">Club & Nightlife</Link></li>
-              <li><Link href="/studentenverenigingen" className="hover:text-foreground">Studentenverenigingen</Link></li>
               <li><Link href="/zakelijke-evenementen" className="hover:text-foreground">Zakelijk</Link></li>
               <li><Link href="/attractieparken" className="hover:text-foreground">Attractieparken</Link></li>
             </ul>

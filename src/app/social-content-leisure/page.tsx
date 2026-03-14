@@ -108,23 +108,23 @@ export default async function SocialContentLeisurePage() {
                 </p>
                 <ol className="list-decimal pl-5 space-y-2">
                   <li>
-                    <strong>Voorbereiding & concept</strong> – samen bepalen we thema&apos;s, formats en boodschap.
+                    <strong>Voorbereiding & concept</strong> – Samen bepalen we thema&apos;s, formats en boodschap.
                     Wij werken dit uit in een draaiboek met shots en scenes.
                   </li>
                   <li>
-                    <strong>Jullie verzorgen gezichten & mascottes</strong> – de leisure bestemming regelt
-                    presentatoren, acteurs, medewerkers en eventuele mascottes die in beeld komen.
+                    <strong>Jullie verzorgen gezichten & mascottes</strong> – Jullie regelen
+                    medewerkers en eventuele mascottes die in beeld komen.
                   </li>
                   <li>
-                    <strong>Opnamedag op locatie</strong> – wij nemen veel video's tegelijk in één dag op, efficiënt
+                    <strong>Opnamedag op locatie</strong> – We nemen veel video's tegelijk in één dag op, efficiënt
                     ingepland zodat de operatie zo min mogelijk wordt belast.
                   </li>
                   <li>
-                    <strong>Montage & optimalisatie</strong> – wij monteren de reels, voegen titels, muziek en hooks
+                    <strong>Montage & optimalisatie</strong> – We monteren de reels, voegen titels, muziek en hooks
                     toe en optimaliseren voor TikTok, Reels en eventueel YouTube Shorts.
                   </li>
                   <li>
-                    <strong>Planning & plaatsing</strong> – in afstemming met jullie marketingteam plannen en posten wij
+                    <strong>Planning & plaatsing</strong> – In afstemming met jullie marketingteam plannen en posten wij
                     de content, zodat er een consistente stroom aan zichtbaarheid ontstaat.
                   </li>
                 </ol>
@@ -133,7 +133,7 @@ export default async function SocialContentLeisurePage() {
 
             {/* Reels showcase */}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold">Voorbeelden</h2>
+              <h2 className="text-3xl font-bold">Showcase</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 {reels.map((reel) => (
                   <div
@@ -202,10 +202,6 @@ export default async function SocialContentLeisurePage() {
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">
                   Theme Park Science Trailer
-                  <span className="text-sm font-normal text-muted-foreground">
-                    {" "}
-                    (edit door Second Shot Media, beelden extern)
-                  </span>
                 </h3>
                 <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
                   <iframe

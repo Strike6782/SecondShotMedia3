@@ -45,6 +45,7 @@ export default async function GalaPhotographyPage() {
             </div>
 
             <div className="space-y-3">
+              <h3 className="text-3xl font-bold">Deze verenigingen gingen je voor:</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 items-center">
                 <div className="mx-auto flex h-[132px] w-[132px] items-center justify-center rounded-xl border bg-muted/60 p-1">
                   <img

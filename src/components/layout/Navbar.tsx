@@ -26,13 +26,15 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    name: "Evenementen videografie",
-    href: "/evenementen-videograaf/",
+    name: "Videografie",
+    href: "/videografie/",
+    children: [
+      { name: "Evenementen videografie", href: "/videografie/evenementen" },
+      { name: "FPV dronevliegen", href: "/videografie/fpv-dronevliegen" },
+      { name: "Social content voor leisure", href: "/social-content-leisure/" },
+    ],
   },
-  {
-    name: "Social content voor leisure",
-    href: "/social-content-leisure/",
-  },
+  // "Social content voor leisure" hangt onder Videografie
   {
     name: "Contact",
     href: "/contact/",

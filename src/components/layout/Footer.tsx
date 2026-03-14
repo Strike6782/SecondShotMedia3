@@ -20,7 +20,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">Diensten</h3>
             <ul className="flex flex-col gap-2 text-sm">
               <li><Link href="/evenementen-fotograaf" className="hover:text-foreground">Evenementen Fotograaf</Link></li>
-              <li><Link href="/evenementen-videograaf" className="hover:text-foreground">Evenementen Videograaf</Link></li>
+              <li><Link href="/videografie" className="hover:text-foreground">Videografie</Link></li>
               <li><Link href="/clubfotografie" className="hover:text-foreground">Club & Nightlife</Link></li>
               <li><Link href="/studentenverenigingen" className="hover:text-foreground">Studentenverenigingen</Link></li>
               <li><Link href="/zakelijke-evenementen" className="hover:text-foreground">Zakelijk</Link></li>

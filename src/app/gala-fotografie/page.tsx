@@ -5,7 +5,7 @@ import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gala Fotografie Studentenvereniging | Evenementen Fotograaf",
+  title: "Gala fotografie studentenvereniging | Second Shot Media",
   description:
     "Stijlvolle gala fotografie voor studentenverenigingen en zakelijke events. Focus op sfeer, details en elegante portretten.",
 };

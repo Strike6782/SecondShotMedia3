@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold text-foreground">Second Shot Media</h3>
             <p className="text-sm leading-relaxed">
-              Professionele evenementenfotografie en videografie. Ik leg de sfeer, energie en momenten vast die jouw event onvergetelijk maken.
+              Fotograaf en videograaf voor evenementen en leisure. Van reportage en aftermovies tot social content voor attractieparken en beleving — strak en inhoudelijk sterk.
             </p>
             <p className="text-sm text-foreground font-medium italic">
               "Elk bijzonder moment verdient een tweede kans om te schitteren"
@@ -19,7 +19,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold text-foreground">Diensten</h3>
             <ul className="flex flex-col gap-2 text-sm">
-              <li><Link href="/evenementen-fotograaf" className="hover:text-foreground">Evenementen Fotograaf</Link></li>
+              <li><Link href="/evenementen-fotograaf" className="hover:text-foreground">Evenementenfotografie</Link></li>
               <li><Link href="/videografie" className="hover:text-foreground">Videografie</Link></li>
               <li><Link href="/clubfotografie" className="hover:text-foreground">Club & Nightlife</Link></li>
               <li><Link href="/zakelijke-evenementen" className="hover:text-foreground">Zakelijk</Link></li>

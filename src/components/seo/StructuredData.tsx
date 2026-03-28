@@ -12,7 +12,7 @@ export function StructuredData() {
       "@type": "Person",
       "name": "Ivan Balkenende"
     },
-    "description": "Professionele evenementen fotograaf en videograaf in Midden-Nederland.",
+    "description": "Professionele fotograaf en videograaf voor evenementen en leisure in Midden-Nederland.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Amersfoort",

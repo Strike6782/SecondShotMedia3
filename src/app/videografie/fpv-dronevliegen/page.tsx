@@ -54,7 +54,7 @@ export default function FPVDronePage() {
                     mooi het van binnen is, allemaal in één doorlopend shot.
                   </p>
                   <p>
-                    Uiteraard werk ik altijd volgens de geldende wet- en regelgeving, heb ik een europees vliegbewijs,
+                    Uiteraard werk ik altijd volgens de geldende wet- en regelgeving, heb ik een europees vliegbewijs (A1, A2 en A3),
                     en kijk ik vooraf mee naar wat er veilig en haalbaar is binnen uw locatie en event.
                   </p>
                 </div>

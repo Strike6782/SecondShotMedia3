@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Evenementen fotograaf en videograaf in Utrecht | Second Shot Media",
-  description: "Op zoek naar een evenementen fotograaf en videograaf in Utrecht? Professionele fotografie en videografie voor Jaarbeurs congressen, bedrijfsfeesten en festivals in Utrecht.",
+  title: "Fotograaf en videograaf voor evenementen en leisure in Utrecht | Second Shot Media",
+  description: "Op zoek naar een fotograaf en videograaf voor evenementen en leisure in Utrecht? Professionele fotografie en videografie voor Jaarbeurs congressen, bedrijfsfeesten, festivals en leisure in Utrecht.",
 };
 
 export default async function Page() {
@@ -23,7 +23,7 @@ export default async function Page() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero
-        title="Evenementen fotograaf en videograaf in Utrecht"
+        title="Fotograaf en videograaf voor evenementen en leisure in Utrecht"
         subtitle="Professionele fotografie en videografie voor evenementen in Utrecht. Van congressen in Jaarbeurs Utrecht tot festivals in Park Transwijk."
         align="center"
         className="min-h-[40vh]"

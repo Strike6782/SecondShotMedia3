@@ -5,7 +5,7 @@ import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Festival Fotografie | Evenementen Fotograaf",
+  title: "Festival fotografie | Second Shot Media",
   description:
     "Professionele festival fotografie voor podia, publiek en sfeerbeelden. Ideaal voor socials, aftermovies en marketing.",
 };

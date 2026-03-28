@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     template: "%s | Second Shot Media",
-    default: "Second Shot Media | Evenementen Fotograaf & Videograaf",
+    default: "Second Shot Media | Fotograaf en videograaf voor evenementen en leisure",
   },
-  description: "Professionele evenementenfotografie en videografie in Midden-Nederland. Ivan Balkenende legt de sfeer van uw event vast.",
+  description:
+    "Fotografie en videografie voor evenementen, zakelijk en leisure in Midden-Nederland. Aftermovies, reportages en social content. Second Shot Media — Ivan Balkenende.",
 };
 
 import { Navbar } from "@/components/layout/Navbar";

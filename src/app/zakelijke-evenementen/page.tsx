@@ -5,7 +5,7 @@ import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Zakelijke Evenementen Fotograaf & Videograaf",
+  title: "Zakelijke evenementen | Fotograaf en videograaf",
   description: "Professionele vastlegging van congressen, beurzen en bedrijfsevenementen. Kwaliteit voor uw zakelijke communicatie.",
 };
 

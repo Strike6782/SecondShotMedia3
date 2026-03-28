@@ -33,7 +33,7 @@ export default async function EventPhotographyPage() {
               <h2 className="text-3xl font-bold tracking-tight">De sfeer van jouw event vastgelegd</h2>
               <div className="prose prose-lg dark:prose-invert text-muted-foreground">
                 <p>
-                  Als evenementen fotograaf specialiseer ik me in het vastleggen van de unieke vibe van elk evenement.
+                  Als fotograaf voor evenementen specialiseer ik me in het vastleggen van de unieke vibe van elk evenement.
                   Of het nu gaat om een grootschalig festival, een intiem bedrijfsfeest, of een bruisende clubavond;
                   ik zorg ervoor dat de beelden spreken.
                 </p>

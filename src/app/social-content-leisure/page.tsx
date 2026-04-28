@@ -8,7 +8,7 @@ import { getImagesFromDirectory } from "@/lib/gallery";
 export const metadata: Metadata = {
   title: "Social Content & Reels voor Leisure Bestemmingen | Second Shot Media",
   description:
-    "Structurele social content en reels voor attractieparken en leisure bestemmingen. 1 opnamedag per kwartaal, wij regelen strategie, productie en plaatsing.",
+    "Structurele social content en reels voor attractieparken en leisure bestemmingen.",
 };
 
 const reels = [
@@ -19,16 +19,22 @@ const reels = [
     videoSrc: "/reels/halloween-vlaardingen.mp4",
   },
   {
-    title: "Familiepark Drievliet",
-    description: "Unieke beelden uit een achtbaan in Drievliet.",
+    title: "Theme Park Science",
+    description: "Unieke beelden uit een achtbaan",
     url: "https://www.instagram.com/reel/DVRG-QRil8f/",
     videoSrc: "/reels/drievliet-formule-x.mp4",
   },
   {
-    title: "Studentenscouting U.F.O.-Stam",
-    description: "Bij de verbouwing van hun nieuwe gebouw",
-    url: "https://www.instagram.com/reel/DJZL0QqsGql/",
-    videoSrc: "/reels/ufo-gebouw-update.mp4",
+    title: "Familiepark Drievliet",
+    description: "Leuke weetjes van Drievliet",
+    url: "https://www.instagram.com/",
+    videoSrc: "/reels/leuke-weetjes.mp4",
+  },
+  {
+    title: "StoomCycloon opening Drievliet",
+    description: "De nieuwe attractie in Drievliet.",
+    url: "https://www.instagram.com/reel/DXb8DBlAsiN/",
+    videoSrc: "/reels/stoomcycloon.mp4",
   },
 ];
 
@@ -58,7 +64,7 @@ export default async function SocialContentLeisurePage() {
                   Instagram. Denk aan attractieparken, themabelevingen en seizoensevenementen.
                 </p>
                 <p>
-                  Ik werk onder andere al voor partijen als Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween
+                  We werken onder andere voor partijen als Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween
                   Vlaardingen, Halloween Rosmalen en Theme Park Science. Daarmee combineren we seizoenscampagnes met
                   doorlopende zichtbaarheid op social media.
                 </p>
@@ -88,8 +94,8 @@ export default async function SocialContentLeisurePage() {
               <h2 className="text-3xl font-bold">Klein, gespecialiseerd team</h2>
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
                 <p>
-                  Social content voor leisure doe ik niet alleen, maar samen met een klein, gespecialiseerd team. Per
-                  opdracht kijken we welke mensen nodig zijn: van cameraman en editor tot social media specialist.
+                  Deze social content maken we samen met een klein team; met specialisaties in concepting, productie, videografie en editing.
+                  Op een opnamedag zullen we vaak met zijn tweeen zijn; een videograaf, en iemand die de planning bijhoudt en productie verzorgt.
                 </p>
                 <p>
                   Doordat het team bewust klein en overzichtelijk blijft, schakelen we snel, zijn de lijnen kort en
@@ -100,27 +106,26 @@ export default async function SocialContentLeisurePage() {
 
             {/* Werkwijze */}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold">Onze werkwijze: 1 opnamedag per kwartaal</h2>
+              <h2 className="text-3xl font-bold">Onze werkwijze: 1 opnamedag per twee maanden</h2>
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
                 <p>
-                  Het uitgangspunt is simpel: <strong>één intensieve opnamedag per drie maanden</strong>, waarmee we
+                  Het uitgangspunt is simpel: <strong>één intensieve opnamedag per twee maanden</strong>, waarmee we
                   voldoende content maken voor een hele periode.
                 </p>
                 <ol className="list-decimal pl-5 space-y-2">
                   <li>
                     <strong>Voorbereiding & concept</strong> – Samen bepalen we thema&apos;s, formats en boodschap.
-                    Wij werken dit uit in een draaiboek met shots en scenes.
+                    Wij werken dit uit in een draaiboek.
                   </li>
                   <li>
-                    <strong>Jullie verzorgen gezichten & mascottes</strong> – Jullie regelen
-                    medewerkers en eventuele mascottes die in beeld komen.
+                    <strong>Voor de camera</strong> – Jullie regelen medewerkers/presentatoren en eventuele characters die in beeld komen.
                   </li>
                   <li>
-                    <strong>Opnamedag op locatie</strong> – We nemen veel video's tegelijk in één dag op, efficiënt
-                    ingepland zodat de operatie zo min mogelijk wordt belast.
+                    <strong>Opnamedag</strong> – We nemen veel video's tegelijk in één dag op, efficiënt
+                    ingepland zodat de operatie van je park zo min mogelijk wordt belast.
                   </li>
                   <li>
-                    <strong>Montage & optimalisatie</strong> – We monteren de reels, voegen titels, muziek en hooks
+                    <strong>Montage & optimalisatie</strong> – We monteren de reels, voegen titels, muziek en ondertiteling
                     toe en optimaliseren voor TikTok, Reels en eventueel YouTube Shorts.
                   </li>
                   <li>

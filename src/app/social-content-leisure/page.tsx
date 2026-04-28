@@ -34,7 +34,7 @@ const reels = [
     title: "StoomCycloon opening Drievliet",
     description: "De nieuwe attractie in Drievliet.",
     url: "https://www.instagram.com/reel/DXb8DBlAsiN/",
-    videoSrc: "/reels/stoomcycloon.mp4",
+    videoSrc: "/reels/StoomCycloon.mp4",
   },
 ];
 

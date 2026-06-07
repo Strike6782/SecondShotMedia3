@@ -3,6 +3,8 @@ import path from "path";
 
 import sizeOf from "image-size";
 
+import { shuffleImages } from "@/lib/shuffle";
+
 export interface ImageFile {
   src: string;
   width: number;
@@ -18,7 +20,7 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
     return [];
   }
 
-  const fileNames = fs.readdirSync(galleryDirectory).sort();
+  const fileNames = fs.readdirSync(galleryDirectory);
 
   const images = fileNames
     .filter((fileName) => {
@@ -53,5 +55,5 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
       };
     });
 
-  return images;
+  return shuffleImages(images);
 }

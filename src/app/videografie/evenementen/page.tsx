@@ -1,5 +1,3 @@
-import { getImagesFromDirectory } from "@/lib/gallery";
-import { Gallery } from "@/components/gallery/Gallery";
 import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
@@ -12,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default async function EventVideographySubPage() {
-  const images = await getImagesFromDirectory("video-production");
-
   const videos = [
     { title: "World Scout Jamboree - Zuid Korea", subtitle: "", id: "5esMJo_vDig", type: "youtube" as const },
     { title: "Halloween Vlaardingen", subtitle: "", id: "YEwFVZvs5fg", type: "youtube" as const },
@@ -69,11 +65,6 @@ export default async function EventVideographySubPage() {
             <div className="space-y-8">
               <h2 className="text-3xl font-bold tracking-tight">Portfolio Highlights</h2>
               <VideoGrid videos={videos} className="lg:grid-cols-2" />
-
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-4">Behind the Scenes</h3>
-                <Gallery images={images} />
-              </div>
             </div>
           </div>
 

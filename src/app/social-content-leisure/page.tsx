@@ -4,6 +4,7 @@ import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { Gallery } from "@/components/gallery/Gallery";
 import { getImagesFromDirectory } from "@/lib/gallery";
+import { getLeisureReels } from "@/lib/reels";
 
 export const metadata: Metadata = {
   title: "Social Content & Reels voor Leisure Bestemmingen | Second Shot Media",
@@ -11,34 +12,8 @@ export const metadata: Metadata = {
     "Structurele social content en reels voor attractieparken en leisure bestemmingen.",
 };
 
-const reels = [
-  {
-    title: "Halloween Vlaardingen",
-    description: "Campagnevideo voor Halloween Vlaardingen.",
-    url: "https://www.instagram.com/reel/DPDpMeeiIZA/",
-    videoSrc: "/reels/halloween-vlaardingen.mp4",
-  },
-  {
-    title: "Theme Park Science",
-    description: "Unieke beelden uit een achtbaan",
-    url: "https://www.instagram.com/reel/DVRG-QRil8f/",
-    videoSrc: "/reels/drievliet-formule-x.mp4",
-  },
-  {
-    title: "Familiepark Drievliet",
-    description: "Leuke weetjes van Drievliet",
-    url: "https://www.instagram.com/",
-    videoSrc: "/reels/leuke-weetjes.mp4",
-  },
-  {
-    title: "StoomCycloon opening Drievliet",
-    description: "De nieuwe attractie in Drievliet.",
-    url: "https://www.instagram.com/reel/DXb8DBlAsiN/",
-    videoSrc: "/reels/StoomCycloon.mp4",
-  },
-];
-
 export default async function SocialContentLeisurePage() {
+  const reels = await getLeisureReels();
   const themeParkImages = await getImagesFromDirectory("theme-parks");
 
   return (
@@ -139,37 +114,32 @@ export default async function SocialContentLeisurePage() {
             {/* Reels showcase */}
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Showcase</h2>
-              <div className="grid gap-6 md:grid-cols-2">
-                {reels.map((reel) => (
-                  <div
-                    key={reel.title}
-                    className="group rounded-xl border bg-card hover:bg-accent/50 transition-colors p-4 flex flex-col gap-3"
-                  >
-                    <div className="aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
-                      <video
-                        controls
-                        playsInline
-                        className="h-full w-full object-cover"
-                        src={reel.videoSrc}
-                      />
-                    </div>
-                    <div>
+              {reels.length === 0 ? (
+                <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed text-muted-foreground">
+                  <p>Geen reels gevonden. Voeg ze toe via reels-incoming/ en draai npm run reels:optimize.</p>
+                </div>
+              ) : (
+                <div className="grid gap-6 md:grid-cols-2">
+                  {reels.map((reel) => (
+                    <div
+                      key={reel.videoSrc}
+                      className="group rounded-xl border bg-card hover:bg-accent/50 transition-colors p-4 flex flex-col gap-3"
+                    >
+                      <div className="aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
+                        <video
+                          controls
+                          playsInline
+                          className="h-full w-full object-cover"
+                          src={reel.videoSrc}
+                        />
+                      </div>
                       <h3 className="font-semibold group-hover:text-primary transition-colors">
                         {reel.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{reel.description}</p>
-                      <a
-                        href={reel.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-1 inline-flex text-xs text-primary hover:underline"
-                      >
-                        Bekijk op Instagram
-                      </a>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Andere content voor attractieparken */}
@@ -192,20 +162,6 @@ export default async function SocialContentLeisurePage() {
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">
-                  Theme Park Science - Opening nieuw pretpark
-                </h3>
-                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/2PJ1USshijg?si=kRYv-yeUZ5HrOyhZ"
-                    title="Theme Park Science - Opening nieuw pretpark"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">
                   Theme Park Science Trailer
                 </h3>
                 <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
@@ -218,8 +174,22 @@ export default async function SocialContentLeisurePage() {
                 </div>
               </div>
 
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">
+                  Theme Park Science - Opening nieuw pretpark (in samenwerking met Vinuts)
+                </h3>
+                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl bg-muted relative group border border-border">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/2PJ1USshijg?si=kRYv-yeUZ5HrOyhZ"
+                    title="Theme Park Science - Opening nieuw pretpark"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold">Foto-impressie attractieparken</h3>
+                <h3 className="text-xl font-semibold">Foto's van attractieparken</h3>
                 <Gallery images={themeParkImages} />
               </div>
             </div>

@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { getImagesFromDirectory } from "@/lib/gallery";
-import { Gallery } from "@/components/gallery/Gallery";
 import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
 import { VideoGrid } from "@/components/gallery/VideoGrid";
@@ -13,8 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default async function VideographyPage() {
-  const images = await getImagesFromDirectory("video-production");
-
   const videos = [
     { title: "World Scout Jamboree - Zuid Korea", subtitle: "Aftermovie", id: "5esMJo_vDig", type: "youtube" as const },
     { title: "Halloween Vlaardingen", subtitle: "Evenementen recap", id: "YEwFVZvs5fg", type: "youtube" as const },
@@ -109,11 +105,6 @@ export default async function VideographyPage() {
             <div className="space-y-8">
               <h2 className="text-3xl font-bold tracking-tight">Voorbeelden van videowerk</h2>
               <VideoGrid videos={videos} className="lg:grid-cols-3" />
-
-              <div className="mt-12 space-y-4">
-                <h3 className="text-2xl font-bold">Behind the Scenes</h3>
-                <Gallery images={images} />
-              </div>
             </div>
           </div>
 

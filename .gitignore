@@ -44,3 +44,14 @@ next-env.d.ts
 # Deployment
 /code/
 
+# Raw gallery originals (staging); keep folder structure and README
+/gallery-incoming/**
+!/gallery-incoming/README.md
+!/gallery-incoming/*/
+!/gallery-incoming/*/.gitkeep
+
+# Raw reel originals (staging); keep README and manifest
+/reels-incoming/*
+!/reels-incoming/README.md
+!/reels-incoming/reels.json
+

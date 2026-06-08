@@ -71,7 +71,7 @@ export function Navbar() {
                 >
                   {item.name}
                 </Link>
-                <div className="pointer-events-auto opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-150 absolute left-0 top-full pt-2">
+                <div className="pointer-events-auto opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-150 absolute right-0 top-full pt-2">
                   <div className="rounded-md border bg-background shadow-lg min-w-[240px]">
                     <div className="flex flex-col py-2">
                       {item.children.map((child) => (

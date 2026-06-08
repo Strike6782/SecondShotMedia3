@@ -72,7 +72,7 @@ export default async function Home() {
               Mijn focus ligt op het vangen van spontane momenten, interactie en de unieke vibe van uw event.
               </p>
             </div>
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-2xl">6+</span>
                 <span className="text-sm text-muted-foreground">Jaar Ervaring</span>

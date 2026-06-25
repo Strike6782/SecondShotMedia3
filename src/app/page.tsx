@@ -44,8 +44,8 @@ export default async function Home() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="text-lg px-8 border-zinc-700 hover:bg-zinc-800 text-white"
+              variant="outlineOnDark"
+              className="text-lg px-8"
               asChild
             >
               <Link href="/#mini-portfolio">Bekijk werk</Link>

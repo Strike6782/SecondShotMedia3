@@ -58,7 +58,7 @@ export default async function SocialContentLeisurePage() {
                     <Image src="/logos/vlaardingen.webp" alt="Halloween Vlaardingen" width={120} height={120} />
                   </div>
                   <div className="mx-auto flex h-[132px] w-[132px] items-center justify-center rounded-xl border bg-muted/60 p-1">
-                    <Image src="/logos/tps.jpg" alt="Theme Park Science" width={120} height={120} />
+                    <Image src="/logos/tps.jpeg" alt="Theme Park Science" width={120} height={120} />
                   </div>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default async function SocialContentLeisurePage() {
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
                 <p>
                   Naast shortform video en reels maken we ook andere content voor attractieparken en themabelevingen:
-                  fotografie voor campagnes, sfeerbeelden op drukke dagen en langere video&apos;s.
+                  fotografie voor campagnes, sfeerbeelden op drukke dagen en langere video&apos;s. Ook hebben we een grafisch designer in ons team.
                 </p>
                 <p>
                   Zo ontstaat een complete contentmix: van snelle social posts tot verdieping in langere formats.

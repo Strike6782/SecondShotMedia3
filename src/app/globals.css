@@ -11,6 +11,9 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -29,6 +32,9 @@
   --muted-foreground: #6b7280;
   --accent: #f9fafb;
   --accent-foreground: #111827;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #ec1b24;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +51,9 @@
     --muted-foreground: #a1a1aa;
     --accent: #27272a;
     --accent-foreground: #fafafa;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #ec1b24;
   }
 }
 

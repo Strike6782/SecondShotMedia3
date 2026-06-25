@@ -61,7 +61,7 @@ export function Hero({
             <Link href={ctaLink}>{ctaText}</Link>
           </Button>
           {showSecondaryBtn && (
-            <Button size="lg" variant="outline" asChild className="text-base">
+            <Button size="lg" variant="outlineOnDark" asChild className="text-base">
               <Link href="/#mini-portfolio">Bekijk werk</Link>
             </Button>
           )}

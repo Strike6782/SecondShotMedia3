@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import { shuffleImages } from "@/lib/shuffle";
 import { GalleryLightbox } from "@/components/gallery/GalleryLightbox";
 
 interface GalleryImageData {
@@ -33,7 +32,7 @@ function GalleryImage({
   index: number;
   layout: "masonry" | "grid";
   linkTarget?: string;
-  onImageClick?: (index: number) => void;
+  onImageClick?: (src: string) => void;
 }) {
   const isPriority = index < 10;
   const isClickable = !linkTarget && Boolean(onImageClick);
@@ -82,7 +81,7 @@ function GalleryImage({
       ) : isClickable ? (
         <button
           type="button"
-          onClick={() => onImageClick?.(index)}
+          onClick={() => onImageClick?.(image.src)}
           className="block h-full w-full cursor-zoom-in text-left"
           aria-label={`Vergroot ${image.alt}`}
         >
@@ -96,10 +95,16 @@ function GalleryImage({
 }
 
 export function Gallery({ images, className, layout = "masonry", linkTarget }: GalleryProps) {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedSrc, setSelectedSrc] = useState<string | null>(null);
 
-  // Shuffle once per mount so gallery order varies between page visits.
-  const displayImages = useMemo(() => shuffleImages(images), [images]);
+  // Use server-provided order so thumbnails and lightbox always refer to the same image.
+  const displayImages = images;
+
+  const selectedIndex = useMemo(() => {
+    if (!selectedSrc) return null;
+    const index = displayImages.findIndex((image) => image.src === selectedSrc);
+    return index === -1 ? null : index;
+  }, [displayImages, selectedSrc]);
 
   if (!displayImages || displayImages.length === 0) {
     return (
@@ -122,7 +127,7 @@ export function Gallery({ images, className, layout = "masonry", linkTarget }: G
             index={index}
             layout={layout}
             linkTarget={linkTarget}
-            onImageClick={linkTarget ? undefined : setSelectedIndex}
+            onImageClick={linkTarget ? undefined : setSelectedSrc}
           />
         ))}
       </div>
@@ -131,8 +136,8 @@ export function Gallery({ images, className, layout = "masonry", linkTarget }: G
         <GalleryLightbox
           images={displayImages}
           selectedIndex={selectedIndex}
-          onClose={() => setSelectedIndex(null)}
-          onNavigate={setSelectedIndex}
+          onClose={() => setSelectedSrc(null)}
+          onNavigate={(index) => setSelectedSrc(displayImages[index]?.src ?? null)}
         />
       )}
     </>

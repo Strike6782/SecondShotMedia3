@@ -11,17 +11,19 @@ interface HeroProps {
   className?: string;
   align?: "center" | "left";
   showSecondaryBtn?: boolean;
+  showCta?: boolean;
 }
 
 export function Hero({
   title,
   subtitle,
   ctaText = "Neem direct contact op",
-  ctaLink = "/contact",
+  ctaLink = "/over-en-contact/",
   backgroundImage,
   className,
   align = "center",
   showSecondaryBtn = true,
+  showCta = true,
 }: HeroProps) {
   return (
     <section
@@ -57,9 +59,11 @@ export function Hero({
           {subtitle}
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button size="lg" asChild className="text-base">
-            <Link href={ctaLink}>{ctaText}</Link>
-          </Button>
+          {showCta && (
+            <Button size="lg" asChild className="text-base">
+              <Link href={ctaLink}>{ctaText}</Link>
+            </Button>
+          )}
           {showSecondaryBtn && (
             <Button size="lg" variant="outlineOnDark" asChild className="text-base">
               <Link href="/#mini-portfolio">Bekijk werk</Link>

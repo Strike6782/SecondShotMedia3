@@ -33,7 +33,7 @@ const portfolioMap: Record<string, { label: string; dirs: string[]; href: string
   leisure: { label: "Leisure", dirs: ["theme-parks"], href: "/leisure/" },
   "zakelijke-evenementen": { label: "Zakelijke evenementen", dirs: ["corporate"], href: "/zakelijke-evenementen/" },
   evenementen: { label: "Events", dirs: ["events", "club"], href: "/evenementen/" },
-  "gala-en-feest": { label: "Gala en feest", dirs: ["students"], href: "/gala-en-feest/" },
+  "gala-en-feest": { label: "Gala's en feesten", dirs: ["students"], href: "/gala-en-feest/" },
 };
 
 export default async function Home() {

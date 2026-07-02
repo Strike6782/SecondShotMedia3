@@ -244,20 +244,20 @@ export const branches: BranchConfig[] = [
   {
     slug: "gala-en-feest",
     href: "/gala-en-feest/",
-    title: "Gala en feest",
-    navLabel: "Gala en feest",
+    title: "Gala's en feesten",
+    navLabel: "Gala's en feesten",
     seoTitle: "Fotografie en videografie voor gala's en feesten",
     seoDescription:
       "Fotografie en videografie voor gala's, feesten en studentenverenigingen. Gevestigd in Utrecht, actief door heel Nederland.",
-    heroTitle: "Fotografie en videografie voor gala en feest",
+    heroTitle: "Fotografie en videografie voor gala's en feesten",
     heroSubtitle:
       "Elegante reportage en video voor gala's, studentenverenigingen en feesten. Van photobooth tot dansvloer.",
     definition:
       "Second Shot Media levert fotografie en videografie voor gala's, feesten en studentenverenigingen. Wij leggen de sfeer op de dansvloer en bij de photobooth vast. Gevestigd in Utrecht, actief door heel Nederland.",
     introTitle: "Stijlvolle beelden van jullie gala",
     introParagraphs: [
-      "Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer. Wij leggen deze elementen vast op een manier die zowel chic als spontaan is, in foto én video.",
-      "Wij raden 3 uur coverage aan: de eerste anderhalf uur bij een photobooth, de laatste anderhalf uur op de dansvloer.",
+      "Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer. Wij leggen deze elementen vast op een manier die zowel chic als spontaan is, in foto of video.",
+      "Wij raden voor fotografie 3 uur coverage aan: de eerste anderhalf uur bij een photobooth, de laatste anderhalf uur op de dansvloer.",
     ],
     photoTitle: "Galafotografie",
     photoParagraphs: [

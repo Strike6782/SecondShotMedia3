@@ -37,7 +37,7 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
     { title: `Evenementen in ${cityName}`, images: eventImages, href: "/evenementen/" },
     { title: "Zakelijke evenementen", images: corporateImages, href: "/zakelijke-evenementen/" },
     { title: "Leisure", images: themeParkImages, href: "/leisure/" },
-    { title: "Gala en feest", images: studentImages, href: "/gala-en-feest/" },
+    { title: "Gala's en feesten", images: studentImages, href: "/gala-en-feest/" },
   ];
 
   return (

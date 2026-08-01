@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/gallery/Gallery";
 import { Hero } from "@/components/layout/Hero";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
@@ -20,7 +19,6 @@ const isHorizontal = (img: { width: number; height: number }) => img.width / img
 
 // Shared template for city SEO landing pages with local proof content.
 export async function CityLandingPage({ cityName, citySlug }: CityLandingPageProps) {
-  const definition = getCityDefinition(cityName);
   const faqs = getCityFaqs(cityName);
   const localContent = getCityContent(citySlug);
   const path = getCityPath(citySlug);
@@ -49,13 +47,11 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
 
       <Hero
         title={`Fotografie en videografie in ${cityName}`}
-        subtitle={localContent?.highlight ?? `Second Shot Media levert fotografie en videografie in ${cityName}.`}
+        subtitle={getCityDefinition(cityName)}
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
       />
-
-      <DefinitionBlock text={definition} />
 
       <section className="container py-12 px-4 max-w-screen-2xl space-y-16">
         <div className="prose prose-lg dark:prose-invert text-muted-foreground max-w-3xl space-y-4">

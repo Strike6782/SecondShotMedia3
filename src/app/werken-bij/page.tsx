@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Hero } from "@/components/layout/Hero";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
@@ -30,15 +29,13 @@ export default function WerkenBijPage() {
 
       <Hero
         title="Werken bij Second Shot Media"
-        subtitle="Samenwerken als freelance fotograaf of videograaf. Projectmatig, door heel Nederland."
+        subtitle={werkenBijContent.definition}
         ctaText="Meld je aan"
         ctaLink={mailtoLink}
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
       />
-
-      <DefinitionBlock text={werkenBijContent.definition} />
 
       <section className="container py-16 px-6 md:px-12 max-w-screen-2xl space-y-16">
         <div className="space-y-4 max-w-3xl">

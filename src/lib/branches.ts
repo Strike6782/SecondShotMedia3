@@ -16,7 +16,6 @@ export type BranchConfig = {
   seoDescription: string;
   heroTitle: string;
   heroSubtitle: string;
-  definition: string;
   introTitle: string;
   introParagraphs: string[];
   photoTitle: string;
@@ -48,9 +47,7 @@ export const branches: BranchConfig[] = [
       "Fotografie en videografie voor leisure en attractieparken. Shortform content voor TikTok en Reels. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor leisure",
     heroSubtitle:
-      "Shortform content, reels en reportage voor attractieparken en leisure bestemmingen.",
-    definition:
-      "Second Shot Media levert fotografie en videografie voor leisure, waaronder attractieparken en themabelevingen. Wij maken shortform content voor TikTok, Instagram Reels en YouTube Shorts.",
+      "Shortform content, reels en reportage voor attractieparken en leisure bestemmingen. Wij leveren fotografie en videografie voor leisure, waaronder themabelevingen, en maken shortform content voor TikTok, Instagram Reels en YouTube Shorts.",
     introTitle: "Structurele zichtbaarheid op social media",
     introParagraphs: [
       "Met Second Shot Media helpen wij leisure bestemmingen structureel zichtbaar te worden op TikTok en Instagram. Denk aan attractieparken, themabelevingen en seizoensevenementen.",
@@ -136,9 +133,7 @@ export const branches: BranchConfig[] = [
       "Fotografie en videografie voor congressen, beurzen en bedrijfsfeesten. LinkedIn- en PR-ready beelden. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor zakelijke evenementen",
     heroSubtitle:
-      "Professionele reportage en video voor congressen, beurzen en bedrijfsfeesten. Discreet, professioneel en direct inzetbaar.",
-    definition:
-      "Second Shot Media levert fotografie en videografie voor zakelijke evenementen zoals congressen, beurzen en bedrijfsfeesten. Wij leveren beelden geschikt voor LinkedIn, pers en interne communicatie.",
+      "Professionele reportage en video voor congressen, beurzen en bedrijfsfeesten. Discreet, professioneel en direct inzetbaar. Wij leveren beelden geschikt voor LinkedIn, pers en interne communicatie.",
     introTitle: "Uw business event in beeld",
     introParagraphs: [
       "Een zakelijk evenement is vaak méér dan een momentopname: het is een visitekaartje voor uw merk, uw mensen en uw boodschap. Of het nu gaat om een congres, beurs, netwerkborrel of bedrijfsviering, u wilt beelden die de energie vangen én professionaliteit uitstralen.",
@@ -205,9 +200,7 @@ export const branches: BranchConfig[] = [
       "Fotografie en videografie voor festivals, muziekevenementen en nightlife. Aftermovies en sfeerreportages. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor evenementen",
     heroSubtitle:
-      "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen.",
-    definition:
-      "Second Shot Media levert fotografie en videografie voor evenementen, festivals en nightlife. Denk aan sfeerreportages, podiumfotografie en aftermovies.",
+      "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen. Wij leveren fotografie en videografie voor evenementen, festivals en nightlife — van sfeerreportages en podiumfotografie tot aftermovies.",
     introTitle: "Events die tot leven komen",
     introParagraphs: [
       "Van festivals tot clubnights: wij vangen de energie, sfeer en spontane momenten. Wij leveren fotografie én videografie, van reportage tot aftermovie.",
@@ -298,9 +291,7 @@ export const branches: BranchConfig[] = [
       "Fotografie en videografie voor gala's, feesten en studentenverenigingen. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor gala's en feesten",
     heroSubtitle:
-      "Elegante reportage en video voor gala's, studentenverenigingen en feesten. Van photobooth tot dansvloer.",
-    definition:
-      "Second Shot Media levert fotografie en videografie voor gala's, feesten en studentenverenigingen. Wij leggen de sfeer op de dansvloer en bij de photobooth vast.",
+      "Elegante reportage en video voor gala's, studentenverenigingen en feesten. Van photobooth tot dansvloer. Wij leggen de sfeer op de dansvloer en bij de photobooth vast.",
     introTitle: "Stijlvolle beelden van jullie gala",
     introParagraphs: [
       "Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer. Wij leggen deze elementen vast op een manier die zowel chic als spontaan is, in foto of video.",

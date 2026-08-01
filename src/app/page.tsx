@@ -4,13 +4,13 @@ import Image from "next/image";
 import { ArrowRight, Building2, GraduationCap, Music2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/gallery/Gallery";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { homeContent } from "@/lib/page-content";
+import { AGENCY_DEFINITION } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
   title: "Fotografie en videografie Content Agency | Utrecht",
@@ -64,7 +64,7 @@ export default async function Home() {
             Second Shot <span className="text-primary">Media</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-zinc-300 sm:text-2xl font-light">
-            Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
+            {AGENCY_DEFINITION}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button size="lg" className="text-lg px-8" asChild>
@@ -76,8 +76,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      <DefinitionBlock text={homeContent.definition} />
 
       <section className="container py-16 md:py-24 px-4 max-w-screen-xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -101,7 +99,7 @@ export default async function Home() {
                 tot een volwaardig team met foto- en videografen, designers en content creators.
               </p>
               <p className="text-foreground font-medium italic">
-                Elk bijzonder moment verdient een tweede kans om te schitteren — dat is waar onze naam staat voor.
+                Elk bijzonder moment verdient een tweede kans om te schitteren. Dat is waar onze naam voor staat.
               </p>
               <p>
                 Wij zijn actief in de leisure branche, zakelijke evenementen, muziekevenementen en feesten

@@ -3,7 +3,6 @@ import { Gallery } from "@/components/gallery/Gallery";
 import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { Hero } from "@/components/layout/Hero";
 import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { ClientLogoGrid } from "@/components/seo/ClientLogoGrid";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
@@ -18,7 +17,7 @@ type BranchPageProps = {
   branch: BranchConfig;
 };
 
-// Reusable branch page template: hero, definition, services, portfolio, FAQ.
+// Reusable branch page template: hero, services, portfolio, FAQ.
 export async function BranchPage({ branch }: BranchPageProps) {
   const galleryImages: ImageFile[] = [];
   for (const dir of branch.galleryDirs) {
@@ -44,8 +43,6 @@ export async function BranchPage({ branch }: BranchPageProps) {
         showSecondaryBtn={false}
         showCta={false}
       />
-
-      <DefinitionBlock text={branch.definition} />
 
       <section className="container py-16 px-6 md:px-12 max-w-screen-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Hero } from "@/components/layout/Hero";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { getCities, getCityPath } from "@/lib/cities";
 import { getCityContent } from "@/lib/cities-content";
@@ -27,14 +26,12 @@ export default function WerkgebiedPage() {
 
       <Hero
         title="Ons werkgebied"
-        subtitle="Gevestigd in Utrecht, actief voor fotografie en videografie door heel Nederland."
+        subtitle={AGENCY_DEFINITION}
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
         showCta={false}
       />
-
-      <DefinitionBlock text={AGENCY_DEFINITION} />
 
       <section className="container py-16 px-6 md:px-12 max-w-screen-2xl space-y-12">
         <div className="prose prose-lg dark:prose-invert text-muted-foreground max-w-3xl space-y-4">

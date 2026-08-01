@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Hero } from "@/components/layout/Hero";
-import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
@@ -31,14 +30,12 @@ export default function OverEnContactPage() {
 
       <Hero
         title="Over Second Shot Media"
-        subtitle="Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland."
+        subtitle={overContactContent.definition}
         ctaLink="/over-en-contact/#contact"
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
       />
-
-      <DefinitionBlock text={overContactContent.definition} />
 
       <section className="container py-16 px-6 md:px-12 max-w-screen-2xl space-y-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -51,7 +48,7 @@ export default function OverEnContactPage() {
                   Vanuit Utrecht werken wij aan projecten door heel Nederland met een poule van freelance fotografen en videografen.
                 </p>
                 <p className="text-foreground font-medium italic">
-                  Elk bijzonder moment verdient een tweede kans om te schitteren — dat is waar onze naam staat voor.
+                  Elk bijzonder moment verdient een tweede kans om te schitteren. Dat is waar onze naam voor staat.
                 </p>
               </div>
               <Button variant="outline" asChild>
@@ -64,8 +61,7 @@ export default function OverEnContactPage() {
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
                 <p>
                   Ivan Balkenende is de oprichter van Second Shot Media. Met meer dan zes jaar ervaring en ruim 220 events
-                  op zijn naam weet hij als geen ander hoe je energie en sfeer vastlegt. Naast zijn werk bij Second Shot Media
-                  is Ivan ook nog student Informatica aan de Universiteit Utrecht. Second Shot Media begon als freelance klusjes,
+                  op zijn naam weet hij als geen ander hoe je energie en sfeer vastlegt. Second Shot Media begon als freelance klusjes,
                   maar is nu uitgegroeid tot een volwaardig team met foto- en videografen, designers en content creators.
                 </p>
               </div>

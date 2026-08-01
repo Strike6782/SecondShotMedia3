@@ -1,9 +1,7 @@
 import type { FaqItem } from "@/lib/types";
-import { AGENCY_DEFINITION } from "@/lib/site";
 
 // Homepage, over/contact, and werken-bij content (non-branch pages).
 export const homeContent = {
-  definition: AGENCY_DEFINITION,
   faqs: [
     {
       question: "Wat is Second Shot Media?",

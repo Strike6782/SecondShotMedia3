@@ -14,7 +14,7 @@ export function Footer() {
               Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
             </p>
             <p className="text-sm text-foreground font-medium italic">
-              &quot;Elk bijzonder moment verdient een tweede kans om te schitteren&quot;
+              &quot;Elk bijzonder moment verdient een tweede kans om te schitteren. Dat is waar onze naam voor staat.&quot;
             </p>
           </div>
 

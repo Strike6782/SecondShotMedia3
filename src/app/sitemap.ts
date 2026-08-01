@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gala-en-feest/",
     "/over-en-contact/",
     "/werken-bij/",
+    "/werkgebied/",
     "/algemene-voorwaarden/",
   ];
 

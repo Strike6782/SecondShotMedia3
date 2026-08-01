@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold text-foreground">Second Shot Media</h3>
             <p className="text-sm leading-relaxed">
-              Content studio voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
+              Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
             </p>
             <p className="text-sm text-foreground font-medium italic">
               &quot;Elk bijzonder moment verdient een tweede kans om te schitteren&quot;
@@ -32,11 +32,16 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold text-foreground">Studio</h3>
+            <h3 className="text-sm font-semibold text-foreground">Agency</h3>
             <ul className="flex flex-col gap-2 text-sm">
               <li>
                 <Link href="/over-en-contact/" className="hover:text-foreground">
                   Over en contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/werkgebied/" className="hover:text-foreground">
+                  Werkgebied
                 </Link>
               </li>
               <li>

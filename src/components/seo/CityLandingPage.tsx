@@ -6,9 +6,10 @@ import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
+import { getCityContent } from "@/lib/cities-content";
 import { getImagesFromDirectory } from "@/lib/gallery";
-import { getCityDefinition, getCityFaqs } from "@/lib/page-content";
 import { getCityPath } from "@/lib/cities";
+import { getCityDefinition, getCityFaqs } from "@/lib/page-content";
 
 type CityLandingPageProps = {
   cityName: string;
@@ -17,10 +18,11 @@ type CityLandingPageProps = {
 
 const isHorizontal = (img: { width: number; height: number }) => img.width / img.height > 1.2;
 
-// Shared template for city SEO landing pages.
+// Shared template for city SEO landing pages with local proof content.
 export async function CityLandingPage({ cityName, citySlug }: CityLandingPageProps) {
   const definition = getCityDefinition(cityName);
   const faqs = getCityFaqs(cityName);
+  const localContent = getCityContent(citySlug);
   const path = getCityPath(citySlug);
 
   const eventImages = (await getImagesFromDirectory("events")).filter(isHorizontal).slice(0, 4);
@@ -30,7 +32,8 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
 
   const breadcrumbs = [
     { name: "Home", href: "/" },
-    { name: `Fotografie en videografie in ${cityName}`, href: path },
+    { name: "Werkgebied", href: "/werkgebied/" },
+    { name: cityName, href: path },
   ];
 
   const gallerySections = [
@@ -46,7 +49,7 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
 
       <Hero
         title={`Fotografie en videografie in ${cityName}`}
-        subtitle={`Second Shot Media is gevestigd in Utrecht en actief in ${cityName} en door heel Nederland.`}
+        subtitle={localContent?.highlight ?? `Second Shot Media levert fotografie en videografie in ${cityName}.`}
         align="center"
         className="min-h-[40vh]"
         showSecondaryBtn={false}
@@ -55,11 +58,12 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
       <DefinitionBlock text={definition} />
 
       <section className="container py-12 px-4 max-w-screen-2xl space-y-16">
-        <div className="prose prose-lg dark:prose-invert text-muted-foreground max-w-3xl">
+        <div className="prose prose-lg dark:prose-invert text-muted-foreground max-w-3xl space-y-4">
           <p>
             Op zoek naar fotografie en videografie in {cityName}? Second Shot Media levert beide onder één dak voor
             leisure en events.
           </p>
+          {localContent?.localProof && <p>{localContent.localProof}</p>}
         </div>
 
         {gallerySections.map((section) =>
@@ -97,7 +101,17 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
           </div>
         </div>
 
+        <div className="text-center">
+          <Button size="lg" asChild>
+            <Link href="/over-en-contact/#contact">Vraag een offerte voor {cityName}</Link>
+          </Button>
+        </div>
+
         <FaqSection items={faqs} />
+
+        <p className="text-center text-sm text-muted-foreground">
+          <Link href="/werkgebied/" className="text-primary hover:underline">Alle werkgebieden</Link>
+        </p>
       </section>
     </div>
   );

@@ -1,4 +1,10 @@
-import type { BranchLogo, BranchVideo, FaqItem } from "@/lib/types";
+import type {
+  BranchLogo,
+  BranchPricingHint,
+  BranchTestimonial,
+  BranchVideo,
+  FaqItem,
+} from "@/lib/types";
 
 // Branch configuration: content, SEO, galleries, and branch-specific options.
 export type BranchConfig = {
@@ -24,6 +30,8 @@ export type BranchConfig = {
   faqs: FaqItem[];
   logos?: BranchLogo[];
   videos?: BranchVideo[];
+  testimonials?: BranchTestimonial[];
+  pricingHint?: BranchPricingHint;
   showReels?: boolean;
   showFpvSection?: boolean;
   anchorSections?: { id: string; title: string; paragraphs: string[] }[];
@@ -37,16 +45,16 @@ export const branches: BranchConfig[] = [
     navLabel: "Leisure",
     seoTitle: "Fotografie en videografie voor leisure",
     seoDescription:
-      "Fotografie en videografie voor leisure en attractieparken. Shortform content voor TikTok en Reels. Content studio gevestigd in Utrecht, actief door heel Nederland.",
+      "Fotografie en videografie voor leisure en attractieparken. Shortform content voor TikTok en Reels. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor leisure",
     heroSubtitle:
-      "Shortform content, reels en reportage voor attractieparken en leisure bestemmingen. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Shortform content, reels en reportage voor attractieparken en leisure bestemmingen.",
     definition:
-      "Second Shot Media levert fotografie en videografie voor leisure, waaronder attractieparken en themabelevingen. Wij maken onder andere shortform content voor TikTok, Instagram Reels en YouTube Shorts. Gevestigd in Utrecht, actief door heel Nederland.",
-    introTitle: "Leisure content onder één dak",
+      "Second Shot Media levert fotografie en videografie voor leisure, waaronder attractieparken en themabelevingen. Wij maken shortform content voor TikTok, Instagram Reels en YouTube Shorts.",
+    introTitle: "Structurele zichtbaarheid op social media",
     introParagraphs: [
-      "Met Second Shot Media helpen wij leisure bestemmingen om structureel zichtbaar te zijn op TikTok en Instagram. Denk aan attractieparken, themabelevingen en seizoensevenementen.",
-      "Wij werken onder andere voor Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween Vlaardingen, Halloween Rosmalen en Theme Park Science. Wij combineren fotografie, videografie en social content.",
+      "Met Second Shot Media helpen wij leisure bestemmingen structureel zichtbaar te worden op TikTok en Instagram. Denk aan attractieparken, themabelevingen en seizoensevenementen.",
+      "Wij werken onder andere voor Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween Vlaardingen, Halloween Rosmalen en Theme Park Science. Het resultaat: een constante stroom reels die past bij uw park en uw doelgroep bereikt.",
     ],
     photoTitle: "Fotografie voor leisure",
     photoParagraphs: [
@@ -69,6 +77,19 @@ export const branches: BranchConfig[] = [
     galleryDirs: ["theme-parks"],
     showReels: true,
     showFpvSection: true,
+    pricingHint: {
+      title: "Structureel leisure pakket",
+      description:
+        "Indicatief vanaf €1.250 per opnamedag (één dag per twee maanden inclusief montage van reels). Exacte prijs hangt af van locatie, scope en gewenste output.",
+    },
+    testimonials: [
+      {
+        quote:
+          "De reels passen echt bij ons park en worden consistent opgeleverd. Wij zien direct meer bereik op TikTok en Instagram.",
+        author: "Marketingteam",
+        role: "Attractiepark in Overijssel",
+      },
+    ],
     videos: [
       { title: "Theme Park Science Trailer", id: "CJl2UsZ-_Tc", type: "youtube" },
       { title: "Theme Park Science - Opening nieuw pretpark", id: "2PJ1USshijg", type: "youtube" },
@@ -112,16 +133,16 @@ export const branches: BranchConfig[] = [
     navLabel: "Zakelijke evenementen",
     seoTitle: "Fotografie en videografie voor zakelijke evenementen",
     seoDescription:
-      "Fotografie en videografie voor congressen, beurzen en bedrijfsfeesten. LinkedIn- en PR-ready beelden. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Fotografie en videografie voor congressen, beurzen en bedrijfsfeesten. LinkedIn- en PR-ready beelden. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor zakelijke evenementen",
     heroSubtitle:
       "Professionele reportage en video voor congressen, beurzen en bedrijfsfeesten. Discreet, professioneel en direct inzetbaar.",
     definition:
-      "Second Shot Media levert fotografie en videografie voor zakelijke evenementen zoals congressen, beurzen en bedrijfsfeesten. Wij leveren beelden geschikt voor LinkedIn, pers en interne communicatie. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Second Shot Media levert fotografie en videografie voor zakelijke evenementen zoals congressen, beurzen en bedrijfsfeesten. Wij leveren beelden geschikt voor LinkedIn, pers en interne communicatie.",
     introTitle: "Uw business event in beeld",
     introParagraphs: [
       "Een zakelijk evenement is vaak méér dan een momentopname: het is een visitekaartje voor uw merk, uw mensen en uw boodschap. Of het nu gaat om een congres, beurs, netwerkborrel of bedrijfsviering, u wilt beelden die de energie vangen én professionaliteit uitstralen.",
-      "Wij werken discreet tussen gasten en sprekers door, leveren fotografie én videografie en zorgen voor beelden die u direct inzet voor persberichten, LinkedIn, interne communicatie en marketingmateriaal.",
+      "Wij werken discreet tussen gasten en sprekers door en zorgen dat u dezelfde dag of de dag erna beelden heeft voor persberichten, LinkedIn en interne communicatie.",
     ],
     photoTitle: "Zakelijke eventfotografie",
     photoParagraphs: [
@@ -142,6 +163,19 @@ export const branches: BranchConfig[] = [
       "Oplevering: bestanden klaar voor uw kanalen",
     ],
     galleryDirs: ["corporate"],
+    pricingHint: {
+      title: "Zakelijke eventreportage",
+      description:
+        "Indicatief vanaf €550 voor een halve dag fotografie of videografie. Volledige dag en combipakketten op maat — vraag een offerte voor uw event.",
+    },
+    testimonials: [
+      {
+        quote:
+          "Professionele beelden die we direct konden gebruiken voor LinkedIn en ons persbericht. Soepele samenwerking en snelle oplevering.",
+        author: "Eventmanager",
+        role: "Universiteit Utrecht",
+      },
+    ],
     faqs: [
       {
         question: "Welke zakelijke events dekken jullie?",
@@ -168,16 +202,16 @@ export const branches: BranchConfig[] = [
     navLabel: "Evenementen",
     seoTitle: "Fotografie en videografie voor evenementen en festivals",
     seoDescription:
-      "Fotografie en videografie voor festivals, muziekevenementen en nightlife. Aftermovies en sfeerreportages. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Fotografie en videografie voor festivals, muziekevenementen en nightlife. Aftermovies en sfeerreportages. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor evenementen",
     heroSubtitle:
       "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen.",
     definition:
-      "Second Shot Media levert fotografie en videografie voor evenementen, festivals en nightlife. Denk aan sfeerreportages, podiumfotografie en aftermovies. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Second Shot Media levert fotografie en videografie voor evenementen, festivals en nightlife. Denk aan sfeerreportages, podiumfotografie en aftermovies.",
     introTitle: "Events die tot leven komen",
     introParagraphs: [
       "Van festivals tot clubnights: wij vangen de energie, sfeer en spontane momenten. Wij leveren fotografie én videografie, van reportage tot aftermovie.",
-      "Wij komen naar uw locatie, waar in Nederland dan ook. Foto's worden doorgaans binnen 48 uur opgeleverd.",
+      "Foto's worden doorgaans binnen 48 uur opgeleverd — ideaal om de buzz van uw event op social media te houden terwijl het nog hot is.",
     ],
     photoTitle: "Eventfotografie",
     photoParagraphs: [
@@ -198,12 +232,25 @@ export const branches: BranchConfig[] = [
       "Oplevering: foto's binnen 48 uur, video volgens afspraak",
     ],
     galleryDirs: ["events", "club"],
+    pricingHint: {
+      title: "Eventreportage",
+      description:
+        "Indicatief vanaf €475 voor een halve dag fotografie op uw festival of feest. Aftermovies en combipakketten op maat — vraag een offerte.",
+    },
+    testimonials: [
+      {
+        quote:
+          "De foto's waren binnen 48 uur online en de aftermovie gaf precies de sfeer van ons festival. Onze bezoekers deelden het massaal.",
+        author: "Organisatie",
+        role: "Festival in de Randstad",
+      },
+    ],
     anchorSections: [
       {
         id: "festivals",
         title: "Festivals",
         paragraphs: [
-          "Podium, publiek en sfeer. Beelden die de beleving van uw festival overbrengen en geschikt zijn voor social media en aftermovies.",
+          "Podium, publiek en sfeer. Beelden die de beleving van je festival overbrengen en geschikt zijn voor social media en aftermovies.",
         ],
       },
       {
@@ -248,16 +295,16 @@ export const branches: BranchConfig[] = [
     navLabel: "Gala's en feesten",
     seoTitle: "Fotografie en videografie voor gala's en feesten",
     seoDescription:
-      "Fotografie en videografie voor gala's, feesten en studentenverenigingen. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Fotografie en videografie voor gala's, feesten en studentenverenigingen. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor gala's en feesten",
     heroSubtitle:
       "Elegante reportage en video voor gala's, studentenverenigingen en feesten. Van photobooth tot dansvloer.",
     definition:
-      "Second Shot Media levert fotografie en videografie voor gala's, feesten en studentenverenigingen. Wij leggen de sfeer op de dansvloer en bij de photobooth vast. Gevestigd in Utrecht, actief door heel Nederland.",
+      "Second Shot Media levert fotografie en videografie voor gala's, feesten en studentenverenigingen. Wij leggen de sfeer op de dansvloer en bij de photobooth vast.",
     introTitle: "Stijlvolle beelden van jullie gala",
     introParagraphs: [
       "Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer. Wij leggen deze elementen vast op een manier die zowel chic als spontaan is, in foto of video.",
-      "Wij raden voor fotografie 3 uur coverage aan: de eerste anderhalf uur bij een photobooth, de laatste anderhalf uur op de dansvloer.",
+      "Wij raden voor fotografie 3 uur coverage aan: de eerste anderhalf uur bij een photobooth, de laatste anderhalf uur op de dansvloer. Het resultaat: almanak-klare beelden en content voor je socials.",
     ],
     photoTitle: "Galafotografie",
     photoParagraphs: [
@@ -265,7 +312,7 @@ export const branches: BranchConfig[] = [
     ],
     videoTitle: "Gala- en feestvideo",
     videoParagraphs: [
-      "Aftermovies en sfeervideo's van uw gala of feest, geschikt voor social media en interne communicatie van uw vereniging.",
+      "Aftermovies en sfeervideo's van je gala of feest, geschikt voor social media en interne communicatie van je vereniging.",
     ],
     whyTitle: "Waarom Second Shot Media voor gala's",
     whyParagraphs: [
@@ -278,6 +325,19 @@ export const branches: BranchConfig[] = [
       "Oplevering: beelden voor socials en archief",
     ],
     galleryDirs: ["students"],
+    pricingHint: {
+      title: "Gala fotografie pakket",
+      description:
+        "Indicatief vanaf €450 voor 3 uur coverage (1,5 uur photobooth + 1,5 uur dansvloer). Video en combipakketten op maat.",
+    },
+    testimonials: [
+      {
+        quote:
+          "Onze almanak en socials zagen er top door. De fotograaf wist precies waar hij moest zijn op de dansvloer.",
+        author: "Bestuur",
+        role: "Studievereniging DSK Utrecht",
+      },
+    ],
     logos: [
       { src: "/logos/dsk.png", alt: "Studievereniging DSK Utrecht" },
       { src: "/logos/ufostam.png", alt: "Studentenscouting U.F.O.-Stam" },

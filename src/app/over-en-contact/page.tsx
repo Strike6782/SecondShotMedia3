@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { Hero } from "@/components/layout/Hero";
 import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { FaqSection } from "@/components/seo/FaqSection";
@@ -12,9 +13,9 @@ import { CONTACT_EMAIL, CONTACT_LINKEDIN, KVK } from "@/lib/site";
 import { Mail } from "lucide-react";
 
 export const metadata = buildPageMetadata({
-  title: "Over Second Shot Media | Contact",
+  title: "Over en contact",
   description:
-    "Content studio voor fotografie en videografie, opgericht door Ivan Balkenende. Gevestigd in Utrecht, actief door heel Nederland.",
+    "Contact met Second Shot Media: content agency voor fotografie en videografie. Oprichter Ivan Balkenende, team in Utrecht, opdrachten door heel Nederland. Vraag een offerte aan.",
   path: "/over-en-contact/",
 });
 
@@ -30,7 +31,7 @@ export default function OverEnContactPage() {
 
       <Hero
         title="Over Second Shot Media"
-        subtitle="Content studio voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland."
+        subtitle="Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland."
         ctaLink="/over-en-contact/#contact"
         align="center"
         className="min-h-[40vh]"
@@ -46,13 +47,15 @@ export default function OverEnContactPage() {
               <h2 className="text-3xl font-bold">Over Second Shot Media</h2>
               <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
                 <p>
-                  Second Shot Media levert fotografie én videografie voor leisure en events. Wij zijn gevestigd in
-                  Utrecht en werken aan projecten door heel Nederland. Voor opdrachten zetten wij een poule van freelance fotografen en videografen in.
+                  Second Shot Media is een content agency voor fotografie en videografie op leisure en events.
+                  Vanuit Utrecht werken wij aan projecten door heel Nederland met een poule van freelance fotografen en videografen.
                 </p>
-                  
+                <p className="text-foreground font-medium italic">
+                  Elk bijzonder moment verdient een tweede kans om te schitteren — dat is waar onze naam staat voor.
+                </p>
               </div>
               <Button variant="outline" asChild>
-                <Link href="/werken-bij/">werken bij</Link>
+                <Link href="/werken-bij/">Werken bij</Link>
               </Button>
             </div>
 
@@ -63,7 +66,7 @@ export default function OverEnContactPage() {
                   Ivan Balkenende is de oprichter van Second Shot Media. Met meer dan zes jaar ervaring en ruim 220 events
                   op zijn naam weet hij als geen ander hoe je energie en sfeer vastlegt. Naast zijn werk bij Second Shot Media
                   is Ivan ook nog student Informatica aan de Universiteit Utrecht. Second Shot Media begon als freelance klusjes,
-                  maar is nu uitgegroeid tot een volwaardige team met foto- en videografen, designers en content creators.
+                  maar is nu uitgegroeid tot een volwaardig team met foto- en videografen, designers en content creators.
                 </p>
               </div>
             </div>
@@ -97,25 +100,25 @@ export default function OverEnContactPage() {
         </div>
 
         <div id="contact" className="scroll-mt-24">
-          <div className="grid gap-8 bg-muted/30 p-8 rounded-2xl border border-border/50 max-w-2xl mx-auto text-center">
-            <div className="space-y-4">
+          <div className="grid gap-8 bg-muted/30 p-8 rounded-2xl border border-border/50 max-w-3xl mx-auto">
+            <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold">Contact</h2>
               <p className="text-muted-foreground text-lg">
-                Neem contact op via e-mail voor beschikbaarheid en een offerte op maat.
+                Vul het formulier voor beschikbaarheid en een offerte op maat, of mail direct.
               </p>
             </div>
 
-            <div className="max-w-sm mx-auto w-full">
-              <Button size="lg" className="w-full text-lg h-14" asChild>
-                <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center justify-center gap-3">
-                  <Mail className="h-6 w-6" />
-                  <span>{CONTACT_EMAIL}</span>
-                </a>
-              </Button>
-            </div>
+            <ContactForm />
 
-            <div className="pt-6 border-t text-sm text-muted-foreground space-y-1">
-              <p className="font-semibold text-foreground">Second Shot Media</p>
+            <div className="pt-6 border-t text-sm text-muted-foreground space-y-1 text-center">
+              <p>
+                Direct mailen:{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline flex items-center justify-center gap-2 mt-2">
+                  <Mail className="h-4 w-4" />
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
+              <p className="font-semibold text-foreground mt-4">Second Shot Media</p>
               <p>Gevestigd in Utrecht</p>
               <p>
                 <a href={CONTACT_LINKEDIN} className="hover:text-primary" target="_blank" rel="noopener noreferrer">

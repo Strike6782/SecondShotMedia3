@@ -7,6 +7,8 @@ import { DefinitionBlock } from "@/components/seo/DefinitionBlock";
 import { ClientLogoGrid } from "@/components/seo/ClientLogoGrid";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
+import { PricingHintSection } from "@/components/seo/PricingHintSection";
+import { TestimonialsSection } from "@/components/seo/TestimonialsSection";
 import type { BranchConfig } from "@/lib/branches";
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { getLeisureReels } from "@/lib/reels";
@@ -65,6 +67,14 @@ export async function BranchPage({ branch }: BranchPageProps) {
                 <ClientLogoGrid logos={branch.logos} />
               </div>
             )}
+
+            {/* Testimonials */}
+            {branch.testimonials && branch.testimonials.length > 0 && (
+              <TestimonialsSection items={branch.testimonials} />
+            )}
+
+            {/* Pricing indication */}
+            {branch.pricingHint && <PricingHintSection hint={branch.pricingHint} />}
 
             {/* Anchor subsections (festivals, club, etc.) */}
             {branch.anchorSections?.map((section) => (

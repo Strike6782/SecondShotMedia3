@@ -10,7 +10,7 @@ import { werkenBijContent } from "@/lib/page-content";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
-  title: "Werken bij Second Shot Media | Freelance fotograaf en videograaf",
+  title: "Werken bij",
   description:
     "Freelance samenwerken als fotograaf of videograaf bij Second Shot Media. Projectmatig meewerken door heel Nederland. Gevestigd in Utrecht.",
   path: "/werken-bij/",

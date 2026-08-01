@@ -20,3 +20,14 @@ export type BranchVideo = {
   subtitle?: string;
   type?: "youtube" | "vimeo";
 };
+
+export type BranchTestimonial = {
+  quote: string;
+  author: string;
+  role?: string;
+};
+
+export type BranchPricingHint = {
+  title: string;
+  description: string;
+};

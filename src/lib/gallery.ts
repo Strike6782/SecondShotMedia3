@@ -3,6 +3,7 @@ import path from "path";
 
 import sizeOf from "image-size";
 
+import { buildGalleryAlt } from "@/lib/gallery-alt";
 import { shuffleImages } from "@/lib/shuffle";
 
 export interface ImageFile {
@@ -22,10 +23,24 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
 
   const fileNames = fs.readdirSync(galleryDirectory);
 
+  // Prefer WebP when both JPEG and WebP exist for the same image base name.
+  const webpBases = new Set(
+    fileNames
+      .filter((fileName) => path.extname(fileName).toLowerCase() === ".webp")
+      .map((fileName) => path.parse(fileName).name)
+  );
+
   const images = fileNames
     .filter((fileName) => {
       const ext = path.extname(fileName).toLowerCase();
-      return [".jpg", ".jpeg", ".png", ".webp", ".avif"].includes(ext);
+      if (![".jpg", ".jpeg", ".png", ".webp", ".avif"].includes(ext)) {
+        return false;
+      }
+      const base = path.parse(fileName).name;
+      if (ext === ".jpg" || ext === ".jpeg") {
+        return !webpBases.has(base);
+      }
+      return true;
     })
     .map((fileName) => {
       const fullPath = path.join(galleryDirectory, fileName);
@@ -43,15 +58,13 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
         console.error(`Error reading image dimensions for ${fileName}:`, err);
       }
 
-      // Create a readable alt text from filename: "festival-utrecht-2024.jpg" -> "Festival Utrecht 2024"
-      const nameWithoutExt = path.parse(fileName).name;
-      const alt = nameWithoutExt.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
+      const alt = buildGalleryAlt(fileName, directory);
 
       return {
         src: `/gallery/${directory}/${fileName}`,
         width,
         height,
-        alt: alt,
+        alt,
       };
     });
 

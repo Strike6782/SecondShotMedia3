@@ -34,7 +34,7 @@ function GalleryImage({
   linkTarget?: string;
   onImageClick?: (src: string) => void;
 }) {
-  const isPriority = index < 10;
+  const isPriority = index < 3;
   const isClickable = !linkTarget && Boolean(onImageClick);
 
   const imageContent = (

@@ -1,10 +1,16 @@
 import { branches } from "@/lib/branches";
 import type { BreadcrumbItem, FaqItem } from "@/lib/types";
 import {
+  BUSINESS_CITY,
+  BUSINESS_COUNTRY,
+  BUSINESS_GEO,
+  BUSINESS_POSTAL_CODE,
+  BUSINESS_STREET,
   CONTACT_EMAIL,
   CONTACT_INSTAGRAM,
   CONTACT_LINKEDIN,
   FOUNDING_YEAR,
+  SITE_LOGO,
   SITE_NAME,
   SITE_URL,
 } from "@/lib/site";
@@ -33,18 +39,27 @@ export function buildGlobalSchemaGraph() {
         "@id": ORG_ID,
         name: SITE_NAME,
         url: SITE_URL,
-        logo: `${SITE_URL}/og-image.jpg`,
+        image: SITE_LOGO,
+        logo: SITE_LOGO,
         description:
-          "Content studio voor fotografie en videografie, gevestigd in Utrecht, actief door heel Nederland.",
+          "Content agency voor fotografie en videografie, gevestigd in Utrecht, actief door heel Nederland.",
         foundingDate: FOUNDING_YEAR,
         founder: { "@type": "Person", "@id": PERSON_ID, name: "Ivan Balkenende" },
         email: CONTACT_EMAIL,
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Utrecht",
+          streetAddress: BUSINESS_STREET,
+          postalCode: BUSINESS_POSTAL_CODE,
+          addressLocality: BUSINESS_CITY,
           addressRegion: "Utrecht",
-          addressCountry: "NL",
+          addressCountry: BUSINESS_COUNTRY,
         },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: BUSINESS_GEO.latitude,
+          longitude: BUSINESS_GEO.longitude,
+        },
+        priceRange: "€€",
         areaServed: { "@type": "Country", name: "Nederland" },
         sameAs: [CONTACT_INSTAGRAM, CONTACT_LINKEDIN],
         hasOfferCatalog: {

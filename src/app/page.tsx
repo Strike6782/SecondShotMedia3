@@ -13,9 +13,9 @@ import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { homeContent } from "@/lib/page-content";
 
 export const metadata = buildPageMetadata({
-  title: "Fotografie en videografie content studio | Gevestigd in Utrecht",
+  title: "Fotografie en videografie Content Agency | Utrecht",
   description:
-    "Content studio gevestigd in Utrecht. Fotografie en videografie voor leisure en events, actief door heel Nederland.",
+    "Second Shot Media: content agency voor fotografie en videografie. Leisure, events, gala's en zakelijke evenementen. 220+ events, één aanspreekpunt voor foto en video.",
   path: "/",
 });
 
@@ -64,7 +64,7 @@ export default async function Home() {
             Second Shot <span className="text-primary">Media</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-zinc-300 sm:text-2xl font-light">
-            Content studio voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
+            Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button size="lg" className="text-lg px-8" asChild>
@@ -87,7 +87,7 @@ export default async function Home() {
             </h2>
             <div className="prose dark:prose-invert text-muted-foreground text-lg space-y-6">
               <p>
-                Welkom bij Second Shot Media. Wij leveren fotografie en videografie
+                Welkom bij Second Shot Media. Wij zijn een content agency voor fotografie en videografie
                 voor leisure en events door heel Nederland. We werken met een vaste poule van getrainde en ervaren
                 fotografen en videografen en kunnen dus op elk moment op een event aanwezig zijn.
               </p>
@@ -96,13 +96,16 @@ export default async function Home() {
                 bedrijfsfeest: wij vangen energie en sfeer vast met één aanspreekpunt voor al uw beeldmateriaal.
               </p>
               <p>
-                De oprichter van Second Shot Media is Ivan Balkenende. Hij is al 6 jaar actief in de fotografie en 
-                videografie en heeft op vele evenementen zijn diensten geleverd. Nu is iets wat klein begon uitgegroeid
-                tot een volwaardige team met foto- en videografen, designers en content creators.
+                De oprichter van Second Shot Media is Ivan Balkenende. Hij is al 6 jaar actief in de fotografie en
+                videografie en heeft op vele evenementen zijn diensten geleverd. Wat klein begon is uitgegroeid
+                tot een volwaardig team met foto- en videografen, designers en content creators.
+              </p>
+              <p className="text-foreground font-medium italic">
+                Elk bijzonder moment verdient een tweede kans om te schitteren — dat is waar onze naam staat voor.
               </p>
               <p>
-                Wij zijn gevestigd in Utrecht en werken aan projecten door heel Nederland. 
-                We zijn actief in de vrijetijds/leisure branche, zakelijke evenementen, muziekevenementen en feesten.
+                Wij zijn actief in de leisure branche, zakelijke evenementen, muziekevenementen en feesten
+                door heel Nederland.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -121,7 +124,7 @@ export default async function Home() {
           <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted">
             <Image
               src="/images/Ivan-Secondshotmedia-event.jpg"
-              alt="Second Shot Media"
+              alt="Ivan Balkenende fotografeert een event voor Second Shot Media"
               fill
               className="object-cover"
               priority
@@ -199,7 +202,7 @@ export default async function Home() {
       </section>
 
       <section className="py-24 px-4 container max-w-screen-md mx-auto text-center space-y-8">
-        <h2 className="text-3xl md:text-4xl font-bold">Klaar om je project vast te leggen?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Klaar om uw project vast te leggen?</h2>
         <p className="text-muted-foreground text-lg">Vraag een vrijblijvende offerte aan.</p>
         <Button size="lg" className="w-full sm:w-auto px-12" asChild>
           <Link href="/over-en-contact/" prefetch={false}>

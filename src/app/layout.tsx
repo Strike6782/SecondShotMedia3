@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: `%s | ${SITE_NAME}`,
-    default: `${SITE_NAME} | Content studio voor fotografie en videografie`,
+    default: `${SITE_NAME} | Content Agency voor fotografie en videografie`,
   },
   description:
-    "Content studio gevestigd in Utrecht. Fotografie en videografie voor leisure en events, actief door heel Nederland.",
+    "Content Agency in Utrecht. Fotografie en videografie voor leisure en events, actief door heel Nederland.",
   openGraph: {
     siteName: SITE_NAME,
     locale: "nl_NL",

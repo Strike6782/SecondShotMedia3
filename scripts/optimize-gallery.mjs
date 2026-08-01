@@ -74,20 +74,30 @@ function toOutputFileName(sourceFileName) {
 }
 
 /**
- * Resizes one source image and writes an optimized JPEG to the public album.
+ * Resizes one source image and writes optimized JPEG and WebP to the public album.
  */
 async function optimizeImage(sourcePath, outputPath) {
+  const pipeline = sharp(sourcePath).rotate().resize({
+    width: MAX_WIDTH,
+    withoutEnlargement: true,
+  });
+
+  await pipeline
+    .jpeg({
+      quality: JPEG_QUALITY,
+      mozjpeg: true,
+    })
+    .toFile(outputPath);
+
+  const webpPath = outputPath.replace(/\.jpg$/i, ".webp");
   await sharp(sourcePath)
     .rotate()
     .resize({
       width: MAX_WIDTH,
       withoutEnlargement: true,
     })
-    .jpeg({
-      quality: JPEG_QUALITY,
-      mozjpeg: true,
-    })
-    .toFile(outputPath);
+    .webp({ quality: JPEG_QUALITY })
+    .toFile(webpPath);
 }
 
 /**

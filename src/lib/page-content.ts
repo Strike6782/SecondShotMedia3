@@ -1,14 +1,14 @@
 import type { FaqItem } from "@/lib/types";
-import { STUDIO_DEFINITION } from "@/lib/site";
+import { AGENCY_DEFINITION } from "@/lib/site";
 
 // Homepage, over/contact, and werken-bij content (non-branch pages).
 export const homeContent = {
-  definition: STUDIO_DEFINITION,
+  definition: AGENCY_DEFINITION,
   faqs: [
     {
       question: "Wat is Second Shot Media?",
       answer:
-        "Second Shot Media is een content studio voor fotografie en videografie, gevestigd in Utrecht. Wij leveren beide diensten onder één dak voor leisure en events.",
+        "Second Shot Media is een content agency voor fotografie en videografie in Utrecht. Wij leveren beide diensten onder één dak voor leisure en events door heel Nederland.",
     },
     {
       question: "Leveren jullie zowel fotografie als videografie?",
@@ -17,7 +17,7 @@ export const homeContent = {
     },
     {
       question: "Waar zijn jullie actief?",
-      answer: "Wij zijn actief door heel Nederland. Wij zijn gevestigd in Utrecht.",
+      answer: "Wij werken aan opdrachten door heel Nederland. Ons team is gevestigd in Utrecht.",
     },
     {
       question: "In welke branches zijn jullie gespecialiseerd?",
@@ -34,7 +34,7 @@ export const homeContent = {
 
 export const overContactContent = {
   definition:
-    "Second Shot Media is een content studio voor fotografie en videografie, opgericht door Ivan Balkenende. Wij zijn gevestigd in Utrecht en werken aan projecten door heel Nederland.",
+    "Second Shot Media is een content agency opgericht door Ivan Balkenende. Vanuit Utrecht leveren wij fotografie en videografie voor leisure en events door heel Nederland.",
   faqs: [
     {
       question: "Waar is Second Shot Media gevestigd?",
@@ -42,7 +42,8 @@ export const overContactContent = {
     },
     {
       question: "Hoe neem ik contact op?",
-      answer: "U kunt ons bereiken via ivan@secondshotmedia.nl.",
+      answer:
+        "Via het contactformulier op deze pagina of per e-mail op ivan@secondshotmedia.nl. Wij reageren doorgaans binnen één werkdag.",
     },
     {
       question: "Wie is Ivan Balkenende?",
@@ -83,7 +84,7 @@ export const werkenBijContent = {
 };
 
 export function getCityDefinition(cityName: string): string {
-  return `Second Shot Media is een content studio voor fotografie en videografie, gevestigd in Utrecht en actief in ${cityName} en door heel Nederland.`;
+  return `Second Shot Media is een content agency in Utrecht en actief in ${cityName} en door heel Nederland voor fotografie en videografie op leisure en events.`;
 }
 
 export function getCityFaqs(cityName: string): FaqItem[] {
@@ -98,7 +99,7 @@ export function getCityFaqs(cityName: string): FaqItem[] {
     },
     {
       question: "Hoe vraag ik een offerte aan?",
-      answer: "Neem contact op via ivan@secondshotmedia.nl voor beschikbaarheid en een offerte op maat.",
+      answer: "Neem contact op via het formulier op over-en-contact of via ivan@secondshotmedia.nl voor beschikbaarheid en een offerte op maat.",
     },
   ];
 }

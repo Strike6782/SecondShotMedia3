@@ -4,12 +4,14 @@ import Image from "next/image";
 import { ArrowRight, Building2, GraduationCap, Music2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/components/gallery/Gallery";
+import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { homeContent } from "@/lib/page-content";
+import { getLeisureReels } from "@/lib/reels";
 import { AGENCY_DEFINITION } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
@@ -37,6 +39,9 @@ const portfolioMap: Record<string, { label: string; dirs: string[]; href: string
 };
 
 export default async function Home() {
+  // Load a handful of leisure reels for the homepage video section.
+  const featuredReels = (await getLeisureReels()).slice(0, 4);
+
   const portfolioSections = await Promise.all(
     branches.map(async (branch) => {
       const config = portfolioMap[branch.slug];
@@ -71,7 +76,7 @@ export default async function Home() {
               <Link href="/over-en-contact/">Neem direct contact op</Link>
             </Button>
             <Button size="lg" variant="outlineOnDark" className="text-lg px-8" asChild>
-              <Link href="/#mini-portfolio">Bekijk werk</Link>
+              <Link href="/#video-portfolio">Bekijk werk</Link>
             </Button>
           </div>
         </div>
@@ -168,6 +173,47 @@ export default async function Home() {
             <h3 className="font-semibold text-lg">Oplevering</h3>
             <p className="text-muted-foreground">Nabewerking en levering in de formaten die u nodig heeft.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="video-portfolio" className="bg-muted/30 py-16 md:py-24 px-4">
+        <div className="container max-w-screen-2xl space-y-16">
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Video werk</h2>
+            <p className="text-muted-foreground text-lg">
+              Aftermovies, reportages en shortform reels uit ons portfolio.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Aftermovies &amp; reportages</h3>
+            <VideoGrid videos={homeContent.featuredVideos} />
+          </div>
+
+          {featuredReels.length > 0 && (
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold">Shortform reels</h3>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {featuredReels.map((reel) => (
+                  <div
+                    key={reel.videoSrc}
+                    className="rounded-xl border bg-card p-4 flex flex-col gap-3"
+                  >
+                    <div className="aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
+                      <video
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="h-full w-full object-cover"
+                        src={reel.videoSrc}
+                      />
+                    </div>
+                    <h4 className="font-semibold text-sm leading-tight">{reel.title}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

@@ -5,7 +5,6 @@ import { Hero } from "@/components/layout/Hero";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
-import { branches } from "@/lib/branches";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { overContactContent } from "@/lib/page-content";
 import { CONTACT_EMAIL, CONTACT_LINKEDIN, KVK } from "@/lib/site";
@@ -76,22 +75,6 @@ export default function OverEnContactPage() {
               className="object-cover"
               priority
             />
-          </div>
-        </div>
-
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold">Waar wij voor werken</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {branches.map((branch) => (
-              <Link
-                key={branch.slug}
-                href={branch.href}
-                className="rounded-2xl border border-border/50 bg-muted/30 p-6 hover:border-primary/50 transition-colors"
-              >
-                <h3 className="font-bold text-lg">{branch.title}</h3>
-                <p className="text-muted-foreground mt-2 text-sm">Fotografie en videografie</p>
-              </Link>
-            ))}
           </div>
         </div>
 

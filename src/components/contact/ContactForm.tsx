@@ -10,6 +10,16 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
+// Opens the user's mail client without navigating the current page away (avoids blank tabs).
+function openMailto(href: string) {
+  const link = document.createElement("a");
+  link.href = href;
+  link.rel = "noopener noreferrer";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
 // Contact form for static hosting via Web3Forms; falls back to mailto when no access key is set.
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -40,7 +50,9 @@ export function ContactForm() {
         "",
         message,
       ].join("\n");
-      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Offerte aanvraag Second Shot Media")}&body=${encodeURIComponent(body)}`;
+      openMailto(
+        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Offerte aanvraag Second Shot Media")}&body=${encodeURIComponent(body)}`
+      );
       setStatus("idle");
       return;
     }

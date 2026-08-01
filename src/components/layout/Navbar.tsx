@@ -14,9 +14,23 @@ const staticNavItems = [
   { name: "Werken bij", href: "/werken-bij/" },
 ];
 
+const CONTACT_FORM_HREF = "/over-en-contact/#contact";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  // On the about page, scroll directly to the contact form instead of reloading.
+  const handleOfferteClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const isOnContactPage =
+      pathname === "/over-en-contact" || pathname === "/over-en-contact/";
+
+    if (isOnContactPage) {
+      event.preventDefault();
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
 
   const navItems = [
     ...branches.map((b) => ({ name: b.navLabel, href: b.href })),
@@ -49,7 +63,9 @@ export function Navbar() {
             </Link>
           ))}
           <Button size="sm" asChild>
-            <Link href="/over-en-contact/">Offerte aanvragen</Link>
+            <Link href={CONTACT_FORM_HREF} onClick={handleOfferteClick}>
+              Offerte aanvragen
+            </Link>
           </Button>
         </div>
 
@@ -86,7 +102,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button className="mt-2" asChild>
-                <Link href="/over-en-contact/" onClick={() => setIsOpen(false)}>
+                <Link href={CONTACT_FORM_HREF} onClick={handleOfferteClick}>
                   Offerte aanvragen
                 </Link>
               </Button>

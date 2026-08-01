@@ -160,11 +160,11 @@ export const branches: BranchConfig[] = [
       "Fotografie en videografie voor festivals, muziekevenementen en nightlife. Aftermovies en sfeerreportages. Content agency in Utrecht, actief door heel Nederland.",
     heroTitle: "Fotografie en videografie voor evenementen",
     heroSubtitle:
-      "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen. Wij leveren fotografie en videografie voor evenementen, festivals en nightlife — van sfeerreportages en podiumfotografie tot aftermovies.",
+      "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen. Wij leveren fotografie en videografie voor evenementen, festivals en nightlife, van sfeerreportages en podiumfotografie tot aftermovies.",
     introTitle: "Events die tot leven komen",
     introParagraphs: [
       "Van festivals tot clubnights: wij vangen de energie, sfeer en spontane momenten. Wij leveren fotografie én videografie, van reportage tot aftermovie.",
-      "Foto's worden doorgaans binnen 48 uur opgeleverd — ideaal om de buzz van uw event op social media te houden terwijl het nog hot is.",
+      "Foto's worden doorgaans binnen 48 uur opgeleverd, ideaal om de buzz van uw event op social media te houden terwijl het nog hot is.",
     ],
     photoTitle: "Eventfotografie",
     photoParagraphs: [

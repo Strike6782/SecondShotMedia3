@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-// Province names in steden.txt — not actual cities.
+// Province names in steden.txt, not actual cities.
 const REGION_HEADERS = new Set([
   "Gelderland",
   "Noord-Holland",

@@ -14,63 +14,51 @@
       "note": "Montage"
     },
     {
-      "id": "2PJ1USshijg",
-      "title": "Theme Park Science - Opening nieuw pretpark",
-      "type": "youtube",
-      "branches": ["leisure"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk samen met een 2e videograaf"
-    },
-    {
       "id": "YEwFVZvs5fg",
       "title": "Halloween Vlaardingen",
       "type": "youtube",
       "branches": ["leisure"],
-      "featuredOnHomepage": true,
-      "note": "Montage. Camerawerk samen met 2e videograaf"
+      "featuredOnHomepage": true
     },
     {
       "id": "TpxAfFtekbw",
       "title": "Halloween Rosmalen",
       "type": "youtube",
-      "branches": ["leisure"],
-      "note": "Camerawerk en montage"
+      "branches": ["leisure"]
     },
     {
       "id": "oO7nvcQF46I",
       "title": "Closing Ceremony Denmark Jamboree",
       "type": "youtube",
       "branches": ["evenementen"],
-      "note": "Montage. Camerawerk in klein team"
+      "featuredOnHomepage": true
     },
     {
       "id": "5esMJo_vDig",
       "title": "World Scout Jamboree - Zuid-Korea",
       "type": "youtube",
       "branches": ["evenementen"],
-      "featuredOnHomepage": true,
-      "note": "Montage. Camerawerk door klein team"
+      "featuredOnHomepage": true
     },
     {
       "id": "i6PQazSqF7Y",
       "title": "DJ JSPHN op ADE Amsterdam",
       "type": "youtube",
       "branches": ["evenementen"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk en montage"
+      "featuredOnHomepage": true
     },
     {
       "id": "ZmouX-TW4OQ",
       "title": "Opening Ceremony Denmark Jamboree",
       "type": "youtube",
-      "branches": ["evenementen"],
-      "note": "Montage. Camerawerk in klein team"
+      "branches": ["evenementen"]
     },
     {
       "id": "edf_QUweTEw",
       "title": "Rythm Roulette - Verjaardagsfestival",
       "type": "youtube",
       "branches": ["evenementen"],
+      "featuredOnHomepage": true,
       "note": "Camerawerk en montage"
     },
     {
@@ -93,6 +81,7 @@
       "title": "Recap activiteitenweek middelbare school",
       "type": "youtube",
       "branches": ["zakelijke-evenementen"],
+      "featuredOnHomepage": true,
       "note": "Camerawerk en montage"
     },
     {
@@ -104,9 +93,18 @@
     },
     {
       "id": "ozqoEutIqKQ",
-      "title": "Gala Studentenvereniging",
+      "title": "Gala Studentenvereniging 2024",
       "type": "youtube",
       "branches": ["gala-en-feest"],
+      "featuredOnHomepage": true,
+      "note": "Camerawerk en montage"
+    },
+    {
+      "id": "Z5kD0EZ3_-s",
+      "title": "Gala Studentenvereniging 2025",
+      "type": "youtube",
+      "branches": ["gala-en-feest"],
+      "featuredOnHomepage": true,
       "note": "Camerawerk en montage"
     },
     {
@@ -116,6 +114,7 @@
       "branches": ["gala-en-feest"],
       "note": "Camerawerk en montage"
     }
+
   ],
   "reels": [
     {

@@ -15,7 +15,7 @@ export const cityContentMap: Record<string, CityContent> = {
   amsterdam: {
     slug: "amsterdam",
     highlight:
-      "In Amsterdam filmen en fotograferen wij festivals, club nights en grote events — onder andere tijdens ADE.",
+      "In Amsterdam filmen en fotograferen wij festivals, club nights en grote events, onder andere tijdens ADE.",
     localProof: "Ervaring met ADE Amsterdam, nightlife en festivalreportages in de metropool.",
   },
   rotterdam: {

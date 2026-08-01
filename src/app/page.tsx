@@ -221,8 +221,8 @@ export default async function Home() {
 
       <section id="mini-portfolio" className="container py-16 md:py-24 px-4 max-w-screen-2xl space-y-16">
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Een selectie van recent werk</h2>
-          <p className="text-muted-foreground text-lg">Foto-impressies per specialisatie.</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Foto portfolio</h2>
+          <p className="text-muted-foreground text-lg">Per specialisatie</p>
         </div>
         <div className="space-y-12">
           {portfolioSections.map(({ label, href, images }) => (

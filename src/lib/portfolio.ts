@@ -52,9 +52,10 @@ const PORTFOLIO_PATH = path.join(process.cwd(), "content", "portfolio.json");
 
 let cachedPortfolio: PortfolioData | null = null;
 
-/** Loads and caches the portfolio manifest from content/portfolio.json. */
+/** Loads the portfolio manifest from content/portfolio.json. */
 export function getPortfolio(): PortfolioData {
-  if (cachedPortfolio) {
+  // In development, always re-read so portfolio.json edits show up without a server restart.
+  if (cachedPortfolio && process.env.NODE_ENV === "production") {
     return cachedPortfolio;
   }
 
@@ -69,7 +70,10 @@ export function getPortfolio(): PortfolioData {
     throw new Error("portfolio.json must contain youtubeVideos, reels, and galleries arrays.");
   }
 
-  cachedPortfolio = parsed;
+  if (process.env.NODE_ENV === "production") {
+    cachedPortfolio = parsed;
+  }
+
   return parsed;
 }
 

@@ -68,7 +68,7 @@ export default function WerkgebiedPage() {
           <Link href="/over-en-contact/#contact" className="text-primary hover:underline">
             Neem contact op
           </Link>
-          — wij werken door heel Nederland.
+          , wij werken door heel Nederland.
         </p>
       </section>
     </div>

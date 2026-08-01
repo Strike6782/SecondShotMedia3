@@ -4,7 +4,7 @@ type TestimonialsSectionProps = {
   items: BranchTestimonial[];
 };
 
-// Client quotes section — only rendered when real testimonials are configured.
+// Client quotes section, only rendered when real testimonials are configured.
 export function TestimonialsSection({ items }: TestimonialsSectionProps) {
   if (!items.length) {
     return null;
@@ -22,7 +22,7 @@ export function TestimonialsSection({ items }: TestimonialsSectionProps) {
             <p className="text-muted-foreground italic">&quot;{item.quote}&quot;</p>
             <footer className="text-sm">
               <span className="font-semibold text-foreground">{item.author}</span>
-              {item.role && <span className="text-muted-foreground"> — {item.role}</span>}
+              {item.role && <span className="text-muted-foreground">, {item.role}</span>}
             </footer>
           </blockquote>
         ))}

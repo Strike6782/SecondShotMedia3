@@ -67,12 +67,12 @@ export async function BranchPage({ branch }: BranchPageProps) {
               </div>
             )}
 
-            {/* Testimonials — only when real quotes are configured */}
+            {/* Testimonials, only when real quotes are configured */}
             {branch.testimonials && branch.testimonials.length > 0 && (
               <TestimonialsSection items={branch.testimonials} />
             )}
 
-            {/* Pricing indication — hydrated client-side to limit archive capture */}
+            {/* Pricing indication, hydrated client-side to limit archive capture */}
             <PricingHintSection branchSlug={branch.slug} />
 
             {/* Anchor subsections (festivals, club, etc.) */}

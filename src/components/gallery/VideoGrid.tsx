@@ -36,7 +36,7 @@ export function VideoGrid({ videos, className }: VideoGridProps) {
         return (
           <motion.div
             key={video.id + index}
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

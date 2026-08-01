@@ -3,6 +3,7 @@ import type { BranchVideo, FaqItem } from "@/lib/types";
 // Homepage, over/contact, and werken-bij content (non-branch pages).
 export const homeContent = {
   // Curated video highlights shown on the homepage (from branch portfolios).
+  // Optional `note` per video, e.g. "Alleen montage" or "Alleen camerawerk".
   featuredVideos: [
     { title: "Theme Park Science Trailer", id: "CJl2UsZ-_Tc", type: "youtube" },
     { title: "Halloween Vlaardingen", id: "YEwFVZvs5fg", type: "youtube" },

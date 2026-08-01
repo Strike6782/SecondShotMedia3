@@ -209,6 +209,9 @@ export default async function Home() {
                       />
                     </div>
                     <h4 className="font-semibold text-sm leading-tight">{reel.title}</h4>
+                    {reel.note && (
+                      <p className="text-sm text-muted-foreground">{reel.note}</p>
+                    )}
                   </div>
                 ))}
               </div>

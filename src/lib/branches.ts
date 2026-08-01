@@ -1,10 +1,4 @@
-import type {
-  BranchLogo,
-  BranchPricingHint,
-  BranchTestimonial,
-  BranchVideo,
-  FaqItem,
-} from "@/lib/types";
+import type { BranchLogo, BranchVideo, FaqItem } from "@/lib/types";
 
 // Branch configuration: content, SEO, galleries, and branch-specific options.
 export type BranchConfig = {
@@ -29,8 +23,6 @@ export type BranchConfig = {
   faqs: FaqItem[];
   logos?: BranchLogo[];
   videos?: BranchVideo[];
-  testimonials?: BranchTestimonial[];
-  pricingHint?: BranchPricingHint;
   showReels?: boolean;
   showFpvSection?: boolean;
   anchorSections?: { id: string; title: string; paragraphs: string[] }[];
@@ -74,19 +66,6 @@ export const branches: BranchConfig[] = [
     galleryDirs: ["theme-parks"],
     showReels: true,
     showFpvSection: true,
-    pricingHint: {
-      title: "Structureel leisure pakket",
-      description:
-        "Indicatief vanaf €1.250 per opnamedag (één dag per twee maanden inclusief montage van reels). Exacte prijs hangt af van locatie, scope en gewenste output.",
-    },
-    testimonials: [
-      {
-        quote:
-          "De reels passen echt bij ons park en worden consistent opgeleverd. Wij zien direct meer bereik op TikTok en Instagram.",
-        author: "Marketingteam",
-        role: "Attractiepark in Overijssel",
-      },
-    ],
     videos: [
       { title: "Theme Park Science Trailer", id: "CJl2UsZ-_Tc", type: "youtube" },
       { title: "Theme Park Science - Opening nieuw pretpark", id: "2PJ1USshijg", type: "youtube" },
@@ -158,19 +137,6 @@ export const branches: BranchConfig[] = [
       "Oplevering: bestanden klaar voor uw kanalen",
     ],
     galleryDirs: ["corporate"],
-    pricingHint: {
-      title: "Zakelijke eventreportage",
-      description:
-        "Indicatief vanaf €550 voor een halve dag fotografie of videografie. Volledige dag en combipakketten op maat — vraag een offerte voor uw event.",
-    },
-    testimonials: [
-      {
-        quote:
-          "Professionele beelden die we direct konden gebruiken voor LinkedIn en ons persbericht. Soepele samenwerking en snelle oplevering.",
-        author: "Eventmanager",
-        role: "Universiteit Utrecht",
-      },
-    ],
     faqs: [
       {
         question: "Welke zakelijke events dekken jullie?",
@@ -225,19 +191,6 @@ export const branches: BranchConfig[] = [
       "Oplevering: foto's binnen 48 uur, video volgens afspraak",
     ],
     galleryDirs: ["events", "club"],
-    pricingHint: {
-      title: "Eventreportage",
-      description:
-        "Indicatief vanaf €475 voor een halve dag fotografie op uw festival of feest. Aftermovies en combipakketten op maat — vraag een offerte.",
-    },
-    testimonials: [
-      {
-        quote:
-          "De foto's waren binnen 48 uur online en de aftermovie gaf precies de sfeer van ons festival. Onze bezoekers deelden het massaal.",
-        author: "Organisatie",
-        role: "Festival in de Randstad",
-      },
-    ],
     anchorSections: [
       {
         id: "festivals",
@@ -316,19 +269,6 @@ export const branches: BranchConfig[] = [
       "Oplevering: beelden voor socials en archief",
     ],
     galleryDirs: ["students"],
-    pricingHint: {
-      title: "Gala fotografie pakket",
-      description:
-        "Indicatief vanaf €450 voor 3 uur coverage (1,5 uur photobooth + 1,5 uur dansvloer). Video en combipakketten op maat.",
-    },
-    testimonials: [
-      {
-        quote:
-          "Onze almanak en socials zagen er top door. De fotograaf wist precies waar hij moest zijn op de dansvloer.",
-        author: "Bestuur",
-        role: "Studievereniging DSK Utrecht",
-      },
-    ],
     logos: [
       { src: "/logos/dsk.png", alt: "Studievereniging DSK Utrecht" },
       { src: "/logos/ufostam.png", alt: "Studentenscouting U.F.O.-Stam" },

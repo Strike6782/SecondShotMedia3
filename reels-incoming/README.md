@@ -20,10 +20,12 @@ Het script comprimeert de video's voor webgebruik, zet ze in `public/reels/` en 
 [
   {
     "file": "halloween-vlaardingen.mp4",
-    "title": "Halloween Vlaardingen"
+    "title": "Halloween Vlaardingen",
+    "note": "Alleen montage"
   }
 ]
 ```
 
 - `file` — bestandsnaam in deze map (exact zoals op schijf)
 - `title` — titel in het showcase-overzicht (verplicht vóór `npm run reels:optimize`)
+- `note` — optionele opmerking onder de titel, bijv. "Alleen montage" of "Alleen camerawerk"

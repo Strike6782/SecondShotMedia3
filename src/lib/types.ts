@@ -17,17 +17,10 @@ export type BranchLogo = {
 export type BranchVideo = {
   id: string;
   title: string;
+  /** Optional credit or context, e.g. "Alleen montage" or "Alleen camerawerk". */
+  note?: string;
+  /** @deprecated Use `note` instead. Kept for backwards compatibility. */
   subtitle?: string;
   type?: "youtube" | "vimeo";
 };
 
-export type BranchTestimonial = {
-  quote: string;
-  author: string;
-  role?: string;
-};
-
-export type BranchPricingHint = {
-  title: string;
-  description: string;
-};

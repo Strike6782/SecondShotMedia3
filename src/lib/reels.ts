@@ -6,6 +6,8 @@ import { shuffleImages } from "@/lib/shuffle";
 export interface LeisureReel {
   title: string;
   videoSrc: string;
+  /** Optional credit or context, e.g. "Alleen montage" or "Alleen camerawerk". */
+  note?: string;
 }
 
 /**

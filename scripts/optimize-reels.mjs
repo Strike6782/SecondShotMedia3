@@ -141,7 +141,7 @@ async function main() {
   let totalOutputBytes = 0;
 
   for (const entry of manifest) {
-    const { file, title } = entry;
+    const { file, title, note } = entry;
 
     if (!file) {
       throw new Error("Elk item in reels.json moet een 'file' hebben.");
@@ -170,6 +170,7 @@ async function main() {
     published.push({
       title,
       videoSrc: `/reels/${outputFileName}`,
+      ...(note?.trim() ? { note: note.trim() } : {}),
     });
 
     console.log(

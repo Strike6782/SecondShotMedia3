@@ -1,4 +1,4 @@
-import type { BranchLogo, BranchVideo, FaqItem } from "@/lib/types";
+import type { BranchLogo, BranchTestimonial, BranchVideo, FaqItem } from "@/lib/types";
 
 // Branch configuration: content, SEO, galleries, and branch-specific options.
 export type BranchConfig = {
@@ -23,6 +23,7 @@ export type BranchConfig = {
   faqs: FaqItem[];
   logos?: BranchLogo[];
   videos?: BranchVideo[];
+  testimonials?: BranchTestimonial[];
   showReels?: boolean;
   showFpvSection?: boolean;
   anchorSections?: { id: string; title: string; paragraphs: string[] }[];

@@ -24,3 +24,9 @@ export type BranchVideo = {
   type?: "youtube" | "vimeo";
 };
 
+export type BranchTestimonial = {
+  quote: string;
+  author: string;
+  role?: string;
+};
+

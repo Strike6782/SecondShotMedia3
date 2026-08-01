@@ -11,7 +11,7 @@
       "type": "youtube",
       "branches": ["leisure"],
       "featuredOnHomepage": false,
-      "note": "Alleen montage"
+      "note": "Montage"
     },
     {
       "id": "2PJ1USshijg",
@@ -27,14 +27,21 @@
       "type": "youtube",
       "branches": ["leisure"],
       "featuredOnHomepage": true,
-      "note": "Camerawerk samen met 2e videograaf, montage door Second Shot Media"
+      "note": "Montage. Camerawerk samen met 2e videograaf"
     },
     {
       "id": "TpxAfFtekbw",
       "title": "Halloween Rosmalen",
       "type": "youtube",
       "branches": ["leisure"],
-      "note": "Camerawerk en montage door Second Shot Media"
+      "note": "Camerawerk en montage"
+    },
+    {
+      "id": "oO7nvcQF46I",
+      "title": "Closing Ceremony Denmark Jamboree",
+      "type": "youtube",
+      "branches": ["evenementen"],
+      "note": "Montage. Camerawerk in klein team"
     },
     {
       "id": "5esMJo_vDig",
@@ -42,45 +49,72 @@
       "type": "youtube",
       "branches": ["evenementen"],
       "featuredOnHomepage": true,
-      "note": "Camerawerk door klein team, montage door Second Shot Media"
+      "note": "Montage. Camerawerk door klein team"
     },
     {
       "id": "i6PQazSqF7Y",
       "title": "DJ JSPHN op ADE Amsterdam",
       "type": "youtube",
       "branches": ["evenementen"],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": true,
+      "note": "Camerawerk en montage"
+    },
+    {
+      "id": "ZmouX-TW4OQ",
+      "title": "Opening Ceremony Denmark Jamboree",
+      "type": "youtube",
+      "branches": ["evenementen"],
+      "note": "Montage. Camerawerk in klein team"
     },
     {
       "id": "edf_QUweTEw",
       "title": "Rythm Roulette - Verjaardagsfestival",
       "type": "youtube",
-      "branches": ["evenementen"]
+      "branches": ["evenementen"],
+      "note": "Camerawerk en montage"
     },
     {
       "id": "39ALWRfNXAk",
       "title": "World Scout Moot",
       "type": "youtube",
-      "branches": ["evenementen"]
+      "branches": ["evenementen"],
+      "note": "Camerawerk en montage"
     },
     {
-      "id": "Z5kD0EZ3_-s",
-      "title": "Gala Studentenvereniging",
+      "id": "K5gq4xvPur8",
+      "title": "Jubileum Diner DakAccent",
       "type": "youtube",
-      "branches": ["gala-en-feest"],
-      "featuredOnHomepage": true
+      "branches": ["zakelijke-evenementen"],
+      "featuredOnHomepage": true,
+      "note": "Camerawerk"
+    },
+    {
+      "id": "KuTGphB3CDw",
+      "title": "Recap activiteitenweek middelbare school",
+      "type": "youtube",
+      "branches": ["zakelijke-evenementen"],
+      "note": "Camerawerk en montage"
+    },
+    {
+      "id": "9MI7c_85K7A",
+      "title": "Recap Nico Campus",
+      "type": "youtube",
+      "branches": ["zakelijke-evenementen"],
+      "note": "Camerawerk en montage"
     },
     {
       "id": "ozqoEutIqKQ",
       "title": "Gala Studentenvereniging",
       "type": "youtube",
-      "branches": ["gala-en-feest"]
+      "branches": ["gala-en-feest"],
+      "note": "Camerawerk en montage"
     },
     {
       "id": "Vc3ixtqtDFs",
       "title": "Introductievideo Studentenvereniging",
       "type": "youtube",
-      "branches": ["gala-en-feest"]
+      "branches": ["gala-en-feest"],
+      "note": "Camerawerk en montage"
     }
   ],
   "reels": [

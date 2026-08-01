@@ -83,10 +83,9 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 text-center space-y-2">
-        <p className="font-semibold text-foreground">Bedankt voor uw bericht!</p>
-        <p className="text-muted-foreground text-sm">
-          Wij reageren doorgaans binnen één werkdag op {CONTACT_EMAIL}.
+      <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 text-center">
+        <p className="font-semibold text-foreground">
+          Bedankt voor je bericht, we zullen spoedig contact met je opnemen
         </p>
       </div>
     );

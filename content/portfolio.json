@@ -11,7 +11,7 @@
       "type": "youtube",
       "branches": ["leisure"],
       "featuredOnHomepage": false,
-      "note": "Montage"
+      "note": "Alleen montage"
     },
     {
       "id": "YEwFVZvs5fg",
@@ -45,7 +45,7 @@
       "title": "DJ JSPHN op ADE Amsterdam",
       "type": "youtube",
       "branches": ["evenementen"],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": false
     },
     {
       "id": "ZmouX-TW4OQ",
@@ -58,61 +58,54 @@
       "title": "Rythm Roulette - Verjaardagsfestival",
       "type": "youtube",
       "branches": ["evenementen"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk en montage"
+      "featuredOnHomepage": true
     },
     {
       "id": "39ALWRfNXAk",
       "title": "World Scout Moot",
       "type": "youtube",
-      "branches": ["evenementen"],
-      "note": "Camerawerk en montage"
+      "branches": ["evenementen"]
     },
     {
       "id": "K5gq4xvPur8",
       "title": "Jubileum Diner DakAccent",
       "type": "youtube",
       "branches": ["zakelijke-evenementen"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk"
+      "featuredOnHomepage": false,
+      "note": "Alleen camerawerk. Montage extern"
     },
     {
       "id": "KuTGphB3CDw",
       "title": "Recap activiteitenweek middelbare school",
       "type": "youtube",
       "branches": ["zakelijke-evenementen"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk en montage"
+      "featuredOnHomepage": true
     },
     {
       "id": "9MI7c_85K7A",
       "title": "Recap Nico Campus",
       "type": "youtube",
-      "branches": ["zakelijke-evenementen"],
-      "note": "Camerawerk en montage"
+      "branches": ["zakelijke-evenementen"]
     },
     {
       "id": "ozqoEutIqKQ",
       "title": "Gala Studentenvereniging 2024",
       "type": "youtube",
       "branches": ["gala-en-feest"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk en montage"
+      "featuredOnHomepage": false
     },
     {
       "id": "Z5kD0EZ3_-s",
       "title": "Gala Studentenvereniging 2025",
       "type": "youtube",
       "branches": ["gala-en-feest"],
-      "featuredOnHomepage": true,
-      "note": "Camerawerk en montage"
+      "featuredOnHomepage": true
     },
     {
       "id": "Vc3ixtqtDFs",
       "title": "Introductievideo Studentenvereniging",
       "type": "youtube",
-      "branches": ["gala-en-feest"],
-      "note": "Camerawerk en montage"
+      "branches": ["gala-en-feest"]
     }
 
   ],
@@ -153,8 +146,8 @@
       "branches": ["leisure"]
     },
     {
-      "file": "Terugblik event short V2.mp4",
-      "title": "Halloween Rosmalen Promo",
+      "file": "OpstartenSungaiDrone.mp4",
+      "title": "Opstart Wildwaterbaan",
       "branches": ["leisure"]
     }
   ],

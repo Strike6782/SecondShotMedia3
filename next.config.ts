@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  // Pin workspace root so builds don't pick up unrelated lockfiles outside this repo.
+  turbopack: {
+    root: path.join(__dirname),
+  },
   trailingSlash: true,
   async redirects() {
     return [

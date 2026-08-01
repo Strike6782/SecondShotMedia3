@@ -1,0 +1,7 @@
+# Exclude staging assets and local tooling from Vercel uploads (smaller deploys).
+gallery-incoming
+reels-incoming
+code
+.next
+out
+node_modules

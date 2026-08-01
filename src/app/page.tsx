@@ -11,6 +11,11 @@ import { branches } from "@/lib/branches";
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { homeContent } from "@/lib/page-content";
+import {
+  getFeaturedYoutubeVideos,
+  getGalleryIdsForBranch,
+  getPortfolioSettings,
+} from "@/lib/portfolio";
 import { getLeisureReels } from "@/lib/reels";
 import { AGENCY_DEFINITION } from "@/lib/site";
 
@@ -31,27 +36,21 @@ const branchIcons: Record<string, ReactNode> = {
   "gala-en-feest": <GraduationCap className="h-10 w-10 mb-4 text-primary" />,
 };
 
-const portfolioMap: Record<string, { label: string; dirs: string[]; href: string }> = {
-  leisure: { label: "Leisure", dirs: ["theme-parks"], href: "/leisure/" },
-  "zakelijke-evenementen": { label: "Zakelijke evenementen", dirs: ["corporate"], href: "/zakelijke-evenementen/" },
-  evenementen: { label: "Events", dirs: ["events", "club"], href: "/evenementen/" },
-  "gala-en-feest": { label: "Gala's en feesten", dirs: ["students"], href: "/gala-en-feest/" },
-};
+const portfolioSettings = getPortfolioSettings();
 
 export default async function Home() {
-  // Load a handful of leisure reels for the homepage video section.
-  const featuredReels = (await getLeisureReels()).slice(0, 4);
+  const featuredReels = (await getLeisureReels()).slice(0, portfolioSettings.homepageFeaturedReelCount);
+  const featuredVideos = getFeaturedYoutubeVideos();
 
   const portfolioSections = await Promise.all(
     branches.map(async (branch) => {
-      const config = portfolioMap[branch.slug];
       const images = (
-        await Promise.all(config.dirs.map((d) => getImagesFromDirectory(d)))
+        await Promise.all(getGalleryIdsForBranch(branch.slug).map((d) => getImagesFromDirectory(d)))
       )
         .flat()
         .filter(isHorizontal)
-        .slice(0, 4);
-      return { branch, images, ...config };
+        .slice(0, portfolioSettings.homepageGalleryPerBranch);
+      return { branch, images, href: branch.href, label: branch.navLabel };
     })
   );
 
@@ -187,7 +186,7 @@ export default async function Home() {
 
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Aftermovies &amp; reportages</h3>
-            <VideoGrid videos={homeContent.featuredVideos} />
+            <VideoGrid videos={featuredVideos} />
           </div>
 
           {featuredReels.length > 0 && (

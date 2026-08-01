@@ -10,6 +10,7 @@ import { PricingHintSection } from "@/components/seo/PricingHintSection";
 import { TestimonialsSection } from "@/components/seo/TestimonialsSection";
 import type { BranchConfig } from "@/lib/branches";
 import { getImagesFromDirectory } from "@/lib/gallery";
+import { getGalleryIdsForBranch, getYoutubeVideosForBranch } from "@/lib/portfolio";
 import { getLeisureReels } from "@/lib/reels";
 import type { ImageFile } from "@/lib/gallery";
 
@@ -20,11 +21,12 @@ type BranchPageProps = {
 // Reusable branch page template: hero, services, portfolio, FAQ.
 export async function BranchPage({ branch }: BranchPageProps) {
   const galleryImages: ImageFile[] = [];
-  for (const dir of branch.galleryDirs) {
+  for (const dir of getGalleryIdsForBranch(branch.slug)) {
     const images = await getImagesFromDirectory(dir);
     galleryImages.push(...images);
   }
 
+  const videos = getYoutubeVideosForBranch(branch.slug);
   const reels = branch.showReels ? await getLeisureReels() : [];
   const breadcrumbs = [
     { name: "Home", href: "/" },
@@ -133,10 +135,10 @@ export async function BranchPage({ branch }: BranchPageProps) {
             )}
 
             {/* YouTube portfolio */}
-            {branch.videos && branch.videos.length > 0 && (
+            {videos.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Video portfolio</h3>
-                <VideoGrid videos={branch.videos} />
+                <VideoGrid videos={videos} />
               </div>
             )}
 

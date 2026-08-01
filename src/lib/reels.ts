@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import { shuffleImages } from "@/lib/shuffle";
-
 export interface LeisureReel {
   title: string;
   videoSrc: string;
@@ -12,6 +10,7 @@ export interface LeisureReel {
 
 /**
  * Loads published leisure reels from the generated manifest.
+ * Order matches content/portfolio.json (via npm run reels:optimize).
  */
 export async function getLeisureReels(): Promise<LeisureReel[]> {
   const manifestPath = path.join(process.cwd(), "content", "leisure-reels.json");
@@ -29,7 +28,5 @@ export async function getLeisureReels(): Promise<LeisureReel[]> {
     return [];
   }
 
-  return shuffleImages(
-    parsed.filter((reel) => reel.title && reel.videoSrc)
-  );
+  return parsed.filter((reel) => reel.title && reel.videoSrc);
 }

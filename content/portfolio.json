@@ -1,0 +1,204 @@
+{
+  "settings": {
+    "homepageFeaturedReelCount": 4,
+    "homepageGalleryPerBranch": 4,
+    "cityPageGalleryCount": 4
+  },
+  "youtubeVideos": [
+    {
+      "id": "CJl2UsZ-_Tc",
+      "title": "Theme Park Science Trailer",
+      "type": "youtube",
+      "branches": ["leisure"],
+      "featuredOnHomepage": false,
+      "note": "Alleen montage"
+    },
+    {
+      "id": "2PJ1USshijg",
+      "title": "Theme Park Science - Opening nieuw pretpark",
+      "type": "youtube",
+      "branches": ["leisure"],
+      "featuredOnHomepage": true,
+      "note": "Camerawerk samen met een 2e videograaf"
+    },
+    {
+      "id": "YEwFVZvs5fg",
+      "title": "Halloween Vlaardingen",
+      "type": "youtube",
+      "branches": ["leisure"],
+      "featuredOnHomepage": true,
+      "note": "Camerawerk samen met 2e videograaf, montage door Second Shot Media"
+    },
+    {
+      "id": "TpxAfFtekbw",
+      "title": "Halloween Rosmalen",
+      "type": "youtube",
+      "branches": ["leisure"],
+      "note": "Camerawerk en montage door Second Shot Media"
+    },
+    {
+      "id": "5esMJo_vDig",
+      "title": "World Scout Jamboree - Zuid-Korea",
+      "type": "youtube",
+      "branches": ["evenementen"],
+      "featuredOnHomepage": true,
+      "note": "Camerawerk door klein team, montage door Second Shot Media"
+    },
+    {
+      "id": "i6PQazSqF7Y",
+      "title": "DJ JSPHN op ADE Amsterdam",
+      "type": "youtube",
+      "branches": ["evenementen"],
+      "featuredOnHomepage": true
+    },
+    {
+      "id": "edf_QUweTEw",
+      "title": "Rythm Roulette - Verjaardagsfestival",
+      "type": "youtube",
+      "branches": ["evenementen"]
+    },
+    {
+      "id": "39ALWRfNXAk",
+      "title": "World Scout Moot",
+      "type": "youtube",
+      "branches": ["evenementen"]
+    },
+    {
+      "id": "Z5kD0EZ3_-s",
+      "title": "Gala Studentenvereniging",
+      "type": "youtube",
+      "branches": ["gala-en-feest"],
+      "featuredOnHomepage": true
+    },
+    {
+      "id": "ozqoEutIqKQ",
+      "title": "Gala Studentenvereniging",
+      "type": "youtube",
+      "branches": ["gala-en-feest"]
+    },
+    {
+      "id": "Vc3ixtqtDFs",
+      "title": "Introductievideo Studentenvereniging",
+      "type": "youtube",
+      "branches": ["gala-en-feest"]
+    }
+  ],
+  "reels": [
+    {
+      "file": "12 - Tea vertellen.mp4",
+      "title": "Scetch mascottes van Hellendoorn",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "19 - Top 3 spannendste attracties - sub.mp4",
+      "title": "Top 3 spannendste attracties uit Hellendoorn",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "26 - POV Ouders in een pretpark.mp4",
+      "title": "POV: Ouders in een pretpark",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "29 - Sneller van glijbaan - sub.mp4",
+      "title": "Challenge: Wie is sneller van glijbaan",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "64 - Formule X onride met persoon.mp4",
+      "title": "Formule X onride in Drievliet",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "halloween-vlaardingen.mp4",
+      "title": "Halloween Vlaardingen Promo",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "StoomCycloon.mp4",
+      "title": "StoomCycloon opening Drievliet",
+      "branches": ["leisure"]
+    },
+    {
+      "file": "Terugblik event short V2.mp4",
+      "title": "Halloween Rosmalen Promo",
+      "branches": ["leisure"]
+    }
+  ],
+  "galleries": [
+    {
+      "id": "theme-parks",
+      "albumContext": "Leisure attractiepark",
+      "branches": ["leisure"],
+      "cityPage": {
+        "title": "Leisure",
+        "href": "/leisure/"
+      }
+    },
+    {
+      "id": "corporate",
+      "albumContext": "Zakelijk event",
+      "branches": ["zakelijke-evenementen"],
+      "cityPage": {
+        "title": "Zakelijke evenementen",
+        "href": "/zakelijke-evenementen/"
+      }
+    },
+    {
+      "id": "events",
+      "albumContext": "Eventfotografie",
+      "branches": ["evenementen"],
+      "cityPage": {
+        "title": "Evenementen in {city}",
+        "href": "/evenementen/"
+      }
+    },
+    {
+      "id": "club",
+      "albumContext": "Nightlife reportage",
+      "branches": ["evenementen"]
+    },
+    {
+      "id": "students",
+      "albumContext": "Gala reportage",
+      "branches": ["gala-en-feest"],
+      "cityPage": {
+        "title": "Gala's en feesten",
+        "href": "/gala-en-feest/"
+      }
+    }
+  ],
+  "photoAltOverrides": {
+    "EP-1.jpg": "Attractiepark Efteling winterse sfeer",
+    "phl-met-olaf-39.jpg": "Pretpark fotografie",
+    "phl-met-olaf-47.jpg": "Pretpark fotografie",
+    "De-Vaste-Clique-IB-1.jpg": "Club nightlife fotografie dansvloer",
+    "De-Vaste-Clique-IB-2.jpg": "Nightlife event sfeerreportage",
+    "De-Vaste-Clique-IB-3.jpg": "Club event publiek en sfeer",
+    "De-Vaste-Clique-IB-5.jpg": "Nightlife fotografie dansvloer",
+    "De-Vaste-Clique-IB-17.jpg": "Club night energie op de dansvloer",
+    "De-Vaste-Clique-IB-22.jpg": "Nightlife event reportage",
+    "De-Vaste-Clique-IB-55.jpg": "Club sfeerbeeld publiek",
+    "De-Vaste-Clique-IB-81.jpg": "Nightlife fotografie low-light",
+    "best-of-breda---Second-Shot-Media-8.jpg": "Festival reportage",
+    "Efteling-Sneeuw---Second-Shot-Media-61.jpg": "Efteling winter attractie fotografie",
+    "Efteling-Sneeuw---Second-Shot-Media-67.jpg": "Efteling winterse themabeleving",
+    "Efteling-Sneeuw---Second-Shot-Media-57.jpg": "Attractiepark Efteling winter event",
+    "Efteling-Sneeuw---Second-Shot-Media-26.jpg": "Efteling sfeerbeeld winter",
+    "Efteling-Sneeuw---Second-Shot-Media-28.jpg": "Efteling attractie winter fotografie",
+    "Efteling-Sneeuw---Second-Shot-Media-69.jpg": "Efteling winter reportage",
+    "Thorpe-Park---Second-Shot-Media-3.jpg": "Thorpe Park attractiepark reportage",
+    "Thorpe-Park---Second-Shot-Media-4.jpg": "Thorpe Park leisure fotografie",
+    "Gala-Codex---Second-Shot-Media-14.jpg": "Gala Codex studentenvereniging reportage",
+    "Gala-USKO---Second-Shot-Media-123.jpg": "Gala USKO Utrecht dansvloer",
+    "Gala-USKO---Second-Shot-Media-69.jpg": "Gala USKO sfeerbeeld",
+    "Gala-USKO---Second-Shot-Media-211.jpg": "Gala USKO fotografie",
+    "Gala-Amersfoortse-Berg---Second-Shot-Media-66.jpg": "Gala Amersfoort reportage",
+    "DSK-Gala-2026---Second-Shot-Media-2.jpg": "DSK Utrecht gala fotografie",
+    "Nico-Campus-2026---Second-Shot-Media-140.jpg": "Zakelijk event Universiteit Utrecht",
+    "Cybersec---Second-Shot-Media-6.jpg": "Cybersecurity congres reportage",
+    "Koningsdag-Hof---Second-Shot-Media-20250426-20.jpg": "Koningsdag event fotografie",
+    "Hof-bevrijdingsdag-2026---Second-Shot-Media-47.jpg": "Bevrijdingsdag festival reportage",
+    "Hof-Dias-Latinos---Second-Shot-Media-20250704-37.jpg": "Latin festival sfeerreportage"
+  }
+}

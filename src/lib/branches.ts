@@ -1,6 +1,7 @@
-import type { BranchLogo, BranchTestimonial, BranchVideo, FaqItem } from "@/lib/types";
+import type { BranchLogo, BranchTestimonial, FaqItem } from "@/lib/types";
 
-// Branch configuration: content, SEO, galleries, and branch-specific options.
+// Branch configuration: marketing copy, SEO, and branch-specific page options.
+// Portfolio media (video's, foto-albums) staat in content/portfolio.json.
 export type BranchConfig = {
   slug: string;
   href: string;
@@ -19,10 +20,8 @@ export type BranchConfig = {
   whyTitle: string;
   whyParagraphs: string[];
   workflowSteps: string[];
-  galleryDirs: string[];
   faqs: FaqItem[];
   logos?: BranchLogo[];
-  videos?: BranchVideo[];
   testimonials?: BranchTestimonial[];
   showReels?: boolean;
   showFpvSection?: boolean;
@@ -64,13 +63,8 @@ export const branches: BranchConfig[] = [
       "Montage & optimalisatie: reels voor social kanalen",
       "Planning & plaatsing: consistente zichtbaarheid",
     ],
-    galleryDirs: ["theme-parks"],
     showReels: true,
     showFpvSection: true,
-    videos: [
-      { title: "Theme Park Science Trailer", id: "CJl2UsZ-_Tc", type: "youtube" },
-      { title: "Theme Park Science - Opening nieuw pretpark", id: "2PJ1USshijg", type: "youtube" },
-    ],
     logos: [
       { src: "/logos/hellendoorn.png", alt: "Avonturenpark Hellendoorn" },
       { src: "/logos/drievliet.png", alt: "Familiepark Drievliet" },
@@ -137,7 +131,6 @@ export const branches: BranchConfig[] = [
       "Nabewerking: selectie, kleur en montage",
       "Oplevering: bestanden klaar voor uw kanalen",
     ],
-    galleryDirs: ["corporate"],
     faqs: [
       {
         question: "Welke zakelijke events dekken jullie?",
@@ -191,7 +184,6 @@ export const branches: BranchConfig[] = [
       "Nabewerking: selectie, kleurcorrectie en montage",
       "Oplevering: foto's binnen 48 uur, video volgens afspraak",
     ],
-    galleryDirs: ["events", "club"],
     anchorSections: [
       {
         id: "festivals",
@@ -207,14 +199,6 @@ export const branches: BranchConfig[] = [
           "Low-light fotografie en video met focus op energie en sfeer op de dansvloer.",
         ],
       },
-    ],
-    videos: [
-      { title: "World Scout Jamboree - Zuid Korea", id: "5esMJo_vDig", type: "youtube" },
-      { title: "Halloween Vlaardingen", id: "YEwFVZvs5fg", type: "youtube" },
-      { title: "Halloween Rosmalen", id: "TpxAfFtekbw", type: "youtube" },
-      { title: "DJ JSPHN op ADE Amsterdam", id: "i6PQazSqF7Y", type: "youtube" },
-      { title: "Rythm Roulette - Verjaardagsfestival", id: "edf_QUweTEw", type: "youtube" },
-      { title: "World Scout Moot", id: "39ALWRfNXAk", type: "youtube" },
     ],
     faqs: [
       {
@@ -269,7 +253,6 @@ export const branches: BranchConfig[] = [
       "Nabewerking: selectie en montage",
       "Oplevering: beelden voor socials en archief",
     ],
-    galleryDirs: ["students"],
     logos: [
       { src: "/logos/dsk.png", alt: "Studievereniging DSK Utrecht" },
       { src: "/logos/ufostam.png", alt: "Studentenscouting U.F.O.-Stam" },
@@ -277,11 +260,6 @@ export const branches: BranchConfig[] = [
       { src: "/logos/vugs.webp", alt: "Vugs Utrecht" },
       { src: "/logos/aegee.jpg", alt: "AEGEE Utrecht" },
       { src: "/logos/ssn.png", alt: "Studenten Scouting Nederland" },
-    ],
-    videos: [
-      { title: "Gala Studentenvereniging", id: "Z5kD0EZ3_-s", type: "youtube" },
-      { title: "Gala Studentenvereniging", id: "ozqoEutIqKQ", type: "youtube" },
-      { title: "Introductievideo Studentenvereniging", id: "Vc3ixtqtDFs", type: "youtube" },
     ],
     faqs: [
       {

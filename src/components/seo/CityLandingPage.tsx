@@ -9,6 +9,7 @@ import { getCityContent } from "@/lib/cities-content";
 import { getImagesFromDirectory } from "@/lib/gallery";
 import { getCityPath } from "@/lib/cities";
 import { getCityDefinition, getCityFaqs } from "@/lib/page-content";
+import { getCityPageGalleries, getPortfolioSettings } from "@/lib/portfolio";
 
 type CityLandingPageProps = {
   cityName: string;
@@ -22,23 +23,21 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
   const faqs = getCityFaqs(cityName);
   const localContent = getCityContent(citySlug);
   const path = getCityPath(citySlug);
+  const { cityPageGalleryCount } = getPortfolioSettings();
 
-  const eventImages = (await getImagesFromDirectory("events")).filter(isHorizontal).slice(0, 4);
-  const corporateImages = (await getImagesFromDirectory("corporate")).filter(isHorizontal).slice(0, 4);
-  const themeParkImages = (await getImagesFromDirectory("theme-parks")).filter(isHorizontal).slice(0, 4);
-  const studentImages = (await getImagesFromDirectory("students")).filter(isHorizontal).slice(0, 4);
+  const gallerySections = await Promise.all(
+    getCityPageGalleries(cityName).map(async (section) => ({
+      ...section,
+      images: (await getImagesFromDirectory(section.id))
+        .filter(isHorizontal)
+        .slice(0, cityPageGalleryCount),
+    }))
+  );
 
   const breadcrumbs = [
     { name: "Home", href: "/" },
     { name: "Werkgebied", href: "/werkgebied/" },
     { name: cityName, href: path },
-  ];
-
-  const gallerySections = [
-    { title: `Evenementen in ${cityName}`, images: eventImages, href: "/evenementen/" },
-    { title: "Zakelijke evenementen", images: corporateImages, href: "/zakelijke-evenementen/" },
-    { title: "Leisure", images: themeParkImages, href: "/leisure/" },
-    { title: "Gala's en feesten", images: studentImages, href: "/gala-en-feest/" },
   ];
 
   return (

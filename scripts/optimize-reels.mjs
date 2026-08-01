@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 
 const incomingRoot = path.join(projectRoot, "reels-incoming");
-const manifestPath = path.join(incomingRoot, "reels.json");
+const portfolioPath = path.join(projectRoot, "content", "portfolio.json");
 const outputVideoDir = path.join(projectRoot, "public", "reels");
 const publishedManifestPath = path.join(projectRoot, "content", "leisure-reels.json");
 
@@ -114,26 +114,27 @@ async function optimizeReel(sourcePath, outputPath) {
 }
 
 /**
- * Reads and validates the incoming reels manifest.
+ * Reads reel entries from the central portfolio manifest.
  */
-function readIncomingManifest() {
-  if (!fs.existsSync(manifestPath)) {
-    throw new Error(`Manifest niet gevonden: ${manifestPath}`);
+function readPortfolioReels() {
+  if (!fs.existsSync(portfolioPath)) {
+    throw new Error(`Portfolio manifest niet gevonden: ${portfolioPath}`);
   }
 
-  const parsed = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  const portfolio = JSON.parse(fs.readFileSync(portfolioPath, "utf8"));
+  const reels = portfolio.reels;
 
-  if (!Array.isArray(parsed) || parsed.length === 0) {
-    throw new Error("reels.json moet een niet-lege array zijn.");
+  if (!Array.isArray(reels) || reels.length === 0) {
+    throw new Error("portfolio.json moet een niet-lege 'reels' array bevatten.");
   }
 
-  return parsed;
+  return reels;
 }
 
 async function main() {
-  console.log("Optimizing leisure reels from reels-incoming/ ...\n");
+  console.log("Optimizing leisure reels from content/portfolio.json ...\n");
 
-  const manifest = readIncomingManifest();
+  const manifest = readPortfolioReels();
   const removedCount = clearOutputDirectory();
 
   const published = [];
@@ -144,7 +145,7 @@ async function main() {
     const { file, title, note } = entry;
 
     if (!file) {
-      throw new Error("Elk item in reels.json moet een 'file' hebben.");
+      throw new Error("Elk reel-item in portfolio.json moet een 'file' hebben.");
     }
 
     if (!title?.trim()) {

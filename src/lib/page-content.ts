@@ -1,17 +1,8 @@
-import type { BranchVideo, FaqItem } from "@/lib/types";
+import type { FaqItem } from "@/lib/types";
 
 // Homepage, over/contact, and werken-bij content (non-branch pages).
+// Portfolio video's en foto's staan in content/portfolio.json.
 export const homeContent = {
-  // Curated video highlights shown on the homepage (from branch portfolios).
-  // Optional `note` per video, e.g. "Alleen montage" or "Alleen camerawerk".
-  featuredVideos: [
-    { title: "Theme Park Science Trailer", id: "CJl2UsZ-_Tc", type: "youtube" },
-    { title: "Halloween Vlaardingen", id: "YEwFVZvs5fg", type: "youtube" },
-    { title: "World Scout Jamboree - Zuid-Korea", id: "5esMJo_vDig", type: "youtube" },
-    { title: "Gala Studentenvereniging", id: "Z5kD0EZ3_-s", type: "youtube" },
-    { title: "DJ JSPHN op ADE Amsterdam", id: "i6PQazSqF7Y", type: "youtube" },
-    { title: "Theme Park Science - Opening nieuw pretpark", id: "2PJ1USshijg", type: "youtube" },
-  ] satisfies BranchVideo[],
   faqs: [
     {
       question: "Wat is Second Shot Media?",

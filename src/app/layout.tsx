@@ -41,8 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl">
+    // suppressHydrationWarning: dev overlay and browser extensions may mutate <html>/<body> before hydration.
+    <html lang="nl" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
         <div className="mx-auto w-full max-w-[2560px] flex flex-col min-h-screen">

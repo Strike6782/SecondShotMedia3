@@ -42,7 +42,7 @@ export const overContactContent = {
     {
       question: "Hoe neem ik contact op?",
       answer:
-        "Via het contactformulier op deze pagina of per e-mail op ivan@secondshotmedia.nl. Wij reageren doorgaans binnen één werkdag.",
+        "Stuur een e-mail naar ivan@secondshotmedia.nl. Wij reageren doorgaans binnen één werkdag.",
     },
     {
       question: "Wie is Ivan Balkenende?",
@@ -98,7 +98,8 @@ export function getCityFaqs(cityName: string): FaqItem[] {
     },
     {
       question: "Hoe vraag ik een offerte aan?",
-      answer: "Neem contact op via het formulier op over-en-contact of via ivan@secondshotmedia.nl voor beschikbaarheid en een offerte op maat.",
+      answer:
+        "Mail ivan@secondshotmedia.nl voor beschikbaarheid en een offerte op maat. Zie ook over-en-contact voor bedrijfsgegevens.",
     },
   ];
 }

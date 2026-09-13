@@ -8,29 +8,16 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { branches } from "@/lib/branches";
+import { OFFERTE_MAILTO } from "@/lib/site";
 
 const staticNavItems = [
   { name: "Over en contact", href: "/over-en-contact/" },
   { name: "Werken bij", href: "/werken-bij/" },
 ];
 
-const CONTACT_FORM_HREF = "/over-en-contact/#contact";
-
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
-  // On the about page, scroll directly to the contact form instead of reloading.
-  const handleOfferteClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const isOnContactPage =
-      pathname === "/over-en-contact" || pathname === "/over-en-contact/";
-
-    if (isOnContactPage) {
-      event.preventDefault();
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
-  };
 
   const navItems = [
     ...branches.map((b) => ({ name: b.navLabel, href: b.href })),
@@ -63,9 +50,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button size="sm" asChild>
-            <Link href={CONTACT_FORM_HREF} onClick={handleOfferteClick}>
-              Offerte aanvragen
-            </Link>
+            <a href={OFFERTE_MAILTO}>Offerte aanvragen</a>
           </Button>
         </div>
 
@@ -102,9 +87,9 @@ export function Navbar() {
                 </Link>
               ))}
               <Button className="mt-2" asChild>
-                <Link href={CONTACT_FORM_HREF} onClick={handleOfferteClick}>
+                <a href={OFFERTE_MAILTO} onClick={() => setIsOpen(false)}>
                   Offerte aanvragen
-                </Link>
+                </a>
               </Button>
             </div>
           </motion.div>

@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ContactForm } from "@/components/contact/ContactForm";
 import { Hero } from "@/components/layout/Hero";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { overContactContent } from "@/lib/page-content";
-import { CONTACT_EMAIL, CONTACT_LINKEDIN, KVK } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
 import { Mail } from "lucide-react";
 
 export const metadata = buildPageMetadata({
@@ -83,21 +82,20 @@ export default function OverEnContactPage() {
             <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold">Contact</h2>
               <p className="text-muted-foreground text-lg">
-                Vul het formulier voor beschikbaarheid en een offerte op maat, of mail direct.
+                Mail ons voor beschikbaarheid en een offerte op maat. Vermeld type event, datum, locatie en gewenste output
+                (foto, video, reels).
               </p>
             </div>
 
-            <ContactForm />
+            <Button size="lg" className="w-full sm:w-auto mx-auto flex" asChild>
+              <a href={OFFERTE_MAILTO}>
+                <Mail className="h-5 w-5 mr-2" />
+                Mail {CONTACT_EMAIL}
+              </a>
+            </Button>
 
             <div className="pt-6 border-t text-sm text-muted-foreground space-y-1 text-center">
-              <p>
-                Direct mailen:{" "}
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline flex items-center justify-center gap-2 mt-2">
-                  <Mail className="h-4 w-4" />
-                  {CONTACT_EMAIL}
-                </a>
-              </p>
-              <p className="font-semibold text-foreground mt-4">Second Shot Media</p>
+              <p className="font-semibold text-foreground">Second Shot Media</p>
               <p>Gevestigd in Utrecht</p>
               <p>
                 <a href={CONTACT_LINKEDIN} className="hover:text-primary" target="_blank" rel="noopener noreferrer">

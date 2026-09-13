@@ -9,13 +9,7 @@ Second Shot Media is een Next.js 16 App Router site, geoptimaliseerd voor hostin
 3. **Build settings** (defaults zijn goed):
    - Build command: `npm run build`
    - Output: standaard Next.js (geen static export)
-4. **Environment variables** (Production + Preview):
-
-   | Variable | Beschrijving |
-   |----------|--------------|
-   | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Access key van [Web3Forms](https://web3forms.com) voor het contactformulier |
-
-5. Deploy. Na de eerste succesvolle build krijg je een `*.vercel.app` preview-URL.
+4. Deploy. Na de eerste succesvolle build krijg je een `*.vercel.app` preview-URL.
 
 ## Custom domain (secondshotmedia.nl)
 
@@ -30,7 +24,6 @@ Second Shot Media is een Next.js 16 App Router site, geoptimaliseerd voor hostin
 
 ```bash
 npm install
-cp .env.example .env.local   # vul Web3Forms key in
 npm run dev
 ```
 
@@ -45,7 +38,7 @@ npx vercel --prod                # production deploy
 
 ## Na deploy controleren
 
-- [ ] `/over-en-contact/` — contactformulier verstuurt (Web3Forms)
+- [ ] `/over-en-contact/` — mailto-link en contactgegevens zichtbaar
 - [ ] `/sitemap.xml` en `/robots.txt` bereikbaar
 - [ ] Oude URL's redirecten (zie `next.config.ts`)
 - [ ] `https://secondshotmedia.nl/` canonical en OG-tags correct

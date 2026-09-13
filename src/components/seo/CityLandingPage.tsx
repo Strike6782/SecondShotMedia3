@@ -10,6 +10,7 @@ import { getImagesFromDirectory } from "@/lib/gallery";
 import { getCityPath } from "@/lib/cities";
 import { getCityDefinition, getCityFaqs } from "@/lib/page-content";
 import { getCityPageGalleries, getPortfolioSettings } from "@/lib/portfolio";
+import { OFFERTE_MAILTO } from "@/lib/site";
 
 type CityLandingPageProps = {
   cityName: string;
@@ -98,7 +99,7 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
 
         <div className="text-center">
           <Button size="lg" asChild>
-            <Link href="/over-en-contact/#contact">Vraag een offerte voor {cityName}</Link>
+            <a href={OFFERTE_MAILTO}>Vraag een offerte voor {cityName}</a>
           </Button>
         </div>
 

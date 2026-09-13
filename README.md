@@ -8,19 +8,10 @@ Website voor [Second Shot Media](https://secondshotmedia.nl) — content agency 
 
 ```bash
 npm install
-cp .env.example .env.local
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-### Environment variables
-
-| Variable | Vereist | Gebruik |
-|----------|---------|---------|
-| `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Aanbevolen | Contactformulier op `/over-en-contact/` |
-
-Zonder Web3Forms key opent het formulier een mailto-fallback.
 
 ## Scripts
 
@@ -37,8 +28,7 @@ Zonder Web3Forms key opent het formulier een mailto-fallback.
 De site is bedoeld voor **Vercel** (Git-integratie, automatische builds).
 
 1. Import deze repo in Vercel.
-2. Zet `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` in Project → Environment Variables.
-3. Koppel domein `secondshotmedia.nl`.
+2. Koppel domein `secondshotmedia.nl`.
 
 Zie [DEPLOYMENT.md](./DEPLOYMENT.md) voor DNS, CLI en checklist.
 

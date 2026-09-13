@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { getPricingHint, type PricingHint } from "@/lib/pricing-hints";
+import { OFFERTE_MAILTO } from "@/lib/site";
 
 type PricingHintSectionProps = {
   branchSlug: string;
@@ -26,7 +26,7 @@ export function PricingHintSection({ branchSlug }: PricingHintSectionProps) {
       <h3 className="text-xl font-bold">{hint.title}</h3>
       <p className="text-muted-foreground">{hint.description}</p>
       <Button variant="outline" asChild>
-        <Link href="/over-en-contact/#contact">Vraag een offerte aan</Link>
+        <a href={OFFERTE_MAILTO}>Vraag een offerte aan</a>
       </Button>
     </div>
   );

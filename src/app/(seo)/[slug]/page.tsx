@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cityName = city?.name ?? citySlug ?? slug;
 
   return buildPageMetadata({
-    title: `Fotografie en videografie in ${cityName}`,
-    description: `Fotografie en videografie in ${cityName} door Second Shot Media. Content agency in Utrecht, actief in ${cityName} en door heel Nederland.`,
+    title: `Eventfotograaf en videograaf in ${cityName}`,
+    description: `Foto en video voor beurzen, congressen, corporate events en festivals in ${cityName}. Eerste selectie dezelfde dag, album binnen 24 uur. Gevestigd in Utrecht.`,
     path: getCityPath(citySlug ?? slug),
   });
 }

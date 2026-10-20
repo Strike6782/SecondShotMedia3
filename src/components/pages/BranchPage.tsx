@@ -1,205 +1,114 @@
-import Image from "next/image";
 import { Gallery } from "@/components/gallery/Gallery";
 import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { Hero } from "@/components/layout/Hero";
-import { ServiceSidebar } from "@/components/layout/ServiceSidebar";
+import { CtaBand } from "@/components/sections/CtaBand";
+import { EventDay } from "@/components/sections/EventDay";
 import { ClientLogoGrid } from "@/components/seo/ClientLogoGrid";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
-import { PricingHintSection } from "@/components/seo/PricingHintSection";
 import { TestimonialsSection } from "@/components/seo/TestimonialsSection";
 import type { BranchConfig } from "@/lib/branches";
-import { getImagesFromDirectory } from "@/lib/gallery";
-import { getGalleryIdsForBranch, getYoutubeVideosForBranch } from "@/lib/portfolio";
-import { getLeisureReels } from "@/lib/reels";
-import type { ImageFile } from "@/lib/gallery";
+import { getGalleryImagesForBranch } from "@/lib/gallery";
+import { eventDay } from "@/lib/page-content";
+import { getYoutubeVideosForBranch } from "@/lib/portfolio";
 
 type BranchPageProps = {
   branch: BranchConfig;
 };
 
-// Reusable branch page template: hero, services, portfolio, FAQ.
+// Event type page: what you get, recent work, how the day runs, questions.
 export async function BranchPage({ branch }: BranchPageProps) {
-  const galleryImages: ImageFile[] = [];
-  for (const dir of getGalleryIdsForBranch(branch.slug)) {
-    const images = await getImagesFromDirectory(dir);
-    galleryImages.push(...images);
-  }
-
+  const allImages = await getGalleryImagesForBranch(branch.slug);
+  // Fill complete rows: 4 photos in two columns, otherwise three columns with whole rows only.
+  const columns = allImages.length === 4 ? 2 : 3;
+  const galleryImages =
+    allImages.length > columns ? allImages.slice(0, allImages.length - (allImages.length % columns)) : allImages;
   const videos = getYoutubeVideosForBranch(branch.slug);
-  const reels = branch.showReels ? await getLeisureReels() : [];
   const breadcrumbs = [
     { name: "Home", href: "/" },
     { name: branch.title, href: branch.href },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <PageStructuredData breadcrumbs={breadcrumbs} faqs={branch.faqs} />
 
       <Hero
         title={branch.heroTitle}
         subtitle={branch.heroSubtitle}
-        align="center"
-        className="min-h-[40vh]"
-        showSecondaryBtn={false}
-        showCta={false}
+        image={branch.heroImage}
+        imageAlt={branch.heroImageAlt}
+        secondary={{ label: "Zo werken wij", href: "/werkwijze/" }}
       />
 
-      <section className="container py-16 px-6 md:px-12 max-w-screen-2xl">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2 space-y-12">
-            {/* Intro */}
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold">{branch.introTitle}</h2>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                {branch.introParagraphs.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-            </div>
-
-            {/* Client logos */}
-            {branch.logos && branch.logos.length > 0 && (
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Referenties</h3>
-                <ClientLogoGrid logos={branch.logos} />
-              </div>
-            )}
-
-            {/* Testimonials, only when real quotes are configured */}
-            {branch.testimonials && branch.testimonials.length > 0 && (
-              <TestimonialsSection items={branch.testimonials} />
-            )}
-
-            {/* Pricing indication, hydrated client-side to limit archive capture */}
-            <PricingHintSection branchSlug={branch.slug} />
-
-            {/* Anchor subsections (festivals, club, etc.) */}
-            {branch.anchorSections?.map((section) => (
-              <div key={section.id} id={section.id} className="space-y-4 scroll-mt-24">
-                <h3 className="text-2xl font-bold">{section.title}</h3>
-                <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                  {section.paragraphs.map((p) => (
-                    <p key={p.slice(0, 40)}>{p}</p>
-                  ))}
-                </div>
-              </div>
+      <section className="container max-w-screen-2xl py-20 md:py-28">
+        <div className="grid gap-10 md:grid-cols-12">
+          <h2 className="display text-4xl sm:text-5xl md:col-span-5">{branch.introTitle}</h2>
+          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7">
+            {branch.introParagraphs.map((p) => (
+              <p key={p.slice(0, 40)}>{p}</p>
             ))}
+          </div>
+        </div>
 
-            {/* Photography */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">{branch.photoTitle}</h3>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                {branch.photoParagraphs.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-            </div>
+        <div className="mt-20 grid gap-10 md:grid-cols-12">
+          <h2 className="heading text-3xl md:col-span-5">Wat u ontvangt</h2>
+          <ul className="grid gap-x-10 sm:grid-cols-2 md:col-span-7">
+            {branch.deliverables.map((item) => (
+              <li key={item} className="border-t border-border py-4 text-lg">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            {/* Video */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">{branch.videoTitle}</h3>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                {branch.videoParagraphs.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-            </div>
+        {branch.logos && branch.logos.length > 0 && (
+          <div className="mt-20 space-y-6">
+            <h2 className="heading text-3xl">Opdrachtgevers</h2>
+            <ClientLogoGrid logos={branch.logos} />
+          </div>
+        )}
 
-            {/* Leisure reels showcase */}
-            {branch.showReels && (
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Reels showcase</h3>
-                {reels.length === 0 ? (
-                  <p className="text-muted-foreground">Reels worden binnenkort toegevoegd.</p>
-                ) : (
-                  <div className="grid gap-6 md:grid-cols-2">
-                    {reels.map((reel) => (
-                      <div
-                        key={reel.videoSrc}
-                        className="rounded-xl border bg-card p-4 flex flex-col gap-3"
-                      >
-                        <div className="aspect-[9/16] w-full overflow-hidden rounded-lg bg-muted">
-                          <video controls playsInline className="h-full w-full object-cover" src={reel.videoSrc} />
-                        </div>
-                        <h4 className="font-semibold">{reel.title}</h4>
-                        {reel.note && (
-                          <p className="text-sm text-muted-foreground">{reel.note}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+        {branch.testimonials && branch.testimonials.length > 0 && (
+          <div className="mt-20">
+            <TestimonialsSection items={branch.testimonials} />
+          </div>
+        )}
+      </section>
 
-            {/* YouTube portfolio */}
+      {galleryImages.length > 0 && (
+        <section className="bg-muted py-20 md:py-28" aria-labelledby="werk-heading">
+          <div className="container max-w-screen-2xl">
+            <h2 id="werk-heading" className="display mb-12 text-5xl sm:text-6xl">
+              Recent werk
+            </h2>
+            <Gallery
+              images={galleryImages}
+              layout="grid"
+              className={columns === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3"}
+            />
             {videos.length > 0 && (
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Video portfolio</h3>
+              <div className="mt-20">
+                <h3 className="heading mb-8 text-3xl">Video</h3>
                 <VideoGrid videos={videos} />
               </div>
             )}
-
-            {/* FPV drone section (leisure) */}
-            {branch.showFpvSection && (
-              <div id="fpv-drone" className="space-y-4 scroll-mt-24 pt-8 border-t">
-                <h3 className="text-2xl font-bold">FPV drone video</h3>
-                <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                  <p>
-                    Met FPV dronevluchten maken wij spectaculaire one-take tours door attractieparken en leisure
-                    locaties. Ideaal voor promotionele video en social content.
-                  </p>
-                </div>
-                <div className="aspect-video w-full rounded-xl overflow-hidden border">
-                  <Image
-                    src="/images/fpv-dronevliegen-ivan.jpg"
-                    alt="FPV drone videografie Second Shot Media"
-                    width={1280}
-                    height={720}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* Photo gallery */}
-            {galleryImages.length > 0 && (
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Portfolio</h3>
-                <Gallery images={galleryImages} />
-              </div>
-            )}
-
-            {/* Why us */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">{branch.whyTitle}</h3>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                {branch.whyParagraphs.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-            </div>
-
-            {/* Workflow */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Onze werkwijze</h3>
-              <div className="grid sm:grid-cols-2 gap-4 text-muted-foreground text-lg">
-                {branch.workflowSteps.map((step) => (
-                  <p key={step}>{step}</p>
-                ))}
-              </div>
-            </div>
-
-            <FaqSection items={branch.faqs} />
           </div>
+        </section>
+      )}
 
-          <div>
-            <ServiceSidebar className="lg:sticky lg:top-24" />
-          </div>
-        </div>
+      <section className="container max-w-screen-2xl py-20 md:py-28" aria-labelledby="dag-heading">
+        <h2 id="dag-heading" className="display mb-14 max-w-3xl text-5xl sm:text-6xl">
+          Zo verloopt de dag
+        </h2>
+        <EventDay steps={eventDay} />
       </section>
+
+      <div className="container max-w-screen-2xl pb-20 md:pb-28">
+        <FaqSection items={branch.faqs} />
+      </div>
+
+      <CtaBand />
     </div>
   );
 }

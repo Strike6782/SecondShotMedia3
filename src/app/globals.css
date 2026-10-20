@@ -14,69 +14,124 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --font-sans: var(--font-archivo);
 }
 
+/*
+  Palette
+  - paper:    #FFFFFF  page background
+  - concrete: #EDEFF1  quiet surfaces (beurshal-grijs)
+  - ink:      #0F1A2B  text and dark sections (nachtblauw)
+  - slate:    #586274  secondary text
+  - line:     #D5D9DF  rules and borders
+  - signal:   #D7141C  brand red, only for actions and the "delivered" marker
+*/
 :root {
   --background: #ffffff;
-  --foreground: #09090b;
-  --primary: #ec1b24;
-  /* Brand Red */
+  --foreground: #0f1a2b;
+  --primary: #d7141c;
   --primary-foreground: #ffffff;
-  --secondary: #fef2f2;
-  /* Red-50 */
-  --secondary-foreground: #991b1b;
-  /* Red-900 */
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --accent: #f9fafb;
-  --accent-foreground: #111827;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #ec1b24;
+  --secondary: #edeff1;
+  --secondary-foreground: #0f1a2b;
+  --muted: #edeff1;
+  --muted-foreground: #586274;
+  --accent: #edeff1;
+  --accent-foreground: #0f1a2b;
+  --border: #d5d9df;
+  --input: #d5d9df;
+  --ring: #d7141c;
+  --ink: #0f1a2b;
+  --ink-foreground: #f4f6f8;
+  --ink-muted: #a7b0bf;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --primary: #ec1b24;
-    /* Brand Red */
+    --background: #0b1320;
+    --foreground: #eef1f5;
+    --primary: #ef2a32;
     --primary-foreground: #ffffff;
-    --secondary: #450a0a;
-    /* Red-950 */
-    --secondary-foreground: #fef2f2;
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
-    --accent: #27272a;
-    --accent-foreground: #fafafa;
-    --border: #27272a;
-    --input: #27272a;
-    --ring: #ec1b24;
+    --secondary: #16223a;
+    --secondary-foreground: #eef1f5;
+    --muted: #16223a;
+    --muted-foreground: #a7b0bf;
+    --accent: #16223a;
+    --accent-foreground: #eef1f5;
+    --border: #26324a;
+    --input: #26324a;
+    --ring: #ef2a32;
+    --ink: #050a13;
+    --ink-foreground: #eef1f5;
+    --ink-muted: #a7b0bf;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-stretch: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Global utility for larger side margins */
+/* Condensed display type: the signage voice of the site. */
+.display {
+  font-stretch: 72%;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.heading {
+  font-stretch: 80%;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.lede {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* Global page container. */
 .container {
   margin-inline: auto;
-  padding-left: 1.5rem;
-  /* 24px */
-  padding-right: 1.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
   .container {
     padding-left: 2.5rem;
-    /* 40px */
     padding-right: 2.5rem;
   }
 }

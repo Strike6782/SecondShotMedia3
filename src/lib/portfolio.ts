@@ -21,20 +21,20 @@ export type PortfolioReelSource = {
   branches: string[];
 };
 
-/** Photo album mapped to a folder under public/gallery/. */
+/** Photo album: a selection from a folder under public/gallery/. */
 export type PortfolioGallery = {
   id: string;
+  /** Folder under public/gallery/. Defaults to the id. */
+  folder?: string;
+  /** Optional file names to show, in this order. Without it, the whole folder is shown. */
+  include?: string[];
   albumContext: string;
   branches: string[];
-  cityPage?: {
-    title: string;
-    href: string;
-  };
 };
 
 /** Global portfolio settings for homepage and city pages. */
 export type PortfolioSettings = {
-  homepageFeaturedReelCount: number;
+  homepageFeaturedReelCount?: number;
   homepageGalleryPerBranch: number;
   cityPageGalleryCount: number;
 };
@@ -101,26 +101,9 @@ export function getFeaturedYoutubeVideos(): BranchVideo[] {
     .map(toBranchVideo);
 }
 
-/** Returns gallery folder ids for a branch page. */
-export function getGalleryIdsForBranch(branchSlug: string): string[] {
-  return getPortfolio()
-    .galleries.filter((gallery) => gallery.branches.includes(branchSlug))
-    .map((gallery) => gallery.id);
-}
-
-/** Returns gallery sections shown on city landing pages. */
-export function getCityPageGalleries(cityName: string): Array<{
-  id: string;
-  title: string;
-  href: string;
-}> {
-  return getPortfolio()
-    .galleries.filter((gallery) => gallery.cityPage)
-    .map((gallery) => ({
-      id: gallery.id,
-      title: gallery.cityPage!.title.replace("{city}", cityName),
-      href: gallery.cityPage!.href,
-    }));
+/** Returns the photo albums assigned to a branch page. */
+export function getGalleriesForBranch(branchSlug: string): PortfolioGallery[] {
+  return getPortfolio().galleries.filter((gallery) => gallery.branches.includes(branchSlug));
 }
 
 /** Returns manual alt-text overrides for gallery images. */

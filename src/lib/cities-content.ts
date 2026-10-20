@@ -8,93 +8,70 @@ export type CityContent = {
 export const cityContentMap: Record<string, CityContent> = {
   utrecht: {
     slug: "utrecht",
-    highlight:
-      "Vanuit Utrecht werken wij voor studentenverenigingen (DSK, USKO, Vugs), zakelijke events en festivals in de regio.",
-    localProof: "Onder andere gala's van USKO en DSK, events in de stad en corporate opdrachten voor de het Muntgebouw",
+    highlight: "Onze thuisbasis. Beurzen in de Jaarbeurs, congressen en corporate events in de stad.",
+    localProof:
+      "Vanuit Utrecht werken wij voor beurzen in de Jaarbeurs, congressen en corporate events in de stad. Kort op de bal, ook bij vroege opbouw.",
   },
   amsterdam: {
     slug: "amsterdam",
-    highlight:
-      "In Amsterdam filmen en fotograferen wij festivals, club nights en grote events, onder andere tijdens ADE.",
-    localProof: "Ervaring met ADE Amsterdam, nightlife en festivalreportages in de metropool.",
+    highlight: "Congressen, corporate events en festivals, onder andere tijdens ADE.",
+    localProof: "In Amsterdam werkten wij onder andere tijdens ADE.",
   },
   rotterdam: {
     slug: "rotterdam",
-    highlight:
-      "Voor events en zakelijke bijeenkomsten in Rotterdam leveren wij fotografie en videografie met snelle oplevering.",
-    localProof: "Reportages voor events en corporate opdrachten in Rotterdam en de Randstad.",
+    highlight: "Congressen, beurzen en corporate events in Rotterdam en de regio.",
+    localProof: "Voor events in Rotterdam zijn wij vanuit Utrecht snel ter plaatse, ook voor vroege starts.",
   },
   "den-haag": {
     slug: "den-haag",
-    highlight:
-      "In Den Haag en de regio leveren wij reportage en video voor congressen, feesten en leisure events.",
-    localProof: "Zakelijke reportages en eventfotografie in de Haagse regio.",
+    highlight: "Congressen, conferenties en corporate events in Den Haag.",
+    localProof: "Voor congressen en conferenties in Den Haag leveren wij sprekersfoto's en recapvideo's.",
   },
   amersfoort: {
     slug: "amersfoort",
-    highlight:
-      "In Amersfoort en de regio Utrecht-Amersfoort fotograferen wij gala's en studentenfeesten, maar ook voor corporate events en congressen.",
-    localProof: "Gala-reportages in Amersfoort en de regio, onder andere voor studentenverenigingen, maar ook voor corporate events en congressen.",
+    highlight: "Festivals, publieksevenementen en corporate events in Amersfoort en omgeving.",
+    localProof: "Op een kwartier van onze basis in Utrecht.",
   },
   vlaardingen: {
     slug: "vlaardingen",
-    highlight:
-      "Vlaardingen is een vaste locatie voor ons: wij produceren jaarlijks content voor Halloween Vlaardingen.",
-    localProof: "Jaarlijkse fotografie en videografie voor Halloween Vlaardingen, inclusief aftermovies.",
+    highlight: "Events en publieksevenementen in Vlaardingen en de regio Rotterdam.",
+    localProof: "Wij werken al jaren voor evenementen in Vlaardingen, zoals Halloween Vlaardingen.",
   },
   nijmegen: {
     slug: "nijmegen",
-    highlight:
-      "Voor events en studentenfeesten in Nijmegen en Gelderland leveren wij foto en video onder één dak.",
-    localProof: "Eventreportages en gala's in Nijmegen en oostelijke regio.",
+    highlight: "Congressen, corporate events en festivals in Nijmegen en Gelderland.",
   },
   arnhem: {
     slug: "arnhem",
-    highlight:
-      "In Arnhem en Gelderland werken wij voor festivals, corporate events en leisure locaties.",
-    localProof: "Eventfotografie en videografie in Arnhem en de Gelderse regio.",
+    highlight: "Festivals, corporate events en congressen in Arnhem en Gelderland.",
   },
   haarlem: {
     slug: "haarlem",
-    highlight:
-      "Voor events en zakelijke bijeenkomsten in Haarlem en Noord-Holland leveren wij professionele reportage.",
-    localProof: "Corporate en eventopdrachten in Haarlem en de regio.",
+    highlight: "Corporate events en zakelijke bijeenkomsten in Haarlem en Noord-Holland.",
   },
   leiden: {
     slug: "leiden",
-    highlight:
-      "In Leiden fotograferen en filmen wij gala's, studentenfeesten en zakelijke events.",
-    localProof: "Gala's en studentenverenigingen in Leiden en de Randstad.",
+    highlight: "Congressen, wetenschappelijke conferenties en corporate events in Leiden.",
   },
   almere: {
     slug: "almere",
-    highlight:
-      "Voor events in Almere en Flevoland leveren wij dynamische fotografie en aftermovies.",
-    localProof: "Eventreportages in Almere en de Flevoland regio.",
+    highlight: "Beurzen, corporate events en publieksevenementen in Almere en Flevoland.",
   },
   ede: {
     slug: "ede",
-    highlight:
-      "In Ede en de Veluwe-regio werken wij voor leisure en events, nabij attractieparken in Overijssel.",
-    localProof: "Leisure content en events in de regio Ede-Gelderland.",
+    highlight: "Congressen en corporate events in Ede en de Veluwe.",
   },
   apeldoorn: {
     slug: "apeldoorn",
-    highlight:
-      "Apeldoorn en de regio zijn onderdeel van ons werkgebied voor leisure en events in Gelderland.",
-    localProof: "Events en leisure opdrachten in Apeldoorn en oost-Nederland.",
+    highlight: "Corporate events en congressen in Apeldoorn en Oost-Nederland.",
   },
   zwolle: {
     slug: "zwolle",
-    highlight:
-      "Voor festivals en events in Zwolle en Overijssel leveren wij fotografie en videografie.",
-    localProof: "Eventreportages in Zwolle en Overijssel, nabij onze leisure klanten in de regio.",
+    highlight: "Festivals, beurzen en corporate events in Zwolle en Overijssel.",
   },
   hilversum: {
     slug: "hilversum",
-    highlight:
-      "In Hilversum en de Gooi-regio werken wij voor corporate events en media-gerelateerde bijeenkomsten.",
-    localProof: "Zakelijke reportages en events in Hilversum en de regio.",
+    highlight: "Corporate events en mediabijeenkomsten in Hilversum en het Gooi.",
   },
 };
 

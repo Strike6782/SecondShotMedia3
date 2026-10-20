@@ -1,39 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Gallery } from "@/components/gallery/Gallery";
 import { Hero } from "@/components/layout/Hero";
+import { CtaBand } from "@/components/sections/CtaBand";
+import { EventDay } from "@/components/sections/EventDay";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
 import { getCityContent } from "@/lib/cities-content";
-import { getImagesFromDirectory } from "@/lib/gallery";
 import { getCityPath } from "@/lib/cities";
-import { getCityDefinition, getCityFaqs } from "@/lib/page-content";
-import { getCityPageGalleries, getPortfolioSettings } from "@/lib/portfolio";
-import { OFFERTE_MAILTO } from "@/lib/site";
+import { eventDay, getCityDefinition, getCityFaqs } from "@/lib/page-content";
 
 type CityLandingPageProps = {
   cityName: string;
   citySlug: string;
 };
 
-const isHorizontal = (img: { width: number; height: number }) => img.width / img.height > 1.2;
-
 // Shared template for city SEO landing pages with local proof content.
 export async function CityLandingPage({ cityName, citySlug }: CityLandingPageProps) {
   const faqs = getCityFaqs(cityName);
   const localContent = getCityContent(citySlug);
   const path = getCityPath(citySlug);
-  const { cityPageGalleryCount } = getPortfolioSettings();
-
-  const gallerySections = await Promise.all(
-    getCityPageGalleries(cityName).map(async (section) => ({
-      ...section,
-      images: (await getImagesFromDirectory(section.id))
-        .filter(isHorizontal)
-        .slice(0, cityPageGalleryCount),
-    }))
-  );
 
   const breadcrumbs = [
     { name: "Home", href: "/" },
@@ -42,73 +28,58 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <PageStructuredData breadcrumbs={breadcrumbs} faqs={faqs} />
 
-      <Hero
-        title={`Fotografie en videografie in ${cityName}`}
-        subtitle={getCityDefinition(cityName)}
-        align="center"
-        className="min-h-[40vh]"
-        showSecondaryBtn={false}
-      />
+      <Hero title={`Eventfotograaf en videograaf in ${cityName}`} subtitle={getCityDefinition(cityName)} />
 
-      <section className="container py-12 px-4 max-w-screen-2xl space-y-16">
-        <div className="prose prose-lg dark:prose-invert text-muted-foreground max-w-3xl space-y-4">
-          <p>
-            Op zoek naar fotografie en videografie in {cityName}? Second Shot Media levert beide onder één dak voor
-            leisure en events.
-          </p>
+      <section className="container max-w-screen-2xl py-20 md:py-28">
+        <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+          {localContent?.highlight && <p className="heading text-3xl text-foreground">{localContent.highlight}</p>}
           {localContent?.localProof && <p>{localContent.localProof}</p>}
+          <p>
+            U krijgt één aanspreekpunt, een eerste selectie dezelfde dag en het volledige album binnen 24 uur. Ook
+            in {cityName}.
+          </p>
         </div>
 
-        {gallerySections.map((section) =>
-          section.images.length > 0 ? (
-            <div key={section.href}>
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl font-bold">{section.title}</h2>
-                <Button variant="ghost" asChild>
-                  <Link href={section.href}>Bekijk meer &rarr;</Link>
-                </Button>
+        <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {branches.map((branch) => (
+            <Link key={branch.slug} href={branch.href} prefetch={false} className="group block">
+              <div className="relative aspect-[4/3] overflow-hidden bg-ink">
+                <Image
+                  src={branch.heroImage}
+                  alt={branch.heroImageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-opacity group-hover:opacity-85"
+                />
               </div>
-              <Gallery
-                images={section.images}
-                layout="grid"
-                className="md:grid-cols-4 lg:grid-cols-4"
-                linkTarget={section.href}
-              />
-            </div>
-          ) : null
-        )}
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Onze specialisaties</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {branches.map((branch) => (
-              <Link
-                key={branch.slug}
-                href={branch.href}
-                className="rounded-xl border p-4 hover:border-primary/50 transition-colors"
-              >
-                <span className="font-semibold">{branch.title}</span>
-                <span className="block text-sm text-muted-foreground mt-1">Fotografie en videografie</span>
-              </Link>
-            ))}
-          </div>
+              <h2 className="heading mt-4 text-2xl group-hover:underline group-hover:decoration-primary group-hover:underline-offset-8">
+                {branch.title}
+              </h2>
+            </Link>
+          ))}
         </div>
-
-        <div className="text-center">
-          <Button size="lg" asChild>
-            <a href={OFFERTE_MAILTO}>Vraag een offerte voor {cityName}</a>
-          </Button>
-        </div>
-
-        <FaqSection items={faqs} />
-
-        <p className="text-center text-sm text-muted-foreground">
-          <Link href="/werkgebied/" className="text-primary hover:underline">Alle werkgebieden</Link>
-        </p>
       </section>
+
+      <section className="bg-muted py-20 md:py-28">
+        <div className="container max-w-screen-2xl">
+          <h2 className="display mb-14 text-5xl sm:text-6xl">Zo verloopt de dag</h2>
+          <EventDay steps={eventDay} />
+        </div>
+      </section>
+
+      <div className="container max-w-screen-2xl py-20 md:py-28 space-y-10">
+        <FaqSection items={faqs} />
+        <p className="text-muted-foreground">
+          <Link href="/werkgebied/" className="underline underline-offset-4">
+            Alle steden in ons werkgebied
+          </Link>
+        </p>
+      </div>
+
+      <CtaBand title={`Uw event in ${cityName}?`} />
     </div>
   );
 }

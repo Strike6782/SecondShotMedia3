@@ -24,8 +24,8 @@ export const SERVICES_ID = `${SITE_URL}/#services`;
 export function buildGlobalSchemaGraph() {
   const services = branches.map((branch) => ({
     "@type": "Service",
-    name: `Fotografie en videografie voor ${branch.title.toLowerCase()}`,
-    serviceType: "Fotografie en videografie",
+    name: branch.seoTitle,
+    serviceType: "Eventfotografie en -videografie",
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Nederland" },
     url: `${SITE_URL}${branch.href}`,
@@ -42,7 +42,7 @@ export function buildGlobalSchemaGraph() {
         image: SITE_LOGO,
         logo: SITE_LOGO,
         description:
-          "Content agency voor fotografie en videografie, gevestigd in Utrecht, actief door heel Nederland.",
+          "Foto en video voor beurzen, congressen, corporate events en festivals. Gevestigd in Utrecht, actief door heel Nederland.",
         foundingDate: FOUNDING_YEAR,
         founder: { "@type": "Person", "@id": PERSON_ID, name: "Ivan Balkenende" },
         email: CONTACT_EMAIL,

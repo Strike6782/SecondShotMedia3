@@ -1,73 +1,73 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { OFFERTE_MAILTO } from "@/lib/site";
 
 interface HeroProps {
   title: string;
   subtitle: string;
-  ctaText?: string;
-  ctaLink?: string;
-  backgroundImage?: string;
-  className?: string;
-  align?: "center" | "left";
-  showSecondaryBtn?: boolean;
+  image?: string;
+  imageAlt?: string;
+  /** Show the request button (and an optional secondary link). */
   showCta?: boolean;
+  secondary?: { label: string; href: string };
+  className?: string;
+  size?: "page" | "home";
 }
 
+// Photo-led hero: the image carries the page, the text sits bottom-left like a caption.
 export function Hero({
   title,
   subtitle,
-  ctaText = "Neem direct contact op",
-  ctaLink = "/over-en-contact/",
-  backgroundImage,
-  className,
-  align = "center",
-  showSecondaryBtn = true,
+  image,
+  imageAlt = "",
   showCta = true,
+  secondary,
+  className,
+  size = "page",
 }: HeroProps) {
+  const tall = size === "home";
+
   return (
     <section
       className={cn(
-        "relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-zinc-950 text-white px-4 py-16",
+        "relative isolate flex overflow-hidden bg-ink text-ink-foreground",
+        image ? (tall ? "min-h-[78svh]" : "min-h-[62svh]") : "min-h-[38svh]",
         className
       )}
     >
-      {/* Background Gradient & Overlay */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-zinc-900 to-zinc-950" />
-      </div>
-
-      {backgroundImage && (
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-        </div>
+      {image && (
+        <>
+          <Image src={image} alt={imageAlt} fill priority sizes="100vw" className="-z-20 object-cover" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f1a2b] via-[#0f1a2b]/55 to-[#0f1a2b]/10" />
+        </>
       )}
 
-      <div
-        className={cn(
-          "relative z-10 container flex max-w-screen-xl flex-col gap-6",
-          align === "center" ? "items-center text-center" : "items-start text-left"
-        )}
-      >
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          {title}
-        </h1>
-        <p className="max-w-2xl text-lg text-zinc-300 sm:text-xl">
-          {subtitle}
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row">
-          {showCta && (
-            <Button size="lg" asChild className="text-base">
-              <Link href={ctaLink}>{ctaText}</Link>
-            </Button>
-          )}
-          {showSecondaryBtn && (
-            <Button size="lg" variant="outlineOnDark" asChild className="text-base">
-              <Link href="/#mini-portfolio">Bekijk werk</Link>
-            </Button>
+      <div className="container mt-auto max-w-screen-2xl pb-12 pt-28 md:pb-16">
+        <div className="max-w-4xl space-y-6">
+          <h1
+            className={cn(
+              "display",
+              tall ? "text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-[7.5rem]" : "text-5xl sm:text-6xl lg:text-7xl"
+            )}
+          >
+            {title}
+          </h1>
+          <p className="lede max-w-2xl text-lg text-white/85 sm:text-xl">{subtitle}</p>
+          {(showCta || secondary) && (
+            <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+              {showCta && (
+                <Button size="lg" asChild>
+                  <a href={OFFERTE_MAILTO}>Voorstel aanvragen</a>
+                </Button>
+              )}
+              {secondary && (
+                <Button size="lg" variant="outlineOnDark" asChild>
+                  <Link href={secondary.href}>{secondary.label}</Link>
+                </Button>
+              )}
+            </div>
           )}
         </div>
       </div>

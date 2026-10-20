@@ -1,89 +1,89 @@
 import Link from "next/link";
-import { Instagram, Linkedin } from "lucide-react";
 import { branches } from "@/lib/branches";
-import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, KVK } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/40 text-muted-foreground">
-      <div className="container py-10 md:py-16 max-w-screen-2xl px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-bold text-foreground">Second Shot Media</h3>
-            <p className="text-sm leading-relaxed">
-              Content Agency voor fotografie en videografie. Gevestigd in Utrecht, actief door heel Nederland.
+    <footer className="border-t border-white/10 bg-ink text-ink-foreground">
+      <div className="container max-w-screen-2xl py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5 space-y-5">
+            <p className="display text-4xl md:text-5xl">Second Shot Media</p>
+            <p className="max-w-sm text-ink-muted leading-relaxed">
+              Foto en video voor beurzen, congressen, corporate events en festivals. Gevestigd in Utrecht, actief
+              door heel Nederland.
             </p>
-            <p className="text-sm text-foreground font-medium italic">
-              &quot;Elk bijzonder moment verdient een tweede kans om te schitteren. Dat is waar onze naam voor staat.&quot;
-            </p>
+            <a
+              href={OFFERTE_MAILTO}
+              className="inline-block text-lg font-semibold underline decoration-primary decoration-2 underline-offset-8 hover:decoration-4"
+            >
+              {CONTACT_EMAIL}
+            </a>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold text-foreground">Diensten</h3>
-            <ul className="flex flex-col gap-2 text-sm">
+          <div className="md:col-span-3 space-y-4">
+            <h2 className="font-semibold">Events</h2>
+            <ul className="space-y-2 text-ink-muted">
               {branches.map((branch) => (
                 <li key={branch.slug}>
-                  <Link href={branch.href} className="hover:text-foreground">
-                    {branch.navLabel}
+                  <Link href={branch.href} className="hover:text-ink-foreground">
+                    {branch.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold text-foreground">Agency</h3>
-            <ul className="flex flex-col gap-2 text-sm">
+          <div className="md:col-span-2 space-y-4">
+            <h2 className="font-semibold">Second Shot Media</h2>
+            <ul className="space-y-2 text-ink-muted">
               <li>
-                <Link href="/over-en-contact/" className="hover:text-foreground">
-                  Over en contact
+                <Link href="/werkwijze/" className="hover:text-ink-foreground">
+                  Werkwijze
                 </Link>
               </li>
               <li>
-                <Link href="/werkgebied/" className="hover:text-foreground">
+                <Link href="/over-en-contact/" className="hover:text-ink-foreground">
+                  Over ons en contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/werkgebied/" className="hover:text-ink-foreground">
                   Werkgebied
                 </Link>
               </li>
               <li>
-                <Link href="/werken-bij/" className="hover:text-foreground">
+                <Link href="/werken-bij/" className="hover:text-ink-foreground">
                   Werken bij
                 </Link>
-              </li>
-              <li>
-                <a href={CONTACT_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground">
-                  <Instagram className="h-4 w-4" /> Instagram
-                </a>
-              </li>
-              <li>
-                <a href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground">
-                  <Linkedin className="h-4 w-4" /> LinkedIn
-                </a>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold text-foreground">Contact</h3>
-            <ul className="flex flex-col gap-2 text-sm">
+          <div className="md:col-span-2 space-y-4">
+            <h2 className="font-semibold">Volg ons</h2>
+            <ul className="space-y-2 text-ink-muted">
               <li>
-                E-mail:{" "}
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-foreground hover:underline">
-                  {CONTACT_EMAIL}
+                <a href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" className="hover:text-ink-foreground">
+                  LinkedIn
                 </a>
               </li>
-              <li>Gevestigd in Utrecht</li>
-              <li>Actief in heel Nederland</li>
-              <li>KvK: {KVK}</li>
+              <li>
+                <a href={CONTACT_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="hover:text-ink-foreground">
+                  Instagram
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t pt-6 text-center text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Second Shot Media. Alle rechten voorbehouden.</p>
-          <div className="flex gap-4">
-            <Link href="/algemene-voorwaarden/" className="hover:text-foreground transition-colors">
-              Algemene Voorwaarden
-            </Link>
-          </div>
+
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-ink-muted sm:flex-row sm:justify-between">
+          <p suppressHydrationWarning>
+            &copy; {new Date().getFullYear()} Second Shot Media, Utrecht. KvK {KVK}
+          </p>
+          <Link href="/algemene-voorwaarden/" className="hover:text-ink-foreground">
+            Algemene voorwaarden
+          </Link>
         </div>
       </div>
     </footer>

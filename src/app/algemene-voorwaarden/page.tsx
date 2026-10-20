@@ -12,11 +12,9 @@ export default function GeneralTermsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero
-        title="Algemene Voorwaarden"
+        title="Algemene voorwaarden"
         subtitle="Duidelijke afspraken, goede samenwerking."
-        align="center"
-        className="min-h-[40vh]"
-        showSecondaryBtn={false}
+        showCta={false}
       />
 
       <section className="container py-16 px-6 md:px-12 max-w-4xl mx-auto">

@@ -2,7 +2,7 @@ import { BranchPage } from "@/components/pages/BranchPage";
 import { getBranchBySlug } from "@/lib/branches";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 
-const branch = getBranchBySlug("evenementen")!;
+const branch = getBranchBySlug("beurzen")!;
 
 export const metadata = buildPageMetadata({
   title: branch.seoTitle,
@@ -10,6 +10,6 @@ export const metadata = buildPageMetadata({
   path: branch.href,
 });
 
-export default function EvenementenPage() {
+export default function BeurzenPage() {
   return <BranchPage branch={branch} />;
 }

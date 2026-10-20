@@ -1,29 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Archivo variable font (weight + width axes), self-hosted so builds do not depend on Google Fonts.
+const archivo = localFont({
+  src: "./fonts/archivo-variable.woff2",
+  variable: "--font-archivo",
+  weight: "100 900",
+  display: "swap",
+  declarations: [{ prop: "font-stretch", value: "62% 125%" }],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: `%s | ${SITE_NAME}`,
-    default: `${SITE_NAME} | Content Agency voor fotografie en videografie`,
+    default: `${SITE_NAME} | Foto en video voor events`,
   },
   description:
-    "Content Agency in Utrecht. Fotografie en videografie voor leisure en events, actief door heel Nederland.",
+    "Eventfotografie en -videografie voor beurzen, congressen, corporate events en festivals. Previews dezelfde dag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
   openGraph: {
     siteName: SITE_NAME,
     locale: "nl_NL",
@@ -45,12 +44,20 @@ export default function RootLayout({
     <html lang="nl" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
+        className={`${archivo.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
+        <a
+          href="#inhoud"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-background focus:px-4 focus:py-2"
+        >
+          Naar de inhoud
+        </a>
         <div className="mx-auto w-full max-w-[2560px] flex flex-col min-h-screen">
           <StructuredData />
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main id="inhoud" className="flex-1">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

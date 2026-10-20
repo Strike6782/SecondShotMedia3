@@ -4,6 +4,7 @@ import path from "path";
 import sizeOf from "image-size";
 
 import { buildGalleryAlt } from "@/lib/gallery-alt";
+import { getGalleriesForBranch, type PortfolioGallery } from "@/lib/portfolio";
 import { shuffleImages } from "@/lib/shuffle";
 
 export interface ImageFile {
@@ -13,7 +14,7 @@ export interface ImageFile {
   alt: string;
 }
 
-export async function getImagesFromDirectory(directory: string): Promise<ImageFile[]> {
+export async function getImagesFromDirectory(directory: string, altContext?: string): Promise<ImageFile[]> {
   const galleryDirectory = path.join(process.cwd(), "public", "gallery", directory);
 
   if (!fs.existsSync(galleryDirectory)) {
@@ -58,7 +59,7 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
         console.error(`Error reading image dimensions for ${fileName}:`, err);
       }
 
-      const alt = buildGalleryAlt(fileName, directory);
+      const alt = buildGalleryAlt(fileName, altContext ?? directory);
 
       return {
         src: `/gallery/${directory}/${fileName}`,
@@ -69,4 +70,21 @@ export async function getImagesFromDirectory(directory: string): Promise<ImageFi
     });
 
   return shuffleImages(images);
+}
+
+/** Loads one album: either a curated selection (in order) or the whole folder, shuffled. */
+export async function getGalleryImages(gallery: PortfolioGallery): Promise<ImageFile[]> {
+  const folder = gallery.folder ?? gallery.id;
+  const images = await getImagesFromDirectory(folder, gallery.id);
+  if (!gallery.include?.length) {
+    return images;
+  }
+  const byName = new Map(images.map((img) => [path.basename(img.src), img]));
+  return gallery.include.map((name) => byName.get(name)).filter((img): img is ImageFile => Boolean(img));
+}
+
+/** All photos for an event type page. */
+export async function getGalleryImagesForBranch(branchSlug: string): Promise<ImageFile[]> {
+  const albums = await Promise.all(getGalleriesForBranch(branchSlug).map(getGalleryImages));
+  return albums.flat();
 }

@@ -1,114 +1,115 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/layout/Hero";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { overContactContent } from "@/lib/page-content";
-import { CONTACT_EMAIL, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
-import { Mail } from "lucide-react";
+import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, DELIVERY, KVK, OFFERTE_MAILTO } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
-  title: "Over en contact",
+  title: "Over ons en contact",
   description:
-    "Contact met Second Shot Media: content agency voor fotografie en videografie. Oprichter Ivan Balkenende, team in Utrecht, opdrachten door heel Nederland. Vraag een offerte aan.",
+    "Maak kennis met Ivan Balkenende en het team van Second Shot Media. Gevestigd in Utrecht, actief door heel Nederland. Vraag een voorstel aan voor uw event.",
   path: "/over-en-contact/",
 });
 
 export default function OverEnContactPage() {
   const breadcrumbs = [
     { name: "Home", href: "/" },
-    { name: "Over en contact", href: "/over-en-contact/" },
+    { name: "Over ons en contact", href: "/over-en-contact/" },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <PageStructuredData breadcrumbs={breadcrumbs} faqs={overContactContent.faqs} />
 
-      <Hero
-        title="Over Second Shot Media"
-        subtitle={overContactContent.definition}
-        ctaLink="/over-en-contact/#contact"
-        align="center"
-        className="min-h-[40vh]"
-        showSecondaryBtn={false}
-      />
+      <Hero title="Ivan Balkenende en team" subtitle={overContactContent.definition} showCta={false} />
 
-      <section className="container py-16 px-6 md:px-12 max-w-screen-2xl space-y-16">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-10">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Over Second Shot Media</h2>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                <p>
-                  Second Shot Media is een content agency voor fotografie en videografie op leisure en events.
-                  Vanuit Utrecht werken wij aan projecten door heel Nederland met een poule van freelance fotografen en videografen.
-                </p>
-                <p className="text-foreground font-medium italic">
-                  Elk bijzonder moment verdient een tweede kans om te schitteren. Dat is waar onze naam voor staat.
-                </p>
-              </div>
-              <Button variant="outline" asChild>
-                <Link href="/werken-bij/">Werken bij</Link>
+      <TeamSection showMoreLink={false} />
+
+      <section className="bg-muted py-20 md:py-28">
+        <div className="container max-w-screen-2xl grid gap-10 md:grid-cols-12">
+          <h2 className="display text-5xl sm:text-6xl md:col-span-5">Waarom Second Shot</h2>
+          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7">
+            <p>
+              Op een event gebeurt alles één keer. De speech, de prijsuitreiking, de volle zaal: er is geen tweede
+              take. Wij zorgen dat die momenten toch een tweede leven krijgen, in uw verslag, op LinkedIn en in de
+              aankondiging van de volgende editie.
+            </p>
+            <p className="heading text-2xl text-foreground">
+              Elk bijzonder moment verdient een tweede kans om te schitteren.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="container max-w-screen-2xl scroll-mt-16 py-20 md:py-28">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="space-y-6 md:col-span-7">
+            <h2 className="display text-5xl sm:text-6xl">Contact</h2>
+            <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan reageert persoonlijk.{" "}
+              {DELIVERY.response}.
+            </p>
+            <a
+              href={OFFERTE_MAILTO}
+              className="heading inline-block break-all text-3xl underline decoration-primary decoration-2 underline-offset-8 hover:decoration-4 sm:text-4xl"
+            >
+              {CONTACT_EMAIL}
+            </a>
+            <div>
+              <Button size="lg" asChild>
+                <a href={OFFERTE_MAILTO}>Voorstel aanvragen</a>
               </Button>
             </div>
-
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Over Ivan Balkenende</h2>
-              <div className="prose prose-lg dark:prose-invert text-muted-foreground space-y-4">
-                <p>
-                  Ivan Balkenende is de oprichter van Second Shot Media. Met meer dan zes jaar ervaring en ruim 220 events
-                  op zijn naam weet hij als geen ander hoe je energie en sfeer vastlegt. Second Shot Media begon als freelance klusjes,
-                  maar is nu uitgegroeid tot een volwaardig team met foto- en videografen, designers en content creators.
-                </p>
-              </div>
-            </div>
           </div>
-
-          <div className="relative aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden bg-muted md:sticky md:top-24">
-            <Image
-              src="/images/Ivan-Secondshotmedia-event.jpg"
-              alt="Ivan Balkenende - Second Shot Media"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
-
-        <div id="contact" className="scroll-mt-24">
-          <div className="grid gap-8 bg-muted/30 p-8 rounded-2xl border border-border/50 max-w-3xl mx-auto">
-            <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold">Contact</h2>
-              <p className="text-muted-foreground text-lg">
-                Mail ons voor beschikbaarheid en een offerte op maat. Vermeld type event, datum, locatie en gewenste output
-                (foto, video, reels).
-              </p>
+          <dl className="space-y-5 border-t border-border pt-6 md:col-span-4 md:col-start-9 md:border-t-0 md:border-l md:pl-8 md:pt-0">
+            <div>
+              <dt className="text-sm text-muted-foreground">Gevestigd in</dt>
+              <dd className="text-lg">Utrecht</dd>
             </div>
-
-            <Button size="lg" className="w-full sm:w-auto mx-auto flex" asChild>
-              <a href={OFFERTE_MAILTO}>
-                <Mail className="h-5 w-5 mr-2" />
-                Mail {CONTACT_EMAIL}
-              </a>
-            </Button>
-
-            <div className="pt-6 border-t text-sm text-muted-foreground space-y-1 text-center">
-              <p className="font-semibold text-foreground">Second Shot Media</p>
-              <p>Gevestigd in Utrecht</p>
-              <p>
-                <a href={CONTACT_LINKEDIN} className="hover:text-primary" target="_blank" rel="noopener noreferrer">
+            <div>
+              <dt className="text-sm text-muted-foreground">Werkgebied</dt>
+              <dd className="text-lg">
+                Heel Nederland, en op aanvraag internationaal.{" "}
+                <Link href="/werkgebied/" className="underline underline-offset-4">
+                  Bekijk werkgebied
+                </Link>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm text-muted-foreground">Online</dt>
+              <dd className="text-lg">
+                <a href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
                   LinkedIn
                 </a>
-              </p>
-              <p className="text-xs opacity-70">KVK: {KVK}</p>
+                {" en "}
+                <a href={CONTACT_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+                  Instagram
+                </a>
+              </dd>
             </div>
-          </div>
+            <div>
+              <dt className="text-sm text-muted-foreground">KvK</dt>
+              <dd className="text-lg">{KVK}</dd>
+            </div>
+            <div>
+              <dt className="text-sm text-muted-foreground">Fotograaf of videograaf?</dt>
+              <dd className="text-lg">
+                <Link href="/werken-bij/" className="underline underline-offset-4">
+                  Werken bij Second Shot Media
+                </Link>
+              </dd>
+            </div>
+          </dl>
         </div>
-
-        <FaqSection items={overContactContent.faqs} />
       </section>
+
+      <div className="container max-w-screen-2xl pb-20 md:pb-28">
+        <FaqSection items={overContactContent.faqs} />
+      </div>
     </div>
   );
 }

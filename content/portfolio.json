@@ -1,197 +1,197 @@
 {
   "settings": {
-    "homepageFeaturedReelCount": 4,
     "homepageGalleryPerBranch": 4,
-    "cityPageGalleryCount": 4
+    "cityPageGalleryCount": 4,
+    "homepageFeaturedReelCount": 4
   },
   "youtubeVideos": [
     {
-      "id": "CJl2UsZ-_Tc",
-      "title": "Theme Park Science Trailer",
+      "id": "9MI7c_85K7A",
+      "title": "Recap Nico Campus",
       "type": "youtube",
-      "branches": ["leisure"],
-      "featuredOnHomepage": false,
-      "note": "Alleen montage"
-    },
-    {
-      "id": "YEwFVZvs5fg",
-      "title": "Halloween Vlaardingen",
-      "type": "youtube",
-      "branches": ["leisure"],
-      "featuredOnHomepage": true
-    },
-    {
-      "id": "TpxAfFtekbw",
-      "title": "Halloween Rosmalen",
-      "type": "youtube",
-      "branches": ["leisure"]
-    },
-    {
-      "id": "oO7nvcQF46I",
-      "title": "Closing Ceremony Denmark Jamboree",
-      "type": "youtube",
-      "branches": ["evenementen"],
+      "branches": [
+        "congressen",
+        "corporate-events"
+      ],
       "featuredOnHomepage": true
     },
     {
       "id": "5esMJo_vDig",
       "title": "World Scout Jamboree - Zuid-Korea",
       "type": "youtube",
-      "branches": ["evenementen"],
+      "branches": [
+        "festivals"
+      ],
       "featuredOnHomepage": true
+    },
+    {
+      "id": "oO7nvcQF46I",
+      "title": "Closing Ceremony Denmark Jamboree",
+      "type": "youtube",
+      "branches": [
+        "festivals"
+      ],
+      "featuredOnHomepage": true
+    },
+    {
+      "id": "edf_QUweTEw",
+      "title": "Rythm Roulette - Verjaardagsfestival",
+      "type": "youtube",
+      "branches": [
+        "festivals"
+      ],
+      "featuredOnHomepage": true
+    },
+    {
+      "id": "K5gq4xvPur8",
+      "title": "Jubileum Diner DakAccent",
+      "type": "youtube",
+      "branches": [
+        "corporate-events"
+      ],
+      "featuredOnHomepage": false,
+      "note": "Alleen camerawerk. Montage extern"
     },
     {
       "id": "i6PQazSqF7Y",
       "title": "DJ JSPHN op ADE Amsterdam",
       "type": "youtube",
-      "branches": ["evenementen"],
+      "branches": [
+        "festivals"
+      ],
       "featuredOnHomepage": false
     },
     {
       "id": "ZmouX-TW4OQ",
       "title": "Opening Ceremony Denmark Jamboree",
       "type": "youtube",
-      "branches": ["evenementen"]
-    },
-    {
-      "id": "edf_QUweTEw",
-      "title": "Rythm Roulette - Verjaardagsfestival",
-      "type": "youtube",
-      "branches": ["evenementen"],
-      "featuredOnHomepage": true
+      "branches": [
+        "festivals"
+      ],
+      "featuredOnHomepage": false
     },
     {
       "id": "39ALWRfNXAk",
       "title": "World Scout Moot",
       "type": "youtube",
-      "branches": ["evenementen"]
-    },
-    {
-      "id": "K5gq4xvPur8",
-      "title": "Jubileum Diner DakAccent",
-      "type": "youtube",
-      "branches": ["zakelijke-evenementen"],
-      "featuredOnHomepage": false,
-      "note": "Alleen camerawerk. Montage extern"
-    },
-    {
-      "id": "KuTGphB3CDw",
-      "title": "Recap activiteitenweek middelbare school",
-      "type": "youtube",
-      "branches": ["zakelijke-evenementen"],
-      "featuredOnHomepage": true
-    },
-    {
-      "id": "9MI7c_85K7A",
-      "title": "Recap Nico Campus",
-      "type": "youtube",
-      "branches": ["zakelijke-evenementen"]
-    },
-    {
-      "id": "ozqoEutIqKQ",
-      "title": "Gala Studentenvereniging 2024",
-      "type": "youtube",
-      "branches": ["gala-en-feest"],
+      "branches": [
+        "festivals"
+      ],
       "featuredOnHomepage": false
-    },
-    {
-      "id": "Z5kD0EZ3_-s",
-      "title": "Gala Studentenvereniging 2025",
-      "type": "youtube",
-      "branches": ["gala-en-feest"],
-      "featuredOnHomepage": true
-    },
-    {
-      "id": "Vc3ixtqtDFs",
-      "title": "Introductievideo Studentenvereniging",
-      "type": "youtube",
-      "branches": ["gala-en-feest"]
     }
-
   ],
   "reels": [
     {
       "file": "12 - Tea vertellen.mp4",
       "title": "Scetch mascottes van Hellendoorn",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "19 - Top 3 spannendste attracties - sub.mp4",
       "title": "Top 3 spannendste attracties uit Hellendoorn",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "26 - POV Ouders in een pretpark.mp4",
       "title": "POV: Ouders in een pretpark",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "29 - Sneller van glijbaan - sub.mp4",
       "title": "Challenge: Wie is sneller van glijbaan",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "64 - Formule X onride met persoon.mp4",
       "title": "Formule X onride in Drievliet",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "halloween-vlaardingen.mp4",
       "title": "Halloween Vlaardingen Promo",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "StoomCycloon.mp4",
       "title": "StoomCycloon opening Drievliet",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     },
     {
       "file": "OpstartenSungaiDrone.mp4",
       "title": "Opstart Wildwaterbaan",
-      "branches": ["leisure"]
+      "branches": [
+        "leisure"
+      ]
     }
   ],
   "galleries": [
     {
-      "id": "theme-parks",
-      "albumContext": "Leisure attractiepark",
-      "branches": ["leisure"],
-      "cityPage": {
-        "title": "Leisure",
-        "href": "/leisure/"
-      }
+      "id": "beurzen",
+      "folder": "corporate",
+      "albumContext": "Beursfotografie",
+      "branches": [
+        "beurzen"
+      ],
+      "include": [
+        "Cybersec---Second-Shot-Media-5.jpg",
+        "Cybersec---Second-Shot-Media-3.jpg",
+        "Cybersec---Second-Shot-Media-7.jpg",
+        "Cybersec---Second-Shot-Media-6.jpg"
+      ]
     },
     {
-      "id": "corporate",
-      "albumContext": "Zakelijk event",
-      "branches": ["zakelijke-evenementen"],
-      "cityPage": {
-        "title": "Zakelijke evenementen",
-        "href": "/zakelijke-evenementen/"
-      }
+      "id": "congressen",
+      "folder": "corporate",
+      "albumContext": "Congresfotografie",
+      "branches": [
+        "congressen"
+      ],
+      "include": [
+        "Nico-Campus-2026---Second-Shot-Media-140.jpg",
+        "Cybersec---Second-Shot-Media-6.jpg",
+        "Cybersec---Second-Shot-Media-7.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-158.jpg",
+        "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-97.jpg"
+      ]
     },
     {
-      "id": "events",
-      "albumContext": "Eventfotografie",
-      "branches": ["evenementen"],
-      "cityPage": {
-        "title": "Evenementen in {city}",
-        "href": "/evenementen/"
-      }
+      "id": "corporate-events",
+      "folder": "corporate",
+      "albumContext": "Corporate event",
+      "branches": [
+        "corporate-events"
+      ],
+      "include": [
+        "Nico-Campus-2026---Second-Shot-Media-157.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-102.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-164.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-158.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-109.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-57.jpg"
+      ]
     },
     {
-      "id": "club",
-      "albumContext": "Nightlife reportage",
-      "branches": ["evenementen"]
-    },
-    {
-      "id": "students",
-      "albumContext": "Gala reportage",
-      "branches": ["gala-en-feest"],
-      "cityPage": {
-        "title": "Gala's en feesten",
-        "href": "/gala-en-feest/"
-      }
+      "id": "festivals",
+      "folder": "events",
+      "albumContext": "Festivalfotografie",
+      "branches": [
+        "festivals"
+      ]
     }
   ],
   "photoAltOverrides": {
@@ -225,6 +225,15 @@
     "Cybersec---Second-Shot-Media-6.jpg": "Cybersecurity congres reportage",
     "Koningsdag-Hof---Second-Shot-Media-20250426-20.jpg": "Koningsdag event fotografie",
     "Hof-bevrijdingsdag-2026---Second-Shot-Media-47.jpg": "Bevrijdingsdag festival reportage",
-    "Hof-Dias-Latinos---Second-Shot-Media-20250704-37.jpg": "Latin festival sfeerreportage"
+    "Hof-Dias-Latinos---Second-Shot-Media-20250704-37.jpg": "Latin festival sfeerreportage",
+    "Cybersec---Second-Shot-Media-3.jpg": "Standmedewerker in gesprek met bezoekers op een beurs",
+    "Cybersec---Second-Shot-Media-5.jpg": "Beursstand met bezoekers tijdens Cybersec",
+    "Cybersec---Second-Shot-Media-7.jpg": "Presentatie op het beurspodium voor publiek",
+    "Nico-Campus-2026---Second-Shot-Media-157.jpg": "Gasten in gesprek tijdens een netwerkborrel",
+    "Nico-Campus-2026---Second-Shot-Media-158.jpg": "Volle zaal tijdens de netwerkborrel",
+    "Nico-Campus-2026---Second-Shot-Media-102.jpg": "Barteam schenkt drankjes tijdens een corporate event",
+    "Nico-Campus-2026---Second-Shot-Media-97.jpg": "Congreszaal klaar voor de start van het programma",
+    "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg": "Posterpresentatie tijdens een wetenschappelijke conferentie",
+    "Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg": "Overzicht van een vol plein tijdens Koningsdag"
   }
 }

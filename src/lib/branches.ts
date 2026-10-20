@@ -1,7 +1,11 @@
 import type { BranchLogo, BranchTestimonial, FaqItem } from "@/lib/types";
 
-// Branch configuration: marketing copy, SEO, and branch-specific page options.
+// Event types: marketing copy, SEO and page images.
 // Portfolio media (video's, foto-albums) staat in content/portfolio.json.
+//
+// Testimonials: voeg per eventtype echte quotes toe zodra een klant toestemming geeft, bijvoorbeeld:
+//   testimonials: [{ quote: "…", author: "Naam", role: "Functie, Organisatie" }]
+// De sectie verschijnt automatisch zodra er minimaal één testimonial staat.
 export type BranchConfig = {
   slug: string;
   href: string;
@@ -9,276 +13,218 @@ export type BranchConfig = {
   navLabel: string;
   seoTitle: string;
   seoDescription: string;
+  /** One sentence for overview cards (home, footer, city pages). */
+  summary: string;
   heroTitle: string;
   heroSubtitle: string;
+  heroImage: string;
+  heroImageAlt: string;
   introTitle: string;
   introParagraphs: string[];
-  photoTitle: string;
-  photoParagraphs: string[];
-  videoTitle: string;
-  videoParagraphs: string[];
-  whyTitle: string;
-  whyParagraphs: string[];
-  workflowSteps: string[];
+  deliverables: string[];
   faqs: FaqItem[];
   logos?: BranchLogo[];
   testimonials?: BranchTestimonial[];
-  showReels?: boolean;
-  showFpvSection?: boolean;
-  anchorSections?: { id: string; title: string; paragraphs: string[] }[];
 };
 
 export const branches: BranchConfig[] = [
   {
-    slug: "leisure",
-    href: "/leisure/",
-    title: "Leisure",
-    navLabel: "Leisure",
-    seoTitle: "Fotografie en videografie voor leisure",
+    slug: "beurzen",
+    href: "/beurzen/",
+    title: "Beurzen en expo's",
+    navLabel: "Beurzen",
+    seoTitle: "Beursfotograaf en beursvideo",
     seoDescription:
-      "Fotografie en videografie voor leisure en attractieparken. Shortform content voor TikTok en Reels. Content agency in Utrecht, actief door heel Nederland.",
-    heroTitle: "Fotografie en videografie voor leisure",
+      "Beursfotografie en -video voor organisatoren en exposanten. Eerste selectie aan het eind van elke beursdag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
+    summary: "Standbezoek, presentaties en de drukte op de vloer, voor organisator en exposanten.",
+    heroTitle: "Beursfotografie en -video",
     heroSubtitle:
-      "Shortform content, reels en reportage voor attractieparken en leisure bestemmingen. Wij leveren fotografie en videografie voor leisure, waaronder themabelevingen, en maken shortform content voor TikTok, Instagram Reels en YouTube Shorts.",
-    introTitle: "Structurele zichtbaarheid op social media",
+      "Standbezoek, gesprekken, presentaties en de drukte op de vloer. Uw marketingteam heeft de eerste beelden nog tijdens de beurs.",
+    heroImage: "/gallery/corporate/Cybersec---Second-Shot-Media-5.jpg",
+    heroImageAlt: "Beursvloer met stand en bezoekers tijdens Cybersec",
+    introTitle: "Een beurs duurt een paar dagen. De beelden gebruikt u het hele jaar.",
     introParagraphs: [
-      "Met Second Shot Media helpen wij leisure bestemmingen structureel zichtbaar te worden op TikTok en Instagram. Denk aan attractieparken, themabelevingen en seizoensevenementen.",
-      "Wij werken onder andere voor Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween Vlaardingen, Halloween Rosmalen en Theme Park Science. Het resultaat: een constante stroom reels die past bij uw park en uw doelgroep bereikt.",
+      "In het beursverslag, op LinkedIn, in de nieuwsbrief en bij het werven van exposanten voor de volgende editie. Daarom leggen wij niet alleen de drukte vast, maar ook de gesprekken, de standbouw en de details waar uw exposanten trots op zijn.",
+      "Bij grote hallen verdelen wij de fotografen vooraf per hal of programmaonderdeel. Zo wordt niets dubbel geschoten en niets gemist. Wij werken onder andere in de Jaarbeurs in Utrecht en op beurslocaties door heel Nederland.",
     ],
-    photoTitle: "Fotografie voor leisure",
-    photoParagraphs: [
-      "Naast video leveren wij fotografie voor campagnes, sfeerbeelden op drukke dagen en promotioneel materiaal. Zo ontstaat een complete contentmix voor uw leisure bestemming.",
-    ],
-    videoTitle: "Shortform video en reels",
-    videoParagraphs: [
-      "Ons uitgangspunt: één intensieve opnamedag per twee maanden, waarmee wij voldoende reels maken voor een hele periode. Wij monteren en optimaliseren voor TikTok, Reels en YouTube Shorts, en stemmen af met uw marketingteam.",
-    ],
-    whyTitle: "Waarom Second Shot Media voor leisure",
-    whyParagraphs: [
-      "Wij combineren fotografie én videografie onder één dak. Ons team is gespecialiseerd in leisure en shortform content, met korte lijnen en een bewezen track record bij grote parken.",
-    ],
-    workflowSteps: [
-      "Voorbereiding & concept: thema's, formats en draaiboek",
-      "Opnamedag: efficiënte productie op locatie",
-      "Montage & optimalisatie: reels voor social kanalen",
-      "Planning & plaatsing: consistente zichtbaarheid",
-    ],
-    showReels: true,
-    showFpvSection: true,
-    logos: [
-      { src: "/logos/hellendoorn.png", alt: "Avonturenpark Hellendoorn" },
-      { src: "/logos/drievliet.png", alt: "Familiepark Drievliet" },
-      { src: "/logos/vlaardingen.webp", alt: "Halloween Vlaardingen" },
-      { src: "/logos/tps.jpeg", alt: "Theme Park Science" },
+    deliverables: [
+      "Eerste selectie aan het eind van elke beursdag",
+      "Volledig album binnen 24 uur na de laatste dag",
+      "Mappen per hal of stand, zodat exposanten hun eigen beelden vinden",
+      "Sfeerfilm van de beurs en korte verticale video's voor social media",
+      "Presentaties, panels en prijsuitreikingen op de beursvloer",
+      "FPV-drone door de hal, waar de locatie het toestaat",
     ],
     faqs: [
       {
-        question: "Leveren jullie zowel fotografie als videografie voor leisure?",
+        question: "Kunnen er meerdere fotografen tegelijk werken?",
         answer:
-          "Ja. Second Shot Media levert fotografie én videografie voor leisure, waaronder attractieparken en themabelevingen.",
+          "Ja. Bij grote beurzen zetten wij meerdere fotografen en videografen in. Vooraf spreken wij af wie welke hal of welk programmaonderdeel vastlegt, en iedereen werkt in dezelfde stijl.",
       },
       {
-        question: "Maken jullie content voor TikTok en Instagram Reels?",
-        answer: "Ja, shortform content voor TikTok, Instagram Reels en YouTube Shorts is een kernspecialisatie.",
-      },
-      {
-        question: "Voor welke leisure klanten werken jullie?",
+        question: "Kunnen exposanten de foto's ook gebruiken?",
         answer:
-          "Onder andere Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween Vlaardingen, Halloween Rosmalen en Theme Park Science.",
+          "Ja, als u dat wilt. In het voorstel leggen wij vast wie de beelden mag gebruiken. Op verzoek leveren wij mappen per stand, zodat exposanten hun eigen foto's snel vinden.",
       },
       {
-        question: "Hoe werkt structurele social content?",
+        question: "Wanneer zijn de eerste foto's beschikbaar?",
         answer:
-          "Wij werken met één opnamedag per twee maanden, waarmee wij een batch reels en shortform content opleveren.",
+          "Aan het eind van elke beursdag ontvangt u een eerste selectie. Het volledige album volgt binnen 24 uur na de laatste beursdag.",
       },
       {
-        question: "Bieden jullie ook FPV drone video aan?",
-        answer: "Ja, FPV drone tours zijn beschikbaar als aanvullende dienst voor leisure en attractieparken.",
+        question: "Hoe ver vooruit moet ik boeken?",
+        answer:
+          "Het voorjaar en najaar zijn drukke beursperiodes. Neem daarom zo vroeg mogelijk contact op. Kleinere opdrachten kunnen vaak ook op korte termijn.",
       },
     ],
   },
   {
-    slug: "zakelijke-evenementen",
-    href: "/zakelijke-evenementen/",
-    title: "Zakelijke evenementen",
-    navLabel: "Zakelijke evenementen",
-    seoTitle: "Fotografie en videografie voor zakelijke evenementen",
+    slug: "congressen",
+    href: "/congressen/",
+    title: "Congressen en conferenties",
+    navLabel: "Congressen",
+    seoTitle: "Congresfotograaf en conferentievideo",
     seoDescription:
-      "Fotografie en videografie voor congressen, beurzen en bedrijfsfeesten. LinkedIn- en PR-ready beelden. Content agency in Utrecht, actief door heel Nederland.",
-    heroTitle: "Fotografie en videografie voor zakelijke evenementen",
+      "Fotografie en video voor congressen en conferenties: sprekers, zalen, workshops en netwerkmomenten. Eerste selectie dezelfde dag, volledig album binnen 24 uur.",
+    summary: "Sprekers, zalen en netwerkmomenten, op tijd voor uw persbericht en LinkedIn.",
+    heroTitle: "Congres- en conferentiefotografie",
     heroSubtitle:
-      "Professionele reportage en video voor congressen, beurzen en bedrijfsfeesten. Discreet, professioneel en direct inzetbaar. Wij leveren beelden geschikt voor LinkedIn, pers en interne communicatie.",
-    introTitle: "Uw business event in beeld",
+      "Sprekers, zalen, workshops en netwerkmomenten. Rustig vastgelegd, zodat u nog dezelfde dag kunt communiceren.",
+    heroImage: "/gallery/corporate/Cybersec---Second-Shot-Media-6.jpg",
+    heroImageAlt: "Spreker op het podium voor een volle zaal tijdens een congres",
+    introTitle: "Uw sprekers, uw sponsors en uw deelnemers willen allemaal hun eigen beeld.",
     introParagraphs: [
-      "Een zakelijk evenement is vaak méér dan een momentopname: het is een visitekaartje voor uw merk, uw mensen en uw boodschap. Of het nu gaat om een congres, beurs, netwerkborrel of bedrijfsviering, u wilt beelden die de energie vangen én professionaliteit uitstralen.",
-      "Wij werken discreet tussen gasten en sprekers door en zorgen dat u dezelfde dag of de dag erna beelden heeft voor persberichten, LinkedIn en interne communicatie.",
+      "Sprekers vragen om een goede foto van hun presentatie, sponsors willen zichtbaar zijn en uw communicatieteam wil tijdens het congres al posten. Wij stemmen vooraf het programma met u af en bepalen per onderdeel wat belangrijk is.",
+      "Tijdens presentaties werken wij zonder flits en vanaf afgesproken posities. Bij meerdere zalen tegelijk zetten wij per zaal een fotograaf in, met één aanspreekpunt voor u.",
     ],
-    photoTitle: "Zakelijke eventfotografie",
-    photoParagraphs: [
-      "Reportagefotografie met oog voor sfeer, details en interactie. Efficiënte selectie en nabewerking in een professionele stijl, geleverd in formaten passend bij uw kanalen.",
-    ],
-    videoTitle: "Video voor zakelijke evenementen",
-    videoParagraphs: [
-      "Aftermovies, eventrecaps en korte video's voor social media. Wij stemmen formaat en montage af op uw kanalen, van YouTube tot LinkedIn.",
-    ],
-    whyTitle: "Waarom Second Shot Media",
-    whyParagraphs: [
-      "Foto en video onder één aanspreekpunt. Snel schakelen, heldere afspraken en kwaliteit die past bij uw merk.",
-    ],
-    workflowSteps: [
-      "Intake en briefing: doelen, programma en gewenste output",
-      "Opname op locatie: discreet en professioneel",
-      "Nabewerking: selectie, kleur en montage",
-      "Oplevering: bestanden klaar voor uw kanalen",
+    deliverables: [
+      "Sprekers op het podium en tijdens vragenrondes",
+      "Zaal, workshops, netwerkpauzes en sponsors",
+      "Eerste selectie dezelfde dag voor social media en persbericht",
+      "Volledig album binnen 24 uur",
+      "Recapvideo en korte sprekershighlights",
+      "Interviews met sprekers of deelnemers op locatie",
     ],
     faqs: [
       {
-        question: "Welke zakelijke events dekken jullie?",
-        answer: "Congressen, beurzen, netwerkborrels, bedrijfsfeesten en productlanceringen.",
+        question: "Storen jullie tijdens presentaties?",
+        answer:
+          "Nee. Wij werken zonder flits, kennen het programma en spreken vooraf vaste posities af. Sprekers en publiek merken weinig van ons.",
       },
       {
-        question: "Leveren jullie foto én video?",
-        answer: "Ja, wij leveren fotografie én videografie voor zakelijke evenementen.",
+        question: "Kunnen jullie meerdere zalen tegelijk vastleggen?",
+        answer:
+          "Ja. Wij zetten per zaal een fotograaf of videograaf in. U houdt één aanspreekpunt en ontvangt alles in één album.",
       },
       {
-        question: "Zijn de beelden geschikt voor LinkedIn en pers?",
-        answer: "Ja, wij leveren professionele reportagebeelden die direct inzetbaar zijn voor PR en social media.",
+        question: "Maken jullie ook interviews of sprekershighlights?",
+        answer:
+          "Ja. Wij filmen korte interviews met sprekers of deelnemers en monteren highlights die u op LinkedIn of uw website kunt gebruiken.",
       },
       {
-        question: "Werken jullie door heel Nederland?",
-        answer: "Ja, wij zijn gevestigd in Utrecht en werken aan opdrachten door heel Nederland.",
+        question: "Kunnen de foto's direct in een persbericht?",
+        answer:
+          "Ja. De eerste selectie ontvangt u dezelfde dag, geschikt voor persbericht, nieuwsbrief en social media.",
       },
     ],
   },
   {
-    slug: "evenementen",
-    href: "/evenementen/",
-    title: "Evenementen",
-    navLabel: "Evenementen",
-    seoTitle: "Fotografie en videografie voor evenementen en festivals",
+    slug: "corporate-events",
+    href: "/corporate-events/",
+    title: "Corporate events",
+    navLabel: "Corporate events",
+    seoTitle: "Fotografie en video voor corporate events",
     seoDescription:
-      "Fotografie en videografie voor festivals, muziekevenementen en nightlife. Aftermovies en sfeerreportages. Content agency in Utrecht, actief door heel Nederland.",
-    heroTitle: "Fotografie en videografie voor evenementen",
+      "Fotografie en video voor personeelsfeesten, jubilea, awards en productlanceringen. Spontane beelden voor employer branding en interne communicatie.",
+    summary: "Jubilea, awards, personeelsfeesten en lanceringen, voor intern gebruik en employer branding.",
+    heroTitle: "Fotografie en video voor corporate events",
     heroSubtitle:
-      "Festivals, muziekevenementen en nightlife. Dynamische foto's en aftermovies die de energie vastleggen. Wij leveren fotografie en videografie voor evenementen, festivals en nightlife, van sfeerreportages en podiumfotografie tot aftermovies.",
-    introTitle: "Events die tot leven komen",
+      "Personeelsfeesten, jubilea, awards en productlanceringen. Beelden die laten zien hoe het is om bij uw organisatie te werken.",
+    heroImage: "/gallery/corporate/Nico-Campus-2026---Second-Shot-Media-157.jpg",
+    heroImageAlt: "Gasten in gesprek tijdens een netwerkborrel",
+    introTitle: "Geen rij geposeerde groepsfoto's, maar hoe de avond echt was.",
     introParagraphs: [
-      "Van festivals tot clubnights: wij vangen de energie, sfeer en spontane momenten. Wij leveren fotografie én videografie, van reportage tot aftermovie.",
-      "Foto's worden doorgaans binnen 48 uur opgeleverd, ideaal om de buzz van uw event op social media te houden terwijl het nog hot is.",
+      "Wij bewegen tussen de gasten en leggen de momenten vast die mensen later terugzoeken: de speech, de uitreiking, de volle dansvloer en de gesprekken aan de bar. Groepsfoto's maken wij natuurlijk ook, als u dat wilt.",
+      "Vooraf bespreken wij uw huisstijl en waar de beelden voor zijn: intranet, LinkedIn, een vacaturecampagne of de uitnodiging voor volgend jaar.",
     ],
-    photoTitle: "Eventfotografie",
-    photoParagraphs: [
-      "Dynamische reportage met focus op publiek, podium en sfeer. Ook ervaring met low-light omgevingen bij club en nightlife.",
-    ],
-    videoTitle: "Aftermovies en eventvideo",
-    videoParagraphs: [
-      "Dynamische edits, ritmisch gemonteerd op de muziek. Van liggende aftermovies voor YouTube tot verticale shortform voor Reels en TikTok.",
-    ],
-    whyTitle: "Waarom Second Shot Media voor evenementen",
-    whyParagraphs: [
-      "Foto en video onder één aanspreekpunt. Ervaring op events tot 50.000 bezoekers. Snelle oplevering en energieke beelden.",
-    ],
-    workflowSteps: [
-      "Briefing: type event, gewenste output en planning",
-      "Opname: reportage en/of video op locatie",
-      "Nabewerking: selectie, kleurcorrectie en montage",
-      "Oplevering: foto's binnen 48 uur, video volgens afspraak",
-    ],
-    anchorSections: [
-      {
-        id: "festivals",
-        title: "Festivals",
-        paragraphs: [
-          "Podium, publiek en sfeer. Beelden die de beleving van je festival overbrengen en geschikt zijn voor social media en aftermovies.",
-        ],
-      },
-      {
-        id: "club-nightlife",
-        title: "Club & nightlife",
-        paragraphs: [
-          "Low-light fotografie en video met focus op energie en sfeer op de dansvloer.",
-        ],
-      },
+    deliverables: [
+      "Sfeer, aankleding, gasten en programmaonderdelen",
+      "Speeches, uitreikingen en optredens",
+      "Eerste selectie dezelfde dag",
+      "Volledig album binnen 24 uur via een deelbare link",
+      "Aftermovie voor intranet, LinkedIn of de volgende editie",
+      "FPV-drone voor een opening of rondgang door de locatie",
     ],
     faqs: [
       {
-        question: "Fotograferen en filmen jullie festivals?",
-        answer: "Ja, wij leveren fotografie én videografie voor festivals en muziekevenementen.",
+        question: "Wat als collega's niet op de foto willen?",
+        answer:
+          "Dat respecteren wij. Wie niet op de foto wil, kan dat aangeven bij de fotograaf. Foto's verwijderen wij achteraf op verzoek.",
       },
       {
-        question: "Doen jullie ook club en nightlife?",
-        answer: "Ja, wij hebben ervaring met low-light fotografie en video in club- en nightlife-omgevingen.",
+        question: "Houden jullie rekening met onze huisstijl?",
+        answer:
+          "Ja. Stuur ons vooraf uw huisstijl en eventueel voorbeeldbeelden. Wij stemmen de kleurbewerking en de selectie daarop af.",
       },
       {
-        question: "Leveren jullie aftermovies?",
-        answer: "Ja, wij maken aftermovies en recap video's voor festivals en evenementen.",
+        question: "Werken jullie ook bij weinig licht?",
+        answer:
+          "Ja. Avondprogramma's, diners en feesten in donkere zalen zijn voor ons gewoon werk. Wij werken waar mogelijk zonder flits.",
       },
       {
-        question: "Hoe snel zijn foto's beschikbaar?",
-        answer: "Wij leveren eventfoto's doorgaans binnen 48 uur na het evenement.",
+        question: "Kunnen wij de foto's intern delen?",
+        answer:
+          "Ja. U ontvangt een deelbare link waarmee collega's de foto's kunnen bekijken en downloaden.",
       },
     ],
   },
   {
-    slug: "gala-en-feest",
-    href: "/gala-en-feest/",
-    title: "Gala's en feesten",
-    navLabel: "Gala's en feesten",
-    seoTitle: "Fotografie en videografie voor gala's en feesten",
+    slug: "festivals",
+    href: "/festivals/",
+    title: "Festivals en publieksevenementen",
+    navLabel: "Festivals",
+    seoTitle: "Festivalfotograaf en aftermovie",
     seoDescription:
-      "Fotografie en videografie voor gala's, feesten en studentenverenigingen. Content agency in Utrecht, actief door heel Nederland.",
-    heroTitle: "Fotografie en videografie voor gala's en feesten",
+      "Fotografie, aftermovies en FPV-dronebeelden voor festivals, stadsevenementen en grote internationale events. Ervaring met events tot 50.000 bezoekers.",
+    summary: "Podium, publiek en sfeer, van stadsfeest tot internationaal event met 50.000 bezoekers.",
+    heroTitle: "Festival- en eventfotografie",
     heroSubtitle:
-      "Elegante reportage en video voor gala's, studentenverenigingen en feesten. Van photobooth tot dansvloer. Wij leggen de sfeer op de dansvloer en bij de photobooth vast.",
-    introTitle: "Stijlvolle beelden van jullie gala",
+      "Podium, publiek en de momenten ertussen. Voor festivals, stadsevenementen en grote internationale events.",
+    heroImage: "/gallery/events/Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg",
+    heroImageAlt: "Overzicht van een vol plein tijdens Koningsdag",
+    introTitle: "De energie van een festival houdt u alleen vast als de beelden snel online staan.",
     introParagraphs: [
-      "Tijdens een gala draait alles om uitstraling: pakken, jurken, aankleding en een volle dansvloer. Wij leggen deze elementen vast op een manier die zowel chic als spontaan is, in foto of video.",
-      "Wij raden voor fotografie 3 uur coverage aan: de eerste anderhalf uur bij een photobooth, de laatste anderhalf uur op de dansvloer. Het resultaat: almanak-klare beelden en content voor je socials.",
+      "Daarom ontvangt u aan het eind van elke festivaldag een eerste selectie. Zo kunt u posten terwijl bezoekers nog napraten, en de voorverkoop voor de volgende editie starten met beelden van deze.",
+      "Wij werkten op events tot 50.000 bezoekers, van Koningsdag en Bevrijdingsdag tot de World Scout Jamboree in Zuid-Korea. Bij meerdere podia werken onze fotografen met vaste stijlafspraken, zodat het geheel als één verhaal oogt.",
     ],
-    photoTitle: "Galafotografie",
-    photoParagraphs: [
-      "Van entreefoto's en groepsportretten tot sfeerbeelden op de dansvloer: een complete reportage voor almanak, socials en herinneringen.",
-    ],
-    videoTitle: "Gala- en feestvideo",
-    videoParagraphs: [
-      "Aftermovies en sfeervideo's van je gala of feest, geschikt voor social media en interne communicatie van je vereniging.",
-    ],
-    whyTitle: "Waarom Second Shot Media voor gala's",
-    whyParagraphs: [
-      "Ervaring met studentenverenigingen en gala's door heel Nederland. Foto én video onder één aanspreekpunt.",
-    ],
-    workflowSteps: [
-      "Afstemming: planning photobooth en dansvloer",
-      "Opname: reportage en video op locatie",
-      "Nabewerking: selectie en montage",
-      "Oplevering: beelden voor socials en archief",
-    ],
-    logos: [
-      { src: "/logos/dsk.png", alt: "Studievereniging DSK Utrecht" },
-      { src: "/logos/ufostam.png", alt: "Studentenscouting U.F.O.-Stam" },
-      { src: "/logos/usko.jpg", alt: "Utrechts Studenten Koor en Orkest" },
-      { src: "/logos/vugs.webp", alt: "Vugs Utrecht" },
-      { src: "/logos/aegee.jpg", alt: "AEGEE Utrecht" },
-      { src: "/logos/ssn.png", alt: "Studenten Scouting Nederland" },
+    deliverables: [
+      "Eerste selectie aan het eind van elke festivaldag",
+      "Volledig album binnen 24 uur na de laatste dag",
+      "Podium, publiek en sfeer, ook bij weinig licht",
+      "Aftermovie en korte reels voor Instagram en TikTok",
+      "Aparte mappen voor artiesten en sponsors",
+      "FPV-drone over terrein en podia, waar regels en locatie het toestaan",
     ],
     faqs: [
       {
-        question: "Fotograferen jullie gala's van studentenverenigingen?",
-        answer: "Ja, gala's en feesten van studentenverenigingen zijn een specialisatie van Second Shot Media.",
-      },
-      {
-        question: "Leveren jullie ook video op gala's?",
-        answer: "Ja, wij leveren fotografie én videografie voor gala's en feesten.",
-      },
-      {
-        question: "Wat is een aanbevolen pakket?",
+        question: "Doen jullie ook meerdaagse festivals?",
         answer:
-          "Wij raden 3 uur coverage aan: anderhalf uur bij de photobooth en anderhalf uur op de dansvloer.",
+          "Ja. U ontvangt na elke dag een eerste selectie en binnen 24 uur na de laatste dag het volledige album.",
       },
       {
-        question: "Welke verenigingen hebben jullie al gedaan?",
+        question: "Kunnen artiesten hun eigen foto's krijgen?",
         answer:
-          "Onder andere DSK Utrecht, U.F.O.-Stam, USKO, Vugs Utrecht, AEGEE Utrecht en Studenten Scouting Nederland.",
+          "Ja. Op verzoek leveren wij aparte mappen per artiest of per sponsor, zodat iedereen zijn eigen beelden snel kan delen.",
+      },
+      {
+        question: "Kunnen jullie FPV-dronebeelden maken?",
+        answer:
+          "Ja. FPV-dronebeelden geven een aftermovie een vlucht die met een gewone camera niet lukt. Wij bespreken vooraf wat op uw locatie en volgens de regels mogelijk is.",
+      },
+      {
+        question: "Hoe groot zijn de events waar jullie werken?",
+        answer:
+          "Van stadsfeesten tot internationale events met tienduizenden bezoekers. Ivan werkte onder andere op de World Scout Jamboree in Zuid-Korea.",
       },
     ],
   },

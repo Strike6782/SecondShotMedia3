@@ -38,9 +38,6 @@ export default function OverEnContactPage() {
               take. Wij zorgen dat die momenten toch een tweede leven krijgen, in uw verslag, op LinkedIn en in de
               aankondiging van de volgende editie.
             </p>
-            <p className="heading text-2xl text-foreground">
-              Elk bijzonder moment verdient een tweede kans om te schitteren.
-            </p>
           </div>
         </div>
       </section>

@@ -51,7 +51,7 @@ export function TeamSection({ showMoreLink = true }: TeamSectionProps) {
           </div>
           <blockquote className="max-w-2xl border-l-2 border-primary pl-6">
             <p className="heading text-2xl sm:text-3xl">
-              &ldquo;Ik wil dat u na afloop alleen nog hoeft te kiezen welke foto u als eerste deelt.&rdquo;
+              &ldquo;Elk bijzonder moment verdient een tweede kans om te schitteren.&rdquo;
             </p>
             <footer className="mt-3 text-muted-foreground">Ivan Balkenende, oprichter</footer>
           </blockquote>

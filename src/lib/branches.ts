@@ -140,8 +140,8 @@ export const branches: BranchConfig[] = [
     heroTitle: "Foto en video voor festivals",
     heroSubtitle:
       "Podium, publiek en de momenten ertussen. Voor festivals, stadsevenementen en grote internationale events.",
-    heroImage: "/gallery/festivals/Rhythm-Roulette---Second-Shot-Media-30.jpg",
-    heroImageAlt: "DJ achter de draaitafel tijdens festival Rhythm Roulette",
+    heroImage: "/gallery/festivals/Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg",
+    heroImageAlt: "Overzicht van een vol plein tijdens Koningsdag op het Hof in Amersfoort",
     introTitle: "De energie van een festival houdt u alleen vast als de beelden snel online staan.",
     introParagraphs: [
       "Daarom ontvangt u na de eerste festivaldag al een selectie van de sterkste beelden. Zo kunt u posten terwijl bezoekers nog napraten, en de voorverkoop voor de volgende editie starten met beelden van deze.",

@@ -45,8 +45,8 @@ export const branches: BranchConfig[] = [
     heroTitle: "Foto en video voor zakelijke events",
     heroSubtitle:
       "Beurzen, congressen, conferenties en seminars. Rustig en zonder flits vastgelegd, met de eerste beelden nog dezelfde dag.",
-    heroImage: "/gallery/corporate/Cybersec---Second-Shot-Media-6.jpg",
-    heroImageAlt: "Spreker op het podium voor een volle zaal",
+    heroImage: "/gallery/zakelijk/WoTS-Overzicht---Second-Shot-Media---5.jpg",
+    heroImageAlt: "Volle beurshal tijdens vakbeurs WoTS 2026 in de Jaarbeurs Utrecht",
     introTitle: "Het event duurt een dag. De beelden gebruikt u het hele jaar.",
     introParagraphs: [
       "In het verslag, op LinkedIn, in de nieuwsbrief en bij het werven van sprekers, exposanten en sponsors voor de volgende editie. Daarom leggen wij niet alleen de volle zaal vast, maar ook de gesprekken, de stands en de details.",
@@ -95,8 +95,8 @@ export const branches: BranchConfig[] = [
     heroTitle: "Foto en video voor bedrijfsfeesten en gala's",
     heroSubtitle:
       "Personeelsfeesten, jubilea, awards, galadiners en kerstfeesten. Beelden die laten zien hoe het is om bij uw organisatie te werken.",
-    heroImage: "/gallery/students/Gala-USKO---Second-Shot-Media-123.jpg",
-    heroImageAlt: "Volle zaal met gasten in avondkleding tijdens een gala",
+    heroImage: "/gallery/feesten/Gala-Codex---Second-Shot-Media-72.jpg",
+    heroImageAlt: "Gasten op de dansvloer tijdens een gala",
     introTitle: "Geen rij geposeerde groepsfoto's, maar hoe de avond echt was.",
     introParagraphs: [
       "Wij bewegen tussen de gasten en leggen de momenten vast die mensen later terugzoeken: de ontvangst, de speech, de uitreiking, de volle dansvloer en de gesprekken aan de bar. Groepsfoto's maken wij natuurlijk ook, als u dat wilt.",
@@ -140,8 +140,8 @@ export const branches: BranchConfig[] = [
     heroTitle: "Foto en video voor festivals",
     heroSubtitle:
       "Podium, publiek en de momenten ertussen. Voor festivals, stadsevenementen en grote internationale events.",
-    heroImage: "/gallery/events/Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg",
-    heroImageAlt: "Overzicht van een vol plein tijdens Koningsdag",
+    heroImage: "/gallery/festivals/Rhythm-Roulette---Second-Shot-Media-30.jpg",
+    heroImageAlt: "DJ achter de draaitafel tijdens festival Rhythm Roulette",
     introTitle: "De energie van een festival houdt u alleen vast als de beelden snel online staan.",
     introParagraphs: [
       "Daarom ontvangt u na de eerste festivaldag al een selectie van de sterkste beelden. Zo kunt u posten terwijl bezoekers nog napraten, en de voorverkoop voor de volgende editie starten met beelden van deze.",
@@ -190,8 +190,8 @@ export const branches: BranchConfig[] = [
     heroTitle: "Content voor pretparken en dagjes uit",
     heroSubtitle:
       "Reels, campagnebeelden en FPV-dronevluchten voor pretparken, dagattracties en seizoensevents zoals Halloween en winter.",
-    heroImage: "/gallery/theme-parks/Thorpe-Park---Second-Shot-Media-3.jpg",
-    heroImageAlt: "Bezoekers in een achtbaan in volle vaart",
+    heroImage: "/gallery/pretparken/De-Vaste-Clique-IB-88.jpg",
+    heroImageAlt: "Verlichte kermisattractie met bezoekers in de avond",
     introTitle: "Een park dat het hele jaar zichtbaar is, verkoopt het hele jaar kaartjes.",
     introParagraphs: [
       "Wij helpen pretparken en dagattracties om structureel zichtbaar te zijn op TikTok en Instagram, met een vaste stroom reels die past bij uw park en uw bezoekers. Daarnaast maken wij campagnebeelden en content rond openingen en seizoensevents.",

@@ -52,7 +52,7 @@ export default function WerkwijzePage() {
       <Hero
         title="Van aanvraag tot album, met één aanspreekpunt"
         subtitle="U regelt een event. Wij zorgen dat de beelden op tijd, in één stijl en zonder gedoe bij u terechtkomen."
-        image="/gallery/corporate/Nico-Campus-2026---Second-Shot-Media-97.jpg"
+        image="/gallery/zakelijk/Nico-Campus-2026---Second-Shot-Media-97.jpg"
         imageAlt="Lege congreszaal vlak voor de start van het programma"
       />
 

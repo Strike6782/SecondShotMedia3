@@ -46,14 +46,12 @@ export function TeamSection({ showMoreLink = true }: TeamSectionProps) {
             <p>
               Bij elke opdracht is hij uw aanspreekpunt: hij maakt het voorstel, brieft het team en staat vaak zelf
               achter de camera. Voor grotere events werkt hij met een vaste poule fotografen, videografen en editors
-              uit heel Nederland. Iedereen werkt volgens dezelfde briefing en stijl, en Ivan controleert alle beelden
-              voordat ze naar u gaan.
+              uit heel Nederland. Iedereen werkt volgens dezelfde briefing en stijl.
             </p>
           </div>
           <blockquote className="max-w-2xl border-l-2 border-primary pl-6">
             <p className="heading text-2xl sm:text-3xl">
-              &ldquo;U belt met mij, niet met een planningsafdeling. Dat blijft zo, hoe groot het team ook
-              wordt.&rdquo;
+              &ldquo;Ik wil dat u na afloop alleen nog hoeft te kiezen welke foto u als eerste deelt.&rdquo;
             </p>
             <footer className="mt-3 text-muted-foreground">Ivan Balkenende, oprichter</footer>
           </blockquote>

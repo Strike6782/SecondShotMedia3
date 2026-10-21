@@ -6,7 +6,7 @@ import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { Button } from "@/components/ui/button";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { overContactContent } from "@/lib/page-content";
-import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, DELIVERY, KVK, OFFERTE_MAILTO } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
 
 export const metadata = buildPageMetadata({
   title: "Over ons en contact",
@@ -50,8 +50,7 @@ export default function OverEnContactPage() {
           <div className="space-y-6 md:col-span-7">
             <h2 className="display text-5xl sm:text-6xl">Contact</h2>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan reageert persoonlijk.{" "}
-              {DELIVERY.response}.
+              Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan neemt persoonlijk contact met u op.
             </p>
             <a
               href={OFFERTE_MAILTO}

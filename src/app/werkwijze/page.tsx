@@ -19,7 +19,7 @@ const faqs: FaqItem[] = [
   {
     question: "Hoe komt de prijs tot stand?",
     answer:
-      "Op basis van de duur, het aantal fotografen en videografen en wat u met de beelden wilt. U ontvangt één all-in prijs, zonder verborgen kosten.",
+      "Dat verschilt per evenement. Neem contact op met Ivan voor een offerte op maat. Wij kijken graag met u mee wat u nodig heeft.",
   },
   {
     question: "Wat als het programma op de dag verandert?",

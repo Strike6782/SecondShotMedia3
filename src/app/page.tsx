@@ -43,8 +43,9 @@ export default function Home() {
             Uw eventdag, en wanneer u wat ontvangt
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8">
-            Een event duurt een dag, de aandacht ervoor nog korter. Daarom heeft u de sterkste beelden nog dezelfde
-            dag, en het volledige album binnen 24 uur.
+            Na afloop wilt u zo snel mogelijk laten zien hoe uw event was: aan deelnemers, partners en iedereen die
+            er niet bij was. Daarom ontvangt u de sterkste beelden nog dezelfde dag, en het volledige album binnen 24
+            uur.
           </p>
         </div>
         <EventDay steps={eventDay} />

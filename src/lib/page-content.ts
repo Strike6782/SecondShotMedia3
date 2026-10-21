@@ -3,12 +3,11 @@ import type { FaqItem } from "@/lib/types";
 // Copy for the homepage, werkwijze, over/contact, werken-bij and city pages.
 // Portfolio video's en foto's staan in content/portfolio.json.
 
-/** How an event day runs, from request to delivery. `delivered` marks the moment the client receives content. */
+/** One step on a timeline (event day, werkwijze, pretparken). */
 export type DayStep = {
   when: string;
   title: string;
   text: string;
-  delivered?: boolean;
 };
 
 export const eventDay: DayStep[] = [
@@ -16,11 +15,6 @@ export const eventDay: DayStep[] = [
     when: "Vooraf",
     title: "Briefing",
     text: "Programma, belangrijkste momenten en wie wat vastlegt staan vast.",
-  },
-  {
-    when: "Voor de start",
-    title: "Team op locatie",
-    text: "Laatste afstemming met u, zodat programmawijzigingen geen gaten geven.",
   },
   {
     when: "Tijdens het event",
@@ -31,22 +25,25 @@ export const eventDay: DayStep[] = [
     when: "Dezelfde dag",
     title: "Eerste selectie",
     text: "De sterkste beelden, klaar voor social media en persbericht.",
-    delivered: true,
   },
   {
     when: "Binnen 24 uur",
     title: "Volledig album",
     text: "Bewerkt, in hoge resolutie en webformaat, via een deelbare link.",
-    delivered: true,
+  },
+  {
+    when: "In overleg",
+    title: "Video",
+    text: "Aftermovie, recap of highlights. De oplevertermijn stemmen wij per project met u af.",
   },
 ];
 
 /** Full process for the werkwijze page. */
 export const workflow: DayStep[] = [
   {
-    when: "Binnen één werkdag",
+    when: "Vooraf",
     title: "Aanvraag en voorstel",
-    text: "U stuurt datum, locatie, tijden en wat u met de beelden wilt. Ivan reageert persoonlijk en stuurt een voorstel op maat met een all-in prijs.",
+    text: "U stuurt datum, locatie, tijden en wat u met de beelden wilt. Ivan neemt persoonlijk contact met u op, kijkt met u mee wat u nodig heeft en stuurt een offerte op maat.",
   },
   {
     when: "Weken vooraf",
@@ -67,18 +64,16 @@ export const workflow: DayStep[] = [
     when: "Dezelfde dag",
     title: "Eerste selectie",
     text: "Een selectie van de sterkste foto's, zodat u kunt posten terwijl het event nog loopt of net voorbij is.",
-    delivered: true,
   },
   {
     when: "Binnen 24 uur",
     title: "Volledig album",
     text: "Alle foto's bewerkt in één stijl, in hoge resolutie en webformaat, in een album dat u kunt delen.",
-    delivered: true,
   },
   {
     when: "In overleg",
     title: "Video",
-    text: "Aftermovie, recap of highlights, liggend en verticaal. Inclusief één revisieronde en gelicenseerde muziek.",
+    text: "Aftermovie, recap of highlights, liggend en verticaal. De oplevertermijn stemmen wij per project met u af. Inclusief één revisieronde en gelicenseerde muziek.",
   },
 ];
 
@@ -131,12 +126,12 @@ export const homeContent = {
     {
       question: "Hoe snel ontvang ik de foto's?",
       answer:
-        "Een eerste selectie ontvangt u dezelfde dag. Het volledige, bewerkte album volgt binnen 24 uur. Bij meerdaagse events krijgt u na elke dag een selectie.",
+        "Een eerste selectie ontvangt u dezelfde dag. Het volledige, bewerkte album volgt binnen 24 uur.",
     },
     {
       question: "Wat kost het?",
       answer:
-        "Dat hangt af van de duur, het aantal mensen en wat u met de beelden wilt. U ontvangt binnen één werkdag een voorstel op maat met een all-in prijs, zonder verborgen kosten.",
+        "Dat verschilt per evenement. Neem contact op met Ivan voor een offerte op maat. Wij kijken graag met u mee wat u nodig heeft.",
     },
     {
       question: "Werken jullie in heel Nederland?",
@@ -162,16 +157,16 @@ export const overContactContent = {
     {
       question: "Hoe vraag ik een voorstel aan?",
       answer:
-        "Mail naar ivan@secondshotmedia.nl met datum, locatie, tijden en wat u met de beelden wilt. U krijgt binnen één werkdag een reactie.",
+        "Mail naar ivan@secondshotmedia.nl met datum, locatie, tijden en wat u met de beelden wilt. Ivan neemt dan persoonlijk contact met u op.",
     },
     {
       question: "Wie zijn de fotografen en videografen?",
       answer:
-        "Een vaste poule van freelance fotografen, videografen en editors. Iedereen werkt volgens dezelfde briefing en stijl, en Ivan controleert de beelden voor levering.",
+        "Een vaste poule van freelance fotografen, videografen en editors. Iedereen werkt volgens dezelfde briefing en stijl.",
     },
     {
       question: "Kan ik ook met jullie samenwerken als fotograaf of videograaf?",
-      answer: "Ja. Kijk op de pagina Werken bij wat wij zoeken en hoe u zich aanmeldt.",
+      answer: "Op dit moment niet. Ons team is compleet.",
     },
   ] satisfies FaqItem[],
 };
@@ -181,23 +176,12 @@ export const werkenBijContent = {
     "Second Shot Media werkt per opdracht samen met freelance fotografen, videografen en editors door heel Nederland. Er zijn geen vaste fulltime functies.",
   faqs: [
     {
+      question: "Zoeken jullie op dit moment nieuwe creators?",
+      answer: "Nee. Ons team is op dit moment compleet.",
+    },
+    {
       question: "Zijn dit vaste banen?",
       answer: "Nee. Wij werken projectmatig samen met freelancers, niet in loondienst.",
-    },
-    {
-      question: "Waar moet ik wonen?",
-      answer:
-        "Wij werken door heel Nederland, met de meeste opdrachten in Midden-Nederland. Reisbereidheid is belangrijk.",
-    },
-    {
-      question: "Wat hebben jullie nodig?",
-      answer:
-        "Een sterk portfolio met eventwerk, eigen professionele apparatuur en de bereidheid om in een vaste stijl en volgens een briefing te werken.",
-    },
-    {
-      question: "Hoe meld ik me aan?",
-      answer:
-        "Stuur een e-mail naar ivan@secondshotmedia.nl met onderwerp 'Samenwerking Second Shot Media'. Vermeld uw portfolio, specialisatie (foto, video of montage), woonplaats en beschikbaarheid.",
     },
   ] satisfies FaqItem[],
 };
@@ -219,7 +203,7 @@ export function getCityFaqs(cityName: string): FaqItem[] {
     {
       question: "Hoe vraag ik een voorstel aan?",
       answer:
-        "Mail ivan@secondshotmedia.nl met datum, locatie, tijden en wat u met de beelden wilt. U krijgt binnen één werkdag een reactie.",
+        "Mail ivan@secondshotmedia.nl met datum, locatie, tijden en wat u met de beelden wilt. Wij kijken graag met u mee wat u nodig heeft.",
     },
   ];
 }

@@ -79,7 +79,7 @@ export const branches: BranchConfig[] = [
       {
         question: "Hoe ver vooruit moet ik boeken?",
         answer:
-          "Het voorjaar en najaar zijn drukke periodes voor beurzen en congressen. Neem daarom zo vroeg mogelijk contact op. Kleinere opdrachten kunnen vaak ook op korte termijn.",
+          "Neem zo snel mogelijk contact op. Dan is er genoeg tijd om in alle rust te briefen en een team samen te stellen.",
       },
     ],
   },
@@ -100,7 +100,7 @@ export const branches: BranchConfig[] = [
     introTitle: "Geen rij geposeerde groepsfoto's, maar hoe de avond echt was.",
     introParagraphs: [
       "Wij bewegen tussen de gasten en leggen de momenten vast die mensen later terugzoeken: de ontvangst, de speech, de uitreiking, de volle dansvloer en de gesprekken aan de bar. Groepsfoto's maken wij natuurlijk ook, als u dat wilt.",
-      "Vooraf bespreken wij uw huisstijl en waar de beelden voor zijn: intranet, LinkedIn, een vacaturecampagne of de uitnodiging voor volgend jaar. Avondwerk in donkere zalen is voor ons gewoon werk.",
+      "Vooraf bespreken wij uw huisstijl en waar de beelden voor zijn: intranet, LinkedIn, een vacaturecampagne of de uitnodiging voor volgend jaar. Ook in donkere zalen en tijdens avondprogramma's leveren wij scherpe, sfeervolle beelden.",
     ],
     deliverables: [
       "Ontvangst, aankleding en de rode loper",
@@ -124,11 +124,7 @@ export const branches: BranchConfig[] = [
       {
         question: "Werken jullie ook bij weinig licht?",
         answer:
-          "Ja. Diners, feesten en uitreikingen in donkere zalen zijn voor ons gewoon werk. Wij werken waar mogelijk zonder flits.",
-      },
-      {
-        question: "Fotograferen jullie ook studentengala's?",
-        answer: "Nee. Wij richten ons op feesten en gala's van bedrijven en organisaties.",
+          "Ja. Wij hebben veel ervaring met diners, feesten en uitreikingen in donkere zalen, en werken waar mogelijk zonder flits.",
       },
     ],
   },
@@ -140,7 +136,7 @@ export const branches: BranchConfig[] = [
     seoTitle: "Festivalfotograaf en aftermovie",
     seoDescription:
       "Fotografie, aftermovies en FPV-dronebeelden voor festivals, stadsevenementen en grote internationale events. Ervaring met events tot 50.000 bezoekers.",
-    summary: "Podium, publiek en sfeer, van stadsfeest tot internationaal event met 50.000 bezoekers.",
+    summary: "Podium, publiek en sfeer, van stadsfeest tot internationaal event.",
     heroTitle: "Foto en video voor festivals",
     heroSubtitle:
       "Podium, publiek en de momenten ertussen. Voor festivals, stadsevenementen en grote internationale events.",
@@ -148,11 +144,11 @@ export const branches: BranchConfig[] = [
     heroImageAlt: "Overzicht van een vol plein tijdens Koningsdag",
     introTitle: "De energie van een festival houdt u alleen vast als de beelden snel online staan.",
     introParagraphs: [
-      "Daarom ontvangt u aan het eind van elke festivaldag een eerste selectie. Zo kunt u posten terwijl bezoekers nog napraten, en de voorverkoop voor de volgende editie starten met beelden van deze.",
-      "Wij werkten op events tot 50.000 bezoekers, van Koningsdag en Bevrijdingsdag tot de World Scout Jamboree in Zuid-Korea. Bij meerdere podia werken onze fotografen met vaste stijlafspraken, zodat het geheel als één verhaal oogt.",
+      "Daarom ontvangt u na de eerste festivaldag al een selectie van de sterkste beelden. Zo kunt u posten terwijl bezoekers nog napraten, en de voorverkoop voor de volgende editie starten met beelden van deze.",
+      "Wij werkten op events tot 50.000 bezoekers, van Koningsdag en Bevrijdingsdag in Amersfoort tot grote internationale meerdaagse evenementen zoals Spejdernes Lejr in Denemarken en de World Scout Jamboree in Zuid-Korea. Bij meerdere podia werken onze fotografen met vaste stijlafspraken, zodat het geheel als één verhaal oogt.",
     ],
     deliverables: [
-      "Eerste selectie aan het eind van elke festivaldag",
+      "Eerste selectie na de eerste festivaldag",
       "Volledig album binnen 24 uur na de laatste dag",
       "Podium, publiek en sfeer, ook bij weinig licht",
       "Aftermovie en korte reels voor Instagram en TikTok",
@@ -163,7 +159,7 @@ export const branches: BranchConfig[] = [
       {
         question: "Doen jullie ook meerdaagse festivals?",
         answer:
-          "Ja. U ontvangt na elke dag een eerste selectie en binnen 24 uur na de laatste dag het volledige album.",
+          "Ja. Na de eerste dag ontvangt u een eerste selectie, en binnen 24 uur na de laatste dag het volledige album.",
       },
       {
         question: "Kunnen artiesten hun eigen foto's krijgen?",
@@ -203,7 +199,7 @@ export const branches: BranchConfig[] = [
     ],
     deliverables: [
       "Reels en shortform video voor TikTok, Instagram en YouTube Shorts",
-      "Vaste opnamedag om de twee maanden, met minimaal twee video's per week",
+      "Op één opnamedag nemen wij efficiënt verschillende video's op",
       "Plaatsing op uw kanalen, in overleg met uw marketingteam",
       "Campagne- en sfeerfotografie van park en attracties",
       "Content rond openingen van nieuwe attracties en seizoensevents",
@@ -218,9 +214,9 @@ export const branches: BranchConfig[] = [
           text: "Thema's, formats en seizoenen voor de komende periode, afgestemd met uw marketingteam.",
         },
         {
-          when: "Om de twee maanden",
+          when: "In het park",
           title: "Opnamedag",
-          text: "Eén intensieve dag in het park, waarop wij genoeg materiaal maken voor de hele periode.",
+          text: "Op één dag nemen wij efficiënt verschillende video's op, genoeg voor een hele periode.",
         },
         {
           when: "Na de opnamedag",
@@ -228,10 +224,9 @@ export const branches: BranchConfig[] = [
           text: "Reels op maat voor TikTok, Instagram en YouTube Shorts, met ondertiteling.",
         },
         {
-          when: "Elke week",
-          title: "Twee video's online",
+          when: "Doorlopend",
+          title: "Plaatsing",
           text: "Wij plaatsen de video's op uw kanalen, zodat uw park zichtbaar blijft.",
-          delivered: true,
         },
       ],
     },
@@ -246,7 +241,7 @@ export const branches: BranchConfig[] = [
       {
         question: "Hoe werkt structurele social content?",
         answer:
-          "Om de twee maanden plannen wij een opnamedag in uw park. Daarvan maken wij genoeg video's om minimaal twee keer per week te posten, en die plaatsen wij ook voor u.",
+          "Wij plannen een opnamedag in uw park en nemen daarop efficiënt verschillende video's op. Die monteren wij en plaatsen wij verspreid over de periode op uw kanalen.",
       },
       {
         question: "Kunnen jullie ook eenmalig iets maken?",

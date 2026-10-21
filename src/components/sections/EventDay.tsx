@@ -9,7 +9,7 @@ type EventDayProps = {
   className?: string;
 };
 
-// The event day as a timeline. Red marks the moments the client receives content.
+// The event day as a timeline.
 export function EventDay({ steps, layout = "row", tone = "light", className }: EventDayProps) {
   const dark = tone === "dark";
   const row = layout === "row";
@@ -47,18 +47,11 @@ export function EventDay({ steps, layout = "row", tone = "light", className }: E
             className={cn(
               "absolute left-0 top-1.5 h-[11px] w-[11px] rounded-full border-2",
               row && "md:top-0",
-              step.delivered
-                ? "border-primary bg-primary"
-                : dark
-                  ? "border-white/60 bg-[#0f1a2b]"
-                  : "border-foreground/50 bg-background"
+              dark ? "border-white/60 bg-[#0f1a2b]" : "border-foreground/50 bg-background"
             )}
           />
           <p
-            className={cn(
-              "text-sm font-semibold",
-              step.delivered ? "text-primary" : dark ? "text-ink-muted" : "text-muted-foreground"
-            )}
+            className={cn("text-sm font-semibold", dark ? "text-ink-muted" : "text-muted-foreground")}
           >
             {step.when}
           </p>

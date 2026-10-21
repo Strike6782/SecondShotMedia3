@@ -27,7 +27,7 @@
   - ink:      #0F1A2B  text and dark sections (nachtblauw)
   - slate:    #586274  secondary text
   - line:     #D5D9DF  rules and borders
-  - signal:   #D7141C  brand red, only for actions and the "delivered" marker
+  - signal:   #D7141C  brand red, only for actions
 */
 :root {
   --background: #ffffff;

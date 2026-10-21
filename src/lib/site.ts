@@ -3,27 +3,7 @@ export const SITE_URL = "https://secondshotmedia.nl";
 export const SITE_NAME = "Second Shot Media";
 export const CONTACT_EMAIL = "ivan@secondshotmedia.nl";
 
-// Prefilled request so the first mail already holds what we need for a proposal.
-const OFFERTE_BODY = [
-  "Hallo Ivan,",
-  "",
-  "Graag ontvang ik een voorstel voor ons event.",
-  "",
-  "Organisatie:",
-  "Soort event (zakelijk event, bedrijfsfeest of gala, festival, pretpark):",
-  "Datum of data:",
-  "Locatie:",
-  "Tijden (start en einde):",
-  "Verwacht aantal bezoekers:",
-  "Gewenst: foto / video / beide",
-  "Waar gebruikt u de beelden voor:",
-  "",
-  "Met vriendelijke groet,",
-].join("\n");
-
-export const OFFERTE_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-  "Aanvraag voorstel eventcontent"
-)}&body=${encodeURIComponent(OFFERTE_BODY)}`;
+export const OFFERTE_MAILTO = `mailto:${CONTACT_EMAIL}`;
 export const CONTACT_INSTAGRAM = "https://instagram.com/secondshotmedia";
 export const CONTACT_LINKEDIN = "https://www.linkedin.com/in/ivan-balkenende/";
 export const KVK = "92016421";
@@ -54,7 +34,6 @@ export const TEAM_PHOTO = "/images/team.jpg";
 export const DELIVERY = {
   previews: "Eerste selectie dezelfde dag",
   album: "Volledig album binnen 24 uur",
-  response: "Reactie binnen één werkdag",
 };
 
 // Kept for backwards compatibility in imports.

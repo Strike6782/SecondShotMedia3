@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { DELIVERY, OFFERTE_MAILTO } from "@/lib/site";
+import { OFFERTE_MAILTO } from "@/lib/site";
 
 type CtaBandProps = {
   title?: string;
@@ -16,8 +16,8 @@ export function CtaBand({ title = "Vertel ons over uw event.", showWorkflowLink 
           <h2 className="display text-5xl sm:text-6xl lg:text-7xl md:col-span-7">{title}</h2>
           <div className="space-y-6 md:col-span-5">
             <p className="text-lg leading-relaxed text-ink-muted">
-              Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan reageert persoonlijk, met
-              een voorstel op maat en een all-in prijs. {DELIVERY.response}.
+              Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan neemt persoonlijk contact
+              met u op en kijkt met u mee wat u nodig heeft.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button size="lg" asChild>

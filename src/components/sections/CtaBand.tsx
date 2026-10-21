@@ -19,7 +19,7 @@ export function CtaBand({ title = "Vertel ons over uw event.", showWorkflowLink 
               Stuur datum, locatie, tijden en waar u de beelden voor wilt gebruiken. Ivan neemt persoonlijk contact
               met u op en kijkt met u mee wat u nodig heeft.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button size="lg" asChild>
                 <a href={OFFERTE_MAILTO}>Voorstel aanvragen</a>
               </Button>

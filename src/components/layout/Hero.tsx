@@ -45,14 +45,21 @@ export function Hero({
       )}
 
       <div className="container mt-auto max-w-screen-2xl pb-12 pt-28 md:pb-16">
-        <div className="max-w-5xl space-y-6">
+        <div className={cn("space-y-6", !tall && "max-w-4xl")}>
           <h1
             className={cn(
-              "display whitespace-pre-line",
-              tall ? "text-[3.25rem] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]" : "text-5xl sm:text-6xl lg:text-7xl"
+              "display",
+              tall
+                ? // Scales with the viewport from md up so every sentence stays on one line.
+                  "text-[3.25rem] md:text-[min(6.5rem,calc((100vw-5rem)/10.8))]"
+                : "text-5xl sm:text-6xl lg:text-7xl"
             )}
           >
-            {title}
+            {title.split("\n").map((line) => (
+              <span key={line} className={cn("block", tall && "md:whitespace-nowrap")}>
+                {line}
+              </span>
+            ))}
           </h1>
           <p className="lede max-w-2xl text-lg text-white/85 sm:text-xl">{subtitle}</p>
           {(showCta || secondary) && (

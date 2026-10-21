@@ -97,6 +97,24 @@
       "featuredOnHomepage": false
     },
     {
+      "id": "eTnETBeKO_A",
+      "title": "Efteling Safestrap video - Theme Park Science",
+      "type": "youtube",
+      "branches": [
+        "pretparken"
+      ],
+      "featuredOnHomepage": false
+    },
+    {
+      "id": "2PJ1USshijg",
+      "title": "Opening nieuw pretpark Bommelwereld - Theme Park Science",
+      "type": "youtube",
+      "branches": [
+        "pretparken"
+      ],
+      "featuredOnHomepage": false
+    },
+    {
       "id": "CJl2UsZ-_Tc",
       "title": "Theme Park Science Trailer",
       "type": "youtube",
@@ -108,7 +126,7 @@
     },
     {
       "id": "YEwFVZvs5fg",
-      "title": "Halloween Vlaardingen",
+      "title": "Aftermovie Halloween Vlaardingen",
       "type": "youtube",
       "branches": [
         "pretparken"
@@ -117,7 +135,7 @@
     },
     {
       "id": "TpxAfFtekbw",
-      "title": "Halloween Rosmalen",
+      "title": "Aftermovie Halloween Rosmalen",
       "type": "youtube",
       "branches": [
         "pretparken"

@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return buildPageMetadata({
     title: `Eventfotograaf en videograaf in ${cityName}`,
-    description: `Foto en video voor beurzen, congressen, corporate events en festivals in ${cityName}. Eerste selectie dezelfde dag, album binnen 24 uur. Gevestigd in Utrecht.`,
+    description: `Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken in ${cityName}. Eerste selectie dezelfde dag, album binnen 24 uur. Gevestigd in Utrecht.`,
     path: getCityPath(citySlug ?? slug),
   });
 }

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} | Foto en video voor events`,
   },
   description:
-    "Eventfotografie en -videografie voor beurzen, congressen, corporate events en festivals. Previews dezelfde dag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
+    "Eventfotografie en -videografie voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Previews dezelfde dag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
   openGraph: {
     siteName: SITE_NAME,
     locale: "nl_NL",

@@ -10,8 +10,7 @@
       "title": "Recap Nico Campus",
       "type": "youtube",
       "branches": [
-        "congressen",
-        "corporate-events"
+        "zakelijke-evenementen"
       ],
       "featuredOnHomepage": true
     },
@@ -47,7 +46,7 @@
       "title": "Jubileum Diner DakAccent",
       "type": "youtube",
       "branches": [
-        "corporate-events"
+        "bedrijfsfeesten-en-galas"
       ],
       "featuredOnHomepage": false,
       "note": "Alleen camerawerk. Montage extern"
@@ -78,12 +77,40 @@
         "festivals"
       ],
       "featuredOnHomepage": false
+    },
+    {
+      "id": "CJl2UsZ-_Tc",
+      "title": "Theme Park Science Trailer",
+      "type": "youtube",
+      "branches": [
+        "pretparken"
+      ],
+      "featuredOnHomepage": false,
+      "note": "Alleen montage"
+    },
+    {
+      "id": "YEwFVZvs5fg",
+      "title": "Halloween Vlaardingen",
+      "type": "youtube",
+      "branches": [
+        "pretparken"
+      ],
+      "featuredOnHomepage": false
+    },
+    {
+      "id": "TpxAfFtekbw",
+      "title": "Halloween Rosmalen",
+      "type": "youtube",
+      "branches": [
+        "pretparken"
+      ],
+      "featuredOnHomepage": false
     }
   ],
   "reels": [
     {
       "file": "12 - Tea vertellen.mp4",
-      "title": "Scetch mascottes van Hellendoorn",
+      "title": "Sketch mascottes van Hellendoorn",
       "branches": [
         "leisure"
       ]
@@ -140,49 +167,48 @@
   ],
   "galleries": [
     {
-      "id": "beurzen",
+      "id": "zakelijke-evenementen",
       "folder": "corporate",
-      "albumContext": "Beursfotografie",
+      "albumContext": "Zakelijk event",
       "branches": [
-        "beurzen"
+        "zakelijke-evenementen"
       ],
       "include": [
         "Cybersec---Second-Shot-Media-5.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-140.jpg",
         "Cybersec---Second-Shot-Media-3.jpg",
         "Cybersec---Second-Shot-Media-7.jpg",
-        "Cybersec---Second-Shot-Media-6.jpg"
-      ]
-    },
-    {
-      "id": "congressen",
-      "folder": "corporate",
-      "albumContext": "Congresfotografie",
-      "branches": [
-        "congressen"
-      ],
-      "include": [
-        "Nico-Campus-2026---Second-Shot-Media-140.jpg",
-        "Cybersec---Second-Shot-Media-6.jpg",
-        "Cybersec---Second-Shot-Media-7.jpg",
         "Nico-Campus-2026---Second-Shot-Media-158.jpg",
-        "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-97.jpg"
+        "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg"
       ]
     },
     {
-      "id": "corporate-events",
-      "folder": "corporate",
-      "albumContext": "Corporate event",
+      "id": "bedrijfsfeesten-en-galas",
+      "folder": "students",
+      "albumContext": "Gala en feest",
       "branches": [
-        "corporate-events"
+        "bedrijfsfeesten-en-galas"
       ],
       "include": [
-        "Nico-Campus-2026---Second-Shot-Media-157.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-102.jpg",
+        "Gala-Amersfoortse-Berg---Second-Shot-Media-66.jpg",
+        "Gala-Codex---Second-Shot-Media-14.jpg",
+        "Gala-Codex---Second-Shot-Media-72.jpg",
+        "Gala-USKO---Second-Shot-Media-123.jpg",
+        "Gala-Codex---Second-Shot-Media-93.jpg",
+        "Gala-USKO---Second-Shot-Media-211.jpg"
+      ]
+    },
+    {
+      "id": "bedrijfsfeesten-borrel",
+      "folder": "corporate",
+      "albumContext": "Bedrijfsfeest",
+      "branches": [
+        "bedrijfsfeesten-en-galas"
+      ],
+      "include": [
         "Nico-Campus-2026---Second-Shot-Media-164.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-158.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-109.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-57.jpg"
+        "Nico-Campus-2026---Second-Shot-Media-102.jpg",
+        "Nico-Campus-2026---Second-Shot-Media-157.jpg"
       ]
     },
     {
@@ -192,34 +218,33 @@
       "branches": [
         "festivals"
       ]
+    },
+    {
+      "id": "pretparken",
+      "folder": "theme-parks",
+      "albumContext": "Pretpark",
+      "branches": [
+        "pretparken"
+      ]
     }
   ],
   "photoAltOverrides": {
-    "EP-1.jpg": "Attractiepark Efteling winterse sfeer",
-    "phl-met-olaf-39.jpg": "Pretpark fotografie",
-    "phl-met-olaf-47.jpg": "Pretpark fotografie",
-    "De-Vaste-Clique-IB-1.jpg": "Club nightlife fotografie dansvloer",
-    "De-Vaste-Clique-IB-2.jpg": "Nightlife event sfeerreportage",
-    "De-Vaste-Clique-IB-3.jpg": "Club event publiek en sfeer",
-    "De-Vaste-Clique-IB-5.jpg": "Nightlife fotografie dansvloer",
-    "De-Vaste-Clique-IB-17.jpg": "Club night energie op de dansvloer",
-    "De-Vaste-Clique-IB-22.jpg": "Nightlife event reportage",
-    "De-Vaste-Clique-IB-55.jpg": "Club sfeerbeeld publiek",
-    "De-Vaste-Clique-IB-81.jpg": "Nightlife fotografie low-light",
-    "best-of-breda---Second-Shot-Media-8.jpg": "Festival reportage",
+    "EP-1.jpg": "Bezoekers in een houten achtbaan",
+    "phl-met-olaf-39.jpg": "Attractie met stoom in een themapark",
+    "phl-met-olaf-47.jpg": "Achtbaan langs een industriële toren",
     "Efteling-Sneeuw---Second-Shot-Media-61.jpg": "Efteling winter attractie fotografie",
     "Efteling-Sneeuw---Second-Shot-Media-67.jpg": "Efteling winterse themabeleving",
     "Efteling-Sneeuw---Second-Shot-Media-57.jpg": "Attractiepark Efteling winter event",
     "Efteling-Sneeuw---Second-Shot-Media-26.jpg": "Efteling sfeerbeeld winter",
     "Efteling-Sneeuw---Second-Shot-Media-28.jpg": "Efteling attractie winter fotografie",
     "Efteling-Sneeuw---Second-Shot-Media-69.jpg": "Efteling winter reportage",
-    "Thorpe-Park---Second-Shot-Media-3.jpg": "Thorpe Park attractiepark reportage",
+    "Thorpe-Park---Second-Shot-Media-3.jpg": "Bezoekers in een achtbaan in volle vaart",
     "Thorpe-Park---Second-Shot-Media-4.jpg": "Thorpe Park leisure fotografie",
-    "Gala-Codex---Second-Shot-Media-14.jpg": "Gala Codex studentenvereniging reportage",
-    "Gala-USKO---Second-Shot-Media-123.jpg": "Gala USKO Utrecht dansvloer",
+    "Gala-Codex---Second-Shot-Media-14.jpg": "Gasten in avondkleding voor een gouden decor",
+    "Gala-USKO---Second-Shot-Media-123.jpg": "Volle zaal met gasten in avondkleding tijdens een gala",
     "Gala-USKO---Second-Shot-Media-69.jpg": "Gala USKO sfeerbeeld",
-    "Gala-USKO---Second-Shot-Media-211.jpg": "Gala USKO fotografie",
-    "Gala-Amersfoortse-Berg---Second-Shot-Media-66.jpg": "Gala Amersfoort reportage",
+    "Gala-USKO---Second-Shot-Media-211.jpg": "Groepsfoto van gasten tijdens een galafeest",
+    "Gala-Amersfoortse-Berg---Second-Shot-Media-66.jpg": "Gasten op de rode loper bij aankomst op een gala",
     "DSK-Gala-2026---Second-Shot-Media-2.jpg": "DSK Utrecht gala fotografie",
     "Nico-Campus-2026---Second-Shot-Media-140.jpg": "Zakelijk event Universiteit Utrecht",
     "Cybersec---Second-Shot-Media-6.jpg": "Cybersecurity congres reportage",
@@ -234,6 +259,13 @@
     "Nico-Campus-2026---Second-Shot-Media-102.jpg": "Barteam schenkt drankjes tijdens een corporate event",
     "Nico-Campus-2026---Second-Shot-Media-97.jpg": "Congreszaal klaar voor de start van het programma",
     "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg": "Posterpresentatie tijdens een wetenschappelijke conferentie",
-    "Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg": "Overzicht van een vol plein tijdens Koningsdag"
+    "Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg": "Overzicht van een vol plein tijdens Koningsdag",
+    "Gala-Codex---Second-Shot-Media-72.jpg": "Gasten op de dansvloer tijdens een gala",
+    "Gala-Codex---Second-Shot-Media-93.jpg": "Gasten in galakleding op het terras",
+    "Nico-Campus-2026---Second-Shot-Media-164.jpg": "Wijn wordt ingeschonken tijdens een borrel",
+    "De-Vaste-Clique-IB-1.jpg": "Bezoekers in een draaiende attractie met rookeffect",
+    "De-Vaste-Clique-IB-50.jpg": "Bezoeker in een draaiende tunnel in een attractiepark",
+    "De-Vaste-Clique-IB-85.jpg": "Verlichte zweefattractie tegen de avondlucht",
+    "De-Vaste-Clique-IB-88.jpg": "Verlichte kermisattractie in de avond"
   }
 }

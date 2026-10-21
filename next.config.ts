@@ -15,12 +15,16 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   async redirects() {
     // Leisure, gala's and nightlife are no longer offered; old URLs point to the closest event page.
+    // Old URLs point to the closest current category.
     return [
-      { source: "/zakelijke-evenementen/", destination: "/congressen/", permanent: true },
       { source: "/evenementen/", destination: "/festivals/", permanent: true },
-      { source: "/leisure/", destination: "/", permanent: true },
-      { source: "/gala-en-feest/", destination: "/corporate-events/", permanent: true },
-      { source: "/social-content-leisure/", destination: "/", permanent: true },
+      { source: "/leisure/", destination: "/pretparken/", permanent: true },
+      { source: "/gala-en-feest/", destination: "/bedrijfsfeesten-en-galas/", permanent: true },
+      { source: "/beurzen/", destination: "/zakelijke-evenementen/", permanent: true },
+      { source: "/congressen/", destination: "/zakelijke-evenementen/", permanent: true },
+      { source: "/corporate-events/", destination: "/bedrijfsfeesten-en-galas/", permanent: true },
+      { source: "/social-content-leisure/", destination: "/pretparken/", permanent: true },
+      { source: "/attractieparken/", destination: "/pretparken/", permanent: true },
       { source: "/videografie/fpv-dronevliegen/", destination: "/werkwijze/#fpv-drone", permanent: true },
       { source: "/festival-fotografie/", destination: "/festivals/", permanent: true },
       { source: "/clubfotografie/", destination: "/festivals/", permanent: true },
@@ -28,12 +32,11 @@ const nextConfig: NextConfig = {
       { source: "/evenementen-videograaf/", destination: "/festivals/", permanent: true },
       { source: "/videografie/", destination: "/festivals/", permanent: true },
       { source: "/videografie/evenementen/", destination: "/festivals/", permanent: true },
-      { source: "/gala-fotografie/", destination: "/corporate-events/", permanent: true },
+      { source: "/gala-fotografie/", destination: "/bedrijfsfeesten-en-galas/", permanent: true },
       { source: "/contact/", destination: "/over-en-contact/", permanent: true },
-      { source: "/attractieparken/", destination: "/", permanent: true },
       { source: "/studentenverenigingen/", destination: "/", permanent: true },
-      { source: "/beursfotograaf/", destination: "/beurzen/", permanent: true },
-      { source: "/congresfotograaf/", destination: "/congressen/", permanent: true },
+      { source: "/beursfotograaf/", destination: "/zakelijke-evenementen/", permanent: true },
+      { source: "/congresfotograaf/", destination: "/zakelijke-evenementen/", permanent: true },
     ];
   },
 };

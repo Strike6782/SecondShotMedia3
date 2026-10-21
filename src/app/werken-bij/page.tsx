@@ -12,7 +12,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata = buildPageMetadata({
   title: "Werken bij",
   description:
-    "Freelance fotograaf, videograaf of editor bij Second Shot Media. Projectmatig werken op beurzen, congressen, corporate events en festivals door heel Nederland.",
+    "Freelance fotograaf, videograaf of editor bij Second Shot Media. Projectmatig werken op zakelijke events, bedrijfsfeesten, festivals en pretparken door heel Nederland.",
   path: "/werken-bij/",
 });
 
@@ -36,7 +36,7 @@ export default function WerkenBijPage() {
 
       <Hero
         title="Werken bij Second Shot Media"
-        subtitle="Fotograaf, videograaf of editor met oog voor events? Werk als creator mee op beurzen, congressen, corporate events en festivals."
+        subtitle="Fotograaf, videograaf of editor met oog voor events? Werk als creator mee op zakelijke events, bedrijfsfeesten, festivals en pretparken."
         showCta={false}
       />
 
@@ -74,7 +74,7 @@ export default function WerkenBijPage() {
             <h2 className="heading mb-4 text-3xl">Wat wij bieden</h2>
             <ul>
               {[
-                "Opdrachten op zakelijke events en festivals",
+                "Opdrachten op zakelijke events, feesten, festivals en in pretparken",
                 "Training en feedback om te groeien",
                 "Duidelijke briefing en planning vooraf",
                 "Een vast netwerk van creators",

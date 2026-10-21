@@ -92,7 +92,7 @@ export const addOns: AddOn[] = [
   {
     id: "fpv-drone",
     title: "FPV-drone",
-    text: "Vloeiende vluchten door een beurshal, over een festivalterrein of in één shot door uw locatie. Wij bespreken vooraf wat volgens de regels en op uw locatie mogelijk is.",
+    text: "Vloeiende vluchten door een beurshal, over een festivalterrein, door een attractie of in één shot door uw locatie. Wij bespreken vooraf wat volgens de regels en op uw locatie mogelijk is.",
   },
   {
     id: "extra-team",
@@ -126,7 +126,7 @@ export const homeContent = {
     {
       question: "Voor welke events werken jullie?",
       answer:
-        "Beurzen, congressen en conferenties, corporate events zoals jubilea en awards, en festivals en publieksevenementen. Steeds met foto, video of allebei.",
+        "Zakelijke events zoals beurzen en congressen, bedrijfsfeesten en gala's, festivals en publieksevenementen, en pretparken en dagattracties. Steeds met foto, video of allebei.",
     },
     {
       question: "Hoe snel ontvang ik de foto's?",
@@ -203,7 +203,7 @@ export const werkenBijContent = {
 };
 
 export function getCityDefinition(cityName: string): string {
-  return `Fotografie en video voor beurzen, congressen, corporate events en festivals in ${cityName}. Second Shot Media is gevestigd in Utrecht en werkt door heel Nederland.`;
+  return `Fotografie en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken in ${cityName}. Second Shot Media is gevestigd in Utrecht en werkt door heel Nederland.`;
 }
 
 export function getCityFaqs(cityName: string): FaqItem[] {

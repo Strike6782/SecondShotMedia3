@@ -10,7 +10,7 @@ const OFFERTE_BODY = [
   "Graag ontvang ik een voorstel voor ons event.",
   "",
   "Organisatie:",
-  "Soort event (beurs, congres, corporate event, festival):",
+  "Soort event (zakelijk event, bedrijfsfeest of gala, festival, pretpark):",
   "Datum of data:",
   "Locatie:",
   "Tijden (start en einde):",
@@ -45,7 +45,7 @@ export const BUSINESS_GEO = {
 export const AGENCY_TAGLINE = "Foto en video voor events";
 
 export const AGENCY_DEFINITION =
-  "Second Shot Media legt beurzen, congressen, corporate events en festivals vast in foto en video. Gevestigd in Utrecht, actief door heel Nederland, met Ivan Balkenende als vast aanspreekpunt van aanvraag tot levering.";
+  "Second Shot Media legt zakelijke events, bedrijfsfeesten, festivals en pretparken vast in foto en video. Gevestigd in Utrecht, actief door heel Nederland, met Ivan Balkenende als vast aanspreekpunt van aanvraag tot levering.";
 
 // Drop a group photo at this path and the team sections show it automatically.
 export const TEAM_PHOTO = "/images/team.jpg";

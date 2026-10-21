@@ -15,7 +15,7 @@ import { getFeaturedYoutubeVideos } from "@/lib/portfolio";
 export const metadata = buildPageMetadata({
   title: "Eventfotografie en -videografie | Utrecht en heel Nederland",
   description:
-    "Foto en video voor beurzen, congressen, corporate events en festivals. Eerste selectie dezelfde dag, volledig album binnen 24 uur. Gevestigd in Utrecht, actief door heel Nederland.",
+    "Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Eerste selectie dezelfde dag, volledig album binnen 24 uur. Gevestigd in Utrecht, actief door heel Nederland.",
   path: "/",
 });
 
@@ -30,7 +30,7 @@ export default function Home() {
       <Hero
         size="home"
         title="Uw event in beeld. Nog dezelfde dag."
-        subtitle="Foto en video voor beurzen, congressen, corporate events en festivals. Gevestigd in Utrecht, actief in heel Nederland."
+        subtitle="Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief in heel Nederland."
         image="/gallery/corporate/Cybersec---Second-Shot-Media-7.jpg"
         imageAlt="Spreker op het podium van een beurs voor een vol publiek"
         secondary={{ label: "Bekijk ons werk", href: "#events" }}
@@ -54,7 +54,7 @@ export default function Home() {
       <section id="events" className="scroll-mt-16 bg-muted py-20 md:py-28" aria-labelledby="events-heading">
         <div className="container max-w-screen-2xl">
           <h2 id="events-heading" className="display mb-14 max-w-3xl text-5xl sm:text-6xl">
-            Vier soorten events, één werkwijze
+            Waar wij voor werken
           </h2>
           <div className="grid gap-x-8 gap-y-14 md:grid-cols-2">
             {branches.map((branch) => (

@@ -1,9 +1,10 @@
+import type { DayStep } from "@/lib/page-content";
 import type { BranchLogo, BranchTestimonial, FaqItem } from "@/lib/types";
 
-// Event types: marketing copy, SEO and page images.
+// Categories: marketing copy, SEO and page images.
 // Portfolio media (video's, foto-albums) staat in content/portfolio.json.
 //
-// Testimonials: voeg per eventtype echte quotes toe zodra een klant toestemming geeft, bijvoorbeeld:
+// Testimonials: voeg per categorie echte quotes toe zodra een klant toestemming geeft, bijvoorbeeld:
 //   testimonials: [{ quote: "…", author: "Naam", role: "Functie, Organisatie" }]
 // De sectie verschijnt automatisch zodra er minimaal één testimonial staat.
 export type BranchConfig = {
@@ -13,7 +14,7 @@ export type BranchConfig = {
   navLabel: string;
   seoTitle: string;
   seoDescription: string;
-  /** One sentence for overview cards (home, footer, city pages). */
+  /** One sentence for overview cards (home, city pages). */
   summary: string;
   heroTitle: string;
   heroSubtitle: string;
@@ -23,87 +24,41 @@ export type BranchConfig = {
   introParagraphs: string[];
   deliverables: string[];
   faqs: FaqItem[];
+  /** Replaces the standard event-day timeline when this category works differently. */
+  process?: { title: string; steps: DayStep[] };
+  /** Show the vertical reels from content/leisure-reels.json. */
+  showReels?: boolean;
   logos?: BranchLogo[];
   testimonials?: BranchTestimonial[];
 };
 
 export const branches: BranchConfig[] = [
   {
-    slug: "beurzen",
-    href: "/beurzen/",
-    title: "Beurzen en expo's",
-    navLabel: "Beurzen",
-    seoTitle: "Beursfotograaf en beursvideo",
+    slug: "zakelijke-evenementen",
+    href: "/zakelijke-evenementen/",
+    title: "Zakelijke events",
+    navLabel: "Zakelijk",
+    seoTitle: "Fotograaf en videograaf voor beurzen en congressen",
     seoDescription:
-      "Beursfotografie en -video voor organisatoren en exposanten. Eerste selectie aan het eind van elke beursdag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
-    summary: "Standbezoek, presentaties en de drukte op de vloer, voor organisator en exposanten.",
-    heroTitle: "Beursfotografie en -video",
+      "Foto en video voor beurzen, congressen, conferenties en seminars. Sprekers, standbezoek en netwerkmomenten. Eerste selectie dezelfde dag, volledig album binnen 24 uur.",
+    summary: "Beurzen, congressen en seminars. Sprekers, standbezoek en netwerkmomenten, op tijd voor uw persbericht.",
+    heroTitle: "Foto en video voor zakelijke events",
     heroSubtitle:
-      "Standbezoek, gesprekken, presentaties en de drukte op de vloer. Uw marketingteam heeft de eerste beelden nog tijdens de beurs.",
-    heroImage: "/gallery/corporate/Cybersec---Second-Shot-Media-5.jpg",
-    heroImageAlt: "Beursvloer met stand en bezoekers tijdens Cybersec",
-    introTitle: "Een beurs duurt een paar dagen. De beelden gebruikt u het hele jaar.",
-    introParagraphs: [
-      "In het beursverslag, op LinkedIn, in de nieuwsbrief en bij het werven van exposanten voor de volgende editie. Daarom leggen wij niet alleen de drukte vast, maar ook de gesprekken, de standbouw en de details waar uw exposanten trots op zijn.",
-      "Bij grote hallen verdelen wij de fotografen vooraf per hal of programmaonderdeel. Zo wordt niets dubbel geschoten en niets gemist. Wij werken onder andere in de Jaarbeurs in Utrecht en op beurslocaties door heel Nederland.",
-    ],
-    deliverables: [
-      "Eerste selectie aan het eind van elke beursdag",
-      "Volledig album binnen 24 uur na de laatste dag",
-      "Mappen per hal of stand, zodat exposanten hun eigen beelden vinden",
-      "Sfeerfilm van de beurs en korte verticale video's voor social media",
-      "Presentaties, panels en prijsuitreikingen op de beursvloer",
-      "FPV-drone door de hal, waar de locatie het toestaat",
-    ],
-    faqs: [
-      {
-        question: "Kunnen er meerdere fotografen tegelijk werken?",
-        answer:
-          "Ja. Bij grote beurzen zetten wij meerdere fotografen en videografen in. Vooraf spreken wij af wie welke hal of welk programmaonderdeel vastlegt, en iedereen werkt in dezelfde stijl.",
-      },
-      {
-        question: "Kunnen exposanten de foto's ook gebruiken?",
-        answer:
-          "Ja, als u dat wilt. In het voorstel leggen wij vast wie de beelden mag gebruiken. Op verzoek leveren wij mappen per stand, zodat exposanten hun eigen foto's snel vinden.",
-      },
-      {
-        question: "Wanneer zijn de eerste foto's beschikbaar?",
-        answer:
-          "Aan het eind van elke beursdag ontvangt u een eerste selectie. Het volledige album volgt binnen 24 uur na de laatste beursdag.",
-      },
-      {
-        question: "Hoe ver vooruit moet ik boeken?",
-        answer:
-          "Het voorjaar en najaar zijn drukke beursperiodes. Neem daarom zo vroeg mogelijk contact op. Kleinere opdrachten kunnen vaak ook op korte termijn.",
-      },
-    ],
-  },
-  {
-    slug: "congressen",
-    href: "/congressen/",
-    title: "Congressen en conferenties",
-    navLabel: "Congressen",
-    seoTitle: "Congresfotograaf en conferentievideo",
-    seoDescription:
-      "Fotografie en video voor congressen en conferenties: sprekers, zalen, workshops en netwerkmomenten. Eerste selectie dezelfde dag, volledig album binnen 24 uur.",
-    summary: "Sprekers, zalen en netwerkmomenten, op tijd voor uw persbericht en LinkedIn.",
-    heroTitle: "Congres- en conferentiefotografie",
-    heroSubtitle:
-      "Sprekers, zalen, workshops en netwerkmomenten. Rustig vastgelegd, zodat u nog dezelfde dag kunt communiceren.",
+      "Beurzen, congressen, conferenties en seminars. Rustig en zonder flits vastgelegd, met de eerste beelden nog dezelfde dag.",
     heroImage: "/gallery/corporate/Cybersec---Second-Shot-Media-6.jpg",
-    heroImageAlt: "Spreker op het podium voor een volle zaal tijdens een congres",
-    introTitle: "Uw sprekers, uw sponsors en uw deelnemers willen allemaal hun eigen beeld.",
+    heroImageAlt: "Spreker op het podium voor een volle zaal",
+    introTitle: "Het event duurt een dag. De beelden gebruikt u het hele jaar.",
     introParagraphs: [
-      "Sprekers vragen om een goede foto van hun presentatie, sponsors willen zichtbaar zijn en uw communicatieteam wil tijdens het congres al posten. Wij stemmen vooraf het programma met u af en bepalen per onderdeel wat belangrijk is.",
-      "Tijdens presentaties werken wij zonder flits en vanaf afgesproken posities. Bij meerdere zalen tegelijk zetten wij per zaal een fotograaf in, met één aanspreekpunt voor u.",
+      "In het verslag, op LinkedIn, in de nieuwsbrief en bij het werven van sprekers, exposanten en sponsors voor de volgende editie. Daarom leggen wij niet alleen de volle zaal vast, maar ook de gesprekken, de stands en de details.",
+      "Vooraf nemen wij het programma met u door en bepalen wij per onderdeel wat belangrijk is. Bij meerdere zalen of hallen tegelijk zetten wij per locatie een fotograaf in, met één aanspreekpunt voor u. Wij werken onder andere in de Jaarbeurs in Utrecht en op eventlocaties door heel Nederland.",
     ],
     deliverables: [
       "Sprekers op het podium en tijdens vragenrondes",
-      "Zaal, workshops, netwerkpauzes en sponsors",
-      "Eerste selectie dezelfde dag voor social media en persbericht",
-      "Volledig album binnen 24 uur",
-      "Recapvideo en korte sprekershighlights",
-      "Interviews met sprekers of deelnemers op locatie",
+      "Standbezoek en gesprekken op de beursvloer",
+      "Netwerkmomenten, workshops en sponsors",
+      "Eerste selectie dezelfde dag, volledig album binnen 24 uur",
+      "Recapvideo, sprekershighlights en interviews",
+      "Mappen per zaal, hal of stand op verzoek",
     ],
     faqs: [
       {
@@ -112,48 +67,48 @@ export const branches: BranchConfig[] = [
           "Nee. Wij werken zonder flits, kennen het programma en spreken vooraf vaste posities af. Sprekers en publiek merken weinig van ons.",
       },
       {
-        question: "Kunnen jullie meerdere zalen tegelijk vastleggen?",
+        question: "Kunnen jullie meerdere zalen of hallen tegelijk vastleggen?",
         answer:
-          "Ja. Wij zetten per zaal een fotograaf of videograaf in. U houdt één aanspreekpunt en ontvangt alles in één album.",
+          "Ja. Wij zetten per zaal of hal een fotograaf of videograaf in. Iedereen werkt in dezelfde stijl, u houdt één aanspreekpunt en ontvangt alles in één album.",
       },
       {
-        question: "Maken jullie ook interviews of sprekershighlights?",
+        question: "Kunnen exposanten en sponsors de foto's ook gebruiken?",
         answer:
-          "Ja. Wij filmen korte interviews met sprekers of deelnemers en monteren highlights die u op LinkedIn of uw website kunt gebruiken.",
+          "Ja, als u dat wilt. In het voorstel leggen wij vast wie de beelden mag gebruiken. Op verzoek leveren wij mappen per stand of sponsor.",
       },
       {
-        question: "Kunnen de foto's direct in een persbericht?",
+        question: "Hoe ver vooruit moet ik boeken?",
         answer:
-          "Ja. De eerste selectie ontvangt u dezelfde dag, geschikt voor persbericht, nieuwsbrief en social media.",
+          "Het voorjaar en najaar zijn drukke periodes voor beurzen en congressen. Neem daarom zo vroeg mogelijk contact op. Kleinere opdrachten kunnen vaak ook op korte termijn.",
       },
     ],
   },
   {
-    slug: "corporate-events",
-    href: "/corporate-events/",
-    title: "Corporate events",
-    navLabel: "Corporate events",
-    seoTitle: "Fotografie en video voor corporate events",
+    slug: "bedrijfsfeesten-en-galas",
+    href: "/bedrijfsfeesten-en-galas/",
+    title: "Bedrijfsfeesten en gala's",
+    navLabel: "Feesten en gala's",
+    seoTitle: "Fotograaf voor bedrijfsfeesten en gala's",
     seoDescription:
-      "Fotografie en video voor personeelsfeesten, jubilea, awards en productlanceringen. Spontane beelden voor employer branding en interne communicatie.",
-    summary: "Jubilea, awards, personeelsfeesten en lanceringen, voor intern gebruik en employer branding.",
-    heroTitle: "Fotografie en video voor corporate events",
+      "Foto en video voor personeelsfeesten, jubilea, awards en galadiners. Spontane avondbeelden voor employer branding en interne communicatie.",
+    summary: "Personeelsfeesten, jubilea, awards en galadiners. De avond zoals hij echt was.",
+    heroTitle: "Foto en video voor bedrijfsfeesten en gala's",
     heroSubtitle:
-      "Personeelsfeesten, jubilea, awards en productlanceringen. Beelden die laten zien hoe het is om bij uw organisatie te werken.",
-    heroImage: "/gallery/corporate/Nico-Campus-2026---Second-Shot-Media-157.jpg",
-    heroImageAlt: "Gasten in gesprek tijdens een netwerkborrel",
+      "Personeelsfeesten, jubilea, awards, galadiners en kerstfeesten. Beelden die laten zien hoe het is om bij uw organisatie te werken.",
+    heroImage: "/gallery/students/Gala-USKO---Second-Shot-Media-123.jpg",
+    heroImageAlt: "Volle zaal met gasten in avondkleding tijdens een gala",
     introTitle: "Geen rij geposeerde groepsfoto's, maar hoe de avond echt was.",
     introParagraphs: [
-      "Wij bewegen tussen de gasten en leggen de momenten vast die mensen later terugzoeken: de speech, de uitreiking, de volle dansvloer en de gesprekken aan de bar. Groepsfoto's maken wij natuurlijk ook, als u dat wilt.",
-      "Vooraf bespreken wij uw huisstijl en waar de beelden voor zijn: intranet, LinkedIn, een vacaturecampagne of de uitnodiging voor volgend jaar.",
+      "Wij bewegen tussen de gasten en leggen de momenten vast die mensen later terugzoeken: de ontvangst, de speech, de uitreiking, de volle dansvloer en de gesprekken aan de bar. Groepsfoto's maken wij natuurlijk ook, als u dat wilt.",
+      "Vooraf bespreken wij uw huisstijl en waar de beelden voor zijn: intranet, LinkedIn, een vacaturecampagne of de uitnodiging voor volgend jaar. Avondwerk in donkere zalen is voor ons gewoon werk.",
     ],
     deliverables: [
-      "Sfeer, aankleding, gasten en programmaonderdelen",
+      "Ontvangst, aankleding en de rode loper",
       "Speeches, uitreikingen en optredens",
-      "Eerste selectie dezelfde dag",
-      "Volledig album binnen 24 uur via een deelbare link",
+      "De volle dansvloer en spontane momenten",
+      "Groepsfoto's of een fotomoment op verzoek",
+      "Eerste selectie dezelfde dag, album binnen 24 uur via een deelbare link",
       "Aftermovie voor intranet, LinkedIn of de volgende editie",
-      "FPV-drone voor een opening of rondgang door de locatie",
     ],
     faqs: [
       {
@@ -169,12 +124,11 @@ export const branches: BranchConfig[] = [
       {
         question: "Werken jullie ook bij weinig licht?",
         answer:
-          "Ja. Avondprogramma's, diners en feesten in donkere zalen zijn voor ons gewoon werk. Wij werken waar mogelijk zonder flits.",
+          "Ja. Diners, feesten en uitreikingen in donkere zalen zijn voor ons gewoon werk. Wij werken waar mogelijk zonder flits.",
       },
       {
-        question: "Kunnen wij de foto's intern delen?",
-        answer:
-          "Ja. U ontvangt een deelbare link waarmee collega's de foto's kunnen bekijken en downloaden.",
+        question: "Fotograferen jullie ook studentengala's?",
+        answer: "Nee. Wij richten ons op feesten en gala's van bedrijven en organisaties.",
       },
     ],
   },
@@ -187,7 +141,7 @@ export const branches: BranchConfig[] = [
     seoDescription:
       "Fotografie, aftermovies en FPV-dronebeelden voor festivals, stadsevenementen en grote internationale events. Ervaring met events tot 50.000 bezoekers.",
     summary: "Podium, publiek en sfeer, van stadsfeest tot internationaal event met 50.000 bezoekers.",
-    heroTitle: "Festival- en eventfotografie",
+    heroTitle: "Foto en video voor festivals",
     heroSubtitle:
       "Podium, publiek en de momenten ertussen. Voor festivals, stadsevenementen en grote internationale events.",
     heroImage: "/gallery/events/Koningsdag-Hof---Second-Shot-Media-20250425-3.jpg",
@@ -225,6 +179,88 @@ export const branches: BranchConfig[] = [
         question: "Hoe groot zijn de events waar jullie werken?",
         answer:
           "Van stadsfeesten tot internationale events met tienduizenden bezoekers. Ivan werkte onder andere op de World Scout Jamboree in Zuid-Korea.",
+      },
+    ],
+  },
+  {
+    slug: "pretparken",
+    href: "/pretparken/",
+    title: "Pretparken en dagjes uit",
+    navLabel: "Pretparken",
+    seoTitle: "Content voor pretparken en dagattracties",
+    seoDescription:
+      "Foto, video en social content voor pretparken, dagattracties en seizoensevents. Reels voor TikTok en Instagram, campagnebeelden en FPV-dronevluchten.",
+    summary: "Social content, campagnebeelden en FPV-dronevluchten voor parken, attracties en seizoensevents.",
+    heroTitle: "Content voor pretparken en dagjes uit",
+    heroSubtitle:
+      "Reels, campagnebeelden en FPV-dronevluchten voor pretparken, dagattracties en seizoensevents zoals Halloween en winter.",
+    heroImage: "/gallery/theme-parks/Thorpe-Park---Second-Shot-Media-3.jpg",
+    heroImageAlt: "Bezoekers in een achtbaan in volle vaart",
+    introTitle: "Een park dat het hele jaar zichtbaar is, verkoopt het hele jaar kaartjes.",
+    introParagraphs: [
+      "Wij helpen pretparken en dagattracties om structureel zichtbaar te zijn op TikTok en Instagram, met een vaste stroom reels die past bij uw park en uw bezoekers. Daarnaast maken wij campagnebeelden en content rond openingen en seizoensevents.",
+      "Wij werkten onder andere voor Avonturenpark Hellendoorn, Familiepark Drievliet, Halloween Vlaardingen, Halloween Rosmalen en Theme Park Science.",
+    ],
+    deliverables: [
+      "Reels en shortform video voor TikTok, Instagram en YouTube Shorts",
+      "Vaste opnamedag om de twee maanden, met minimaal twee video's per week",
+      "Plaatsing op uw kanalen, in overleg met uw marketingteam",
+      "Campagne- en sfeerfotografie van park en attracties",
+      "Content rond openingen van nieuwe attracties en seizoensevents",
+      "FPV-dronevluchten door en over attracties",
+    ],
+    process: {
+      title: "Zo werkt structurele content",
+      steps: [
+        {
+          when: "Vooraf",
+          title: "Contentplan",
+          text: "Thema's, formats en seizoenen voor de komende periode, afgestemd met uw marketingteam.",
+        },
+        {
+          when: "Om de twee maanden",
+          title: "Opnamedag",
+          text: "Eén intensieve dag in het park, waarop wij genoeg materiaal maken voor de hele periode.",
+        },
+        {
+          when: "Na de opnamedag",
+          title: "Montage",
+          text: "Reels op maat voor TikTok, Instagram en YouTube Shorts, met ondertiteling.",
+        },
+        {
+          when: "Elke week",
+          title: "Twee video's online",
+          text: "Wij plaatsen de video's op uw kanalen, zodat uw park zichtbaar blijft.",
+          delivered: true,
+        },
+      ],
+    },
+    showReels: true,
+    logos: [
+      { src: "/logos/hellendoorn.png", alt: "Avonturenpark Hellendoorn" },
+      { src: "/logos/drievliet.png", alt: "Familiepark Drievliet" },
+      { src: "/logos/vlaardingen.webp", alt: "Halloween Vlaardingen" },
+      { src: "/logos/tps.jpeg", alt: "Theme Park Science" },
+    ],
+    faqs: [
+      {
+        question: "Hoe werkt structurele social content?",
+        answer:
+          "Om de twee maanden plannen wij een opnamedag in uw park. Daarvan maken wij genoeg video's om minimaal twee keer per week te posten, en die plaatsen wij ook voor u.",
+      },
+      {
+        question: "Kunnen jullie ook eenmalig iets maken?",
+        answer:
+          "Ja. Bijvoorbeeld voor de opening van een nieuwe attractie, een seizoensevent of een campagne. U ontvangt dan een voorstel op maat.",
+      },
+      {
+        question: "Leveren jullie ook foto's?",
+        answer: "Ja. Wij maken campagne- en sfeerfoto's van uw park en attracties, ook op drukke dagen en in de avond.",
+      },
+      {
+        question: "Kunnen jullie FPV-dronevluchten maken door attracties?",
+        answer:
+          "Ja. Met FPV vliegen wij in één vloeiende shot door of over een attractie. Wij bespreken vooraf wat op uw locatie en volgens de regels mogelijk is.",
       },
     ],
   },

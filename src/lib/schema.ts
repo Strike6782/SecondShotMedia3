@@ -42,7 +42,7 @@ export function buildGlobalSchemaGraph() {
         image: SITE_LOGO,
         logo: SITE_LOGO,
         description:
-          "Foto en video voor beurzen, congressen, corporate events en festivals. Gevestigd in Utrecht, actief door heel Nederland.",
+          "Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief door heel Nederland.",
         foundingDate: FOUNDING_YEAR,
         founder: { "@type": "Person", "@id": PERSON_ID, name: "Ivan Balkenende" },
         email: CONTACT_EMAIL,

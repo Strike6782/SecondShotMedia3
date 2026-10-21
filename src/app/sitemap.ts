@@ -5,10 +5,10 @@ import { SITE_URL } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "/",
-    "/beurzen/",
-    "/congressen/",
-    "/corporate-events/",
+    "/zakelijke-evenementen/",
+    "/bedrijfsfeesten-en-galas/",
     "/festivals/",
+    "/pretparken/",
     "/werkwijze/",
     "/over-en-contact/",
     "/werken-bij/",

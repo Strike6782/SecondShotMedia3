@@ -11,6 +11,7 @@ import type { BranchConfig } from "@/lib/branches";
 import { getGalleryImagesForBranch } from "@/lib/gallery";
 import { eventDay } from "@/lib/page-content";
 import { getYoutubeVideosForBranch } from "@/lib/portfolio";
+import { getLeisureReels } from "@/lib/reels";
 
 type BranchPageProps = {
   branch: BranchConfig;
@@ -24,6 +25,8 @@ export async function BranchPage({ branch }: BranchPageProps) {
   const galleryImages =
     allImages.length > columns ? allImages.slice(0, allImages.length - (allImages.length % columns)) : allImages;
   const videos = getYoutubeVideosForBranch(branch.slug);
+  const reels = branch.showReels ? await getLeisureReels() : [];
+  const timeline = branch.process ?? { title: "Zo verloopt de dag", steps: eventDay };
   const breadcrumbs = [
     { name: "Home", href: "/" },
     { name: branch.title, href: branch.href },
@@ -87,6 +90,27 @@ export async function BranchPage({ branch }: BranchPageProps) {
               layout="grid"
               className={columns === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3"}
             />
+            {reels.length > 0 && (
+              <div className="mt-20">
+                <h3 className="heading mb-8 text-3xl">Reels</h3>
+                <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                  {reels.map((reel) => (
+                    <figure key={reel.videoSrc} className="space-y-2">
+                      <div className="aspect-[9/16] overflow-hidden bg-ink">
+                        <video
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="h-full w-full object-cover"
+                          src={`${reel.videoSrc}#t=0.1`}
+                        />
+                      </div>
+                      <figcaption className="text-sm font-semibold">{reel.title}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
             {videos.length > 0 && (
               <div className="mt-20">
                 <h3 className="heading mb-8 text-3xl">Video</h3>
@@ -99,9 +123,9 @@ export async function BranchPage({ branch }: BranchPageProps) {
 
       <section className="container max-w-screen-2xl py-20 md:py-28" aria-labelledby="dag-heading">
         <h2 id="dag-heading" className="display mb-14 max-w-3xl text-5xl sm:text-6xl">
-          Zo verloopt de dag
+          {timeline.title}
         </h2>
-        <EventDay steps={eventDay} />
+        <EventDay steps={timeline.steps} />
       </section>
 
       <div className="container max-w-screen-2xl pb-20 md:pb-28">

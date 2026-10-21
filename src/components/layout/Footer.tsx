@@ -10,7 +10,7 @@ export function Footer() {
           <div className="md:col-span-5 space-y-5">
             <p className="display text-4xl md:text-5xl">Second Shot Media</p>
             <p className="max-w-sm text-ink-muted leading-relaxed">
-              Foto en video voor beurzen, congressen, corporate events en festivals. Gevestigd in Utrecht, actief
+              Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief
               door heel Nederland.
             </p>
             <a

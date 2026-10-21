@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { branches } from "@/lib/branches";
-import { CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
+import { BTW_ID, CONTACT_EMAIL, CONTACT_INSTAGRAM, CONTACT_LINKEDIN, KVK, OFFERTE_MAILTO } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -79,7 +79,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-ink-muted sm:flex-row sm:justify-between">
           <p suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} Second Shot Media, Utrecht. KvK {KVK}
+            &copy; {new Date().getFullYear()} Second Shot Media, Utrecht. KvK {KVK}. Btw-id {BTW_ID}
           </p>
           <Link href="/algemene-voorwaarden/" className="hover:text-ink-foreground">
             Algemene voorwaarden

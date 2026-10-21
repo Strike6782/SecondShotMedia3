@@ -7,6 +7,7 @@ export const OFFERTE_MAILTO = `mailto:${CONTACT_EMAIL}`;
 export const CONTACT_INSTAGRAM = "https://instagram.com/secondshotmedia";
 export const CONTACT_LINKEDIN = "https://www.linkedin.com/in/ivan-balkenende/";
 export const KVK = "92016421";
+export const BTW_ID = "NL004604590B73";
 export const FOUNDING_YEAR = "2020";
 
 // Business address (matches algemene voorwaarden).

@@ -29,10 +29,10 @@ export function TeamSection({ showMoreLink = true }: TeamSectionProps) {
         <div className="relative aspect-[4/5] overflow-hidden bg-muted lg:col-span-5">
           <Image
             src="/images/ivan-portret.jpg"
-            alt="Ivan Balkenende met camera op een event"
+            alt="Ivan Balkenende met camera op een event van Second Shot Media"
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover object-[60%_center]"
+            className="object-cover object-[45%_center]"
           />
         </div>
 

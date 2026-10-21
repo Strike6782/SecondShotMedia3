@@ -8,11 +8,10 @@ const projectRoot = path.resolve(__dirname, "..");
 
 // Album folders that map 1:1 from gallery-incoming to public/gallery.
 const ALBUMS = [
-  "events",
-  "club",
-  "corporate",
-  "students",
-  "theme-parks",
+  "zakelijk",
+  "feesten",
+  "festivals",
+  "pretparken",
 ];
 
 // Source extensions sharp can read for gallery imports.

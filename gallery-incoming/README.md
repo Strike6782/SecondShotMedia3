@@ -13,11 +13,12 @@ Lege mappen worden overgeslagen.
 
 Welke map bij welke categorie hoort (zie `content/portfolio.json` → `galleries`):
 
-- `corporate/` — zakelijke events (en de borrelfoto's bij bedrijfsfeesten)
-- `students/` — bedrijfsfeesten en gala's
-- `events/` — festivals en publieksevenementen
-- `theme-parks/` — pretparken en dagjes uit
-- `club/` — wordt niet meer getoond
+- `zakelijk/` — zakelijke events
+- `feesten/` — bedrijfsfeesten en gala's
+- `festivals/` — festivals en publieksevenementen
+- `pretparken/` — pretparken en dagjes uit
+
+De homepage toont bij elk bezoek een willekeurige mix uit deze vier mappen.
 
 Welke foto's op een pagina staan, en in welke volgorde, bepaal je in `content/portfolio.json`
 met de `include`-lijst van een gallery. Zonder `include` wordt de hele map getoond.

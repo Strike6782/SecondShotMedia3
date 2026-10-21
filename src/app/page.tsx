@@ -4,12 +4,14 @@ import { VideoGrid } from "@/components/gallery/VideoGrid";
 import { Hero } from "@/components/layout/Hero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { EventDay } from "@/components/sections/EventDay";
+import { HomePortfolio, type PortfolioPhoto } from "@/components/sections/HomePortfolio";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { FaqSection } from "@/components/seo/FaqSection";
 import { PageStructuredData } from "@/components/seo/PageStructuredData";
 import { branches } from "@/lib/branches";
 import { buildPageMetadata } from "@/lib/metadata-helpers";
 import { eventDay, homeContent } from "@/lib/page-content";
+import { getGalleryImagesForBranch } from "@/lib/gallery";
 import { getFeaturedYoutubeVideos } from "@/lib/portfolio";
 
 export const metadata = buildPageMetadata({
@@ -20,7 +22,17 @@ export const metadata = buildPageMetadata({
   absoluteTitle: true,
 });
 
-export default function Home() {
+export default async function Home() {
+  const portfolioGroups: PortfolioPhoto[][] = await Promise.all(
+    branches.map(async (branch) =>
+      (await getGalleryImagesForBranch(branch.slug)).map((img) => ({
+        ...img,
+        category: branch.title,
+        href: branch.href,
+      }))
+    )
+  );
+
   const featuredVideos = getFeaturedYoutubeVideos();
   const breadcrumbs = [{ name: "Home", href: "/" }];
 
@@ -78,6 +90,18 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="container max-w-screen-2xl pt-20 md:pt-28" aria-labelledby="portfolio-heading">
+        <div className="mb-12 grid gap-6 md:grid-cols-12 md:items-end">
+          <h2 id="portfolio-heading" className="display text-5xl sm:text-6xl md:col-span-6">
+            Uit ons portfolio
+          </h2>
+          <p className="text-lg leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8">
+            Een greep uit ons werk. Klik op een foto voor meer van die categorie.
+          </p>
+        </div>
+        <HomePortfolio groups={portfolioGroups} />
       </section>
 
       <TeamSection />

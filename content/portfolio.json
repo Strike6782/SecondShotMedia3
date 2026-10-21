@@ -215,61 +215,28 @@
   ],
   "galleries": [
     {
-      "id": "zakelijke-evenementen",
-      "folder": "corporate",
+      "id": "zakelijk",
       "albumContext": "Zakelijk event",
       "branches": [
         "zakelijke-evenementen"
-      ],
-      "include": [
-        "Cybersec---Second-Shot-Media-5.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-140.jpg",
-        "Cybersec---Second-Shot-Media-3.jpg",
-        "Cybersec---Second-Shot-Media-7.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-158.jpg",
-        "Windtunnel-Project-UT-VU---Second-Shot-Media-13.jpg"
       ]
     },
     {
-      "id": "bedrijfsfeesten-en-galas",
-      "folder": "students",
-      "albumContext": "Gala en feest",
+      "id": "feesten",
+      "albumContext": "Bedrijfsfeest of gala",
       "branches": [
         "bedrijfsfeesten-en-galas"
-      ],
-      "include": [
-        "Gala-Amersfoortse-Berg---Second-Shot-Media-66.jpg",
-        "Gala-Codex---Second-Shot-Media-14.jpg",
-        "Gala-Codex---Second-Shot-Media-72.jpg",
-        "Gala-USKO---Second-Shot-Media-123.jpg",
-        "Gala-Codex---Second-Shot-Media-93.jpg",
-        "Gala-USKO---Second-Shot-Media-211.jpg"
-      ]
-    },
-    {
-      "id": "bedrijfsfeesten-borrel",
-      "folder": "corporate",
-      "albumContext": "Bedrijfsfeest",
-      "branches": [
-        "bedrijfsfeesten-en-galas"
-      ],
-      "include": [
-        "Nico-Campus-2026---Second-Shot-Media-164.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-102.jpg",
-        "Nico-Campus-2026---Second-Shot-Media-157.jpg"
       ]
     },
     {
       "id": "festivals",
-      "folder": "events",
-      "albumContext": "Festivalfotografie",
+      "albumContext": "Festival",
       "branches": [
         "festivals"
       ]
     },
     {
       "id": "pretparken",
-      "folder": "theme-parks",
       "albumContext": "Pretpark",
       "branches": [
         "pretparken"
@@ -314,6 +281,26 @@
     "De-Vaste-Clique-IB-1.jpg": "Bezoekers in een draaiende attractie met rookeffect",
     "De-Vaste-Clique-IB-50.jpg": "Bezoeker in een draaiende tunnel in een attractiepark",
     "De-Vaste-Clique-IB-85.jpg": "Verlichte zweefattractie tegen de avondlucht",
-    "De-Vaste-Clique-IB-88.jpg": "Verlichte kermisattractie in de avond"
+    "De-Vaste-Clique-IB-88.jpg": "Verlichte kermisattractie in de avond",
+    "WoTS-2026-Algemeen---Second-Shot-Media---2.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht",
+    "WoTS-2026-Algemeen---Second-Shot-Media---4.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht",
+    "WoTS-2026-Electronics---Second-Shot-Media---31.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Electronics",
+    "WoTS-2026-Industry---Second-Shot-Media---125.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Industry",
+    "WoTS-2026-Industry---Second-Shot-Media---20.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Industry",
+    "WoTS-2026-Industry---Second-Shot-Media---51.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Industry",
+    "WoTS-2026-Industry---Second-Shot-Media---75.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Industry",
+    "WoTS-2026-Laboratory---Second-Shot-Media---36.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Laboratory",
+    "WoTS-2026-Laboratory---Second-Shot-Media---83.jpg": "Vakbeurs WoTS 2026 in de Jaarbeurs Utrecht, World of Laboratory",
+    "WoTS-Overzicht---Second-Shot-Media---5.jpg": "Overzicht van vakbeurs WoTS 2026 in de Jaarbeurs Utrecht",
+    "Nico-Campus-2026---Second-Shot-Media-162.jpg": "Nico Campus 2026",
+    "Nico-Campus-2026---Second-Shot-Media-175.jpg": "Nico Campus 2026",
+    "Hof-Dias-Latinos---Second-Shot-Media-20250704-45.jpg": "Dias Latinos op het Hof in Amersfoort",
+    "Hof-Dias-Latinos---Second-Shot-Media-20250704-55.jpg": "Dias Latinos op het Hof in Amersfoort",
+    "Hof-bevrijdingsdag---Second-Shot-Media-20250505-79.jpg": "Bevrijdingsdag op het Hof in Amersfoort",
+    "Hof-bevrijdingsdag-2026---Second-Shot-Media-16.jpg": "Bevrijdingsdag op het Hof in Amersfoort",
+    "Koningsdag-Hof---Second-Shot-Media-20250426-22.jpg": "Koningsdag op het Hof in Amersfoort",
+    "Koningsdag-Hof---Second-Shot-Media-20250426-32.jpg": "Koningsdag op het Hof in Amersfoort",
+    "Koningsdag-Hof---Second-Shot-Media-20250426-39.jpg": "Koningsdag op het Hof in Amersfoort",
+    "Rhythm-Roulette---Second-Shot-Media-30.jpg": "Festival Rhythm Roulette"
   }
 }

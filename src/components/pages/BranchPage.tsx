@@ -20,11 +20,9 @@ type BranchPageProps = {
 
 // Event type page: what you get, recent work, how the day runs, questions.
 export async function BranchPage({ branch }: BranchPageProps) {
-  const allImages = await getGalleryImagesForBranch(branch.slug);
-  // Fill complete rows: 4 photos in two columns, otherwise three columns with whole rows only.
-  const columns = allImages.length === 4 ? 2 : 3;
-  const galleryImages =
-    allImages.length > columns ? allImages.slice(0, allImages.length - (allImages.length % columns)) : allImages;
+  const galleryImages = await getGalleryImagesForBranch(branch.slug);
+  // Show every photo; pick the column count that leaves no half-empty last row where possible.
+  const columns = galleryImages.length % 3 === 0 ? 3 : galleryImages.length % 2 === 0 ? 2 : 3;
   const videos = getYoutubeVideosForBranch(branch.slug);
   const reels = branch.showReels ? await getLeisureReels() : [];
   const timeline = branch.process ?? { title: "Zo verloopt de dag", steps: eventDay };

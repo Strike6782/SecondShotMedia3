@@ -13,6 +13,8 @@ export type PortfolioYoutubeVideo = {
   thumbnail?: string;
   branches: string[];
   featuredOnHomepage?: boolean;
+  /** Position on the homepage (1 = first). */
+  homepageOrder?: number;
 };
 
 /** Source reel entry: video file lives in reels-incoming/. */
@@ -101,6 +103,7 @@ export function getYoutubeVideosForBranch(branchSlug: string): BranchVideo[] {
 export function getFeaturedYoutubeVideos(): BranchVideo[] {
   return getPortfolio()
     .youtubeVideos.filter((video) => video.featuredOnHomepage)
+    .sort((a, b) => (a.homepageOrder ?? 99) - (b.homepageOrder ?? 99))
     .map(toBranchVideo);
 }
 

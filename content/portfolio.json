@@ -12,7 +12,7 @@
       "branches": [
         "zakelijke-evenementen"
       ],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": false
     },
     {
       "id": "KuTGphB3CDw",
@@ -21,16 +21,18 @@
       "branches": [
         "zakelijke-evenementen"
       ],
-      "featuredOnHomepage": false
+      "featuredOnHomepage": true,
+      "homepageOrder": 2
     },
     {
       "id": "5esMJo_vDig",
-      "title": "World Scout Jamboree - Zuid-Korea",
+      "title": "Aftermovie World Scout Jamboree",
       "type": "youtube",
       "branches": [
         "festivals"
       ],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": true,
+      "homepageOrder": 4
     },
     {
       "id": "oO7nvcQF46I",
@@ -39,7 +41,8 @@
       "branches": [
         "festivals"
       ],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": true,
+      "homepageOrder": 3
     },
     {
       "id": "edf_QUweTEw",
@@ -48,7 +51,7 @@
       "branches": [
         "festivals"
       ],
-      "featuredOnHomepage": true
+      "featuredOnHomepage": false
     },
     {
       "id": "K5gq4xvPur8",
@@ -112,7 +115,8 @@
       "branches": [
         "pretparken"
       ],
-      "featuredOnHomepage": false
+      "featuredOnHomepage": true,
+      "homepageOrder": 1
     },
     {
       "id": "2PJ1USshijg",

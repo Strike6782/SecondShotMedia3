@@ -8,6 +8,7 @@ export const metadata = buildPageMetadata({
   title: branch.seoTitle,
   description: branch.seoDescription,
   path: branch.href,
+  image: `/og/${branch.slug}.jpg`,
 });
 
 export default function BedrijfsfeestenEnGalasPage() {

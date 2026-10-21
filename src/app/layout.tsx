@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} | Foto en video voor events`,
   },
   description:
-    "Eventfotografie en -videografie voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Previews dezelfde dag, volledig album binnen 24 uur. Vanuit Utrecht, door heel Nederland.",
+    "Eventfotograaf en videograaf uit Utrecht voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Eerste selectie dezelfde dag, album binnen 24 uur.",
   openGraph: {
     siteName: SITE_NAME,
     locale: "nl_NL",
     type: "website",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: SITE_NAME }],
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",

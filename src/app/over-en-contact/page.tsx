@@ -13,6 +13,7 @@ export const metadata = buildPageMetadata({
   description:
     "Maak kennis met Ivan Balkenende en het team van Second Shot Media. Gevestigd in Utrecht, actief door heel Nederland. Vraag een voorstel aan voor uw event.",
   path: "/over-en-contact/",
+  image: "/og/over-ons.jpg",
 });
 
 export default function OverEnContactPage() {

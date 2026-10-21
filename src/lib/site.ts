@@ -15,7 +15,8 @@ export const BUSINESS_STREET = "Cambridgelaan 293";
 export const BUSINESS_POSTAL_CODE = "3541 SE";
 export const BUSINESS_CITY = "Utrecht";
 export const BUSINESS_COUNTRY = "NL";
-export const SITE_LOGO = `${SITE_URL}/og-image.jpg`;
+export const SITE_LOGO = `${SITE_URL}/images/logo-wordmark.png`;
+export const SITE_TAGLINE = "Elk bijzonder moment verdient een tweede kans om te schitteren.";
 
 // Geo coordinates for LocalBusiness schema (Utrecht office area).
 export const BUSINESS_GEO = {

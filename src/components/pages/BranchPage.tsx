@@ -12,6 +12,7 @@ import { getGalleryImagesForBranch } from "@/lib/gallery";
 import { eventDay } from "@/lib/page-content";
 import { getYoutubeVideosForBranch } from "@/lib/portfolio";
 import { getLeisureReels } from "@/lib/reels";
+import { SITE_URL } from "@/lib/site";
 
 type BranchPageProps = {
   branch: BranchConfig;
@@ -34,7 +35,22 @@ export async function BranchPage({ branch }: BranchPageProps) {
 
   return (
     <div className="flex flex-col">
-      <PageStructuredData breadcrumbs={breadcrumbs} faqs={branch.faqs} />
+      <PageStructuredData
+        breadcrumbs={breadcrumbs}
+        faqs={branch.faqs}
+        extra={[
+          {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}${branch.href}#webpage`,
+            url: `${SITE_URL}${branch.href}`,
+            name: branch.seoTitle,
+            description: branch.seoDescription,
+            inLanguage: "nl-NL",
+            about: { "@id": `${SITE_URL}${branch.href}#service` },
+            primaryImageOfPage: `${SITE_URL}${branch.heroImage}`,
+          },
+        ]}
+      />
 
       <Hero
         title={branch.heroTitle}

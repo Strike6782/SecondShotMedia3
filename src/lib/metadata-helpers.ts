@@ -6,31 +6,39 @@ export function buildPageMetadata({
   title,
   description,
   path,
+  image = "/og/home.jpg",
+  absoluteTitle = false,
 }: {
   title: string;
   description: string;
   path: string;
+  /** 1200x630 share image under public/. */
+  image?: string;
+  /** Use the title as-is, without the "| Second Shot Media" suffix. */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
+  const fullTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`;
+  const imageUrl = `${SITE_URL}${image}`;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${title} | ${SITE_NAME}`,
+      title: fullTitle,
       description,
       url,
       siteName: SITE_NAME,
       locale: "nl_NL",
       type: "website",
-      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: fullTitle }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${SITE_NAME}`,
+      title: fullTitle,
       description,
-      images: [`${SITE_URL}/og-image.jpg`],
+      images: [imageUrl],
     },
   };
 }

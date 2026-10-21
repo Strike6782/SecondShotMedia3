@@ -1,22 +1,21 @@
-import Script from "next/script";
+import { jsonLd } from "@/lib/json-ld";
 import { buildPageSchemaGraph } from "@/lib/schema";
 import type { BreadcrumbItem, FaqItem } from "@/lib/types";
 
-// Page-level JSON-LD: breadcrumbs and optional FAQPage.
+// Page-level JSON-LD (breadcrumbs, FAQ, extras), rendered in the server HTML.
 export function PageStructuredData({
   breadcrumbs,
   faqs,
+  extra,
 }: {
   breadcrumbs: BreadcrumbItem[];
   faqs?: FaqItem[];
+  extra?: Record<string, unknown>[];
 }) {
-  const schema = buildPageSchemaGraph({ breadcrumbs, faqs });
-
   return (
-    <Script
-      id="page-structured-data"
+    <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: jsonLd(buildPageSchemaGraph({ breadcrumbs, faqs, extra })) }}
     />
   );
 }

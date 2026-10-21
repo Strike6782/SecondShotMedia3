@@ -13,10 +13,11 @@ import { eventDay, homeContent } from "@/lib/page-content";
 import { getFeaturedYoutubeVideos } from "@/lib/portfolio";
 
 export const metadata = buildPageMetadata({
-  title: "Eventfotografie en -videografie | Utrecht en heel Nederland",
+  title: "Second Shot Media | Eventfotograaf en videograaf in Utrecht",
   description:
-    "Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Eerste selectie dezelfde dag, volledig album binnen 24 uur. Gevestigd in Utrecht, actief door heel Nederland.",
+    "Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Eerste selectie dezelfde dag, album binnen 24 uur. Utrecht en heel Nederland.",
   path: "/",
+  absoluteTitle: true,
 });
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
       <Hero
         size="home"
         title="Uw event in beeld. Nog dezelfde dag."
-        subtitle="Foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief in heel Nederland."
+        subtitle="Second Shot Media maakt foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief in heel Nederland."
         image="/gallery/corporate/Cybersec---Second-Shot-Media-7.jpg"
         imageAlt="Spreker op het podium van een beurs voor een vol publiek"
         secondary={{ label: "Bekijk ons werk", href: "#events" }}

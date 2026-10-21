@@ -12,6 +12,8 @@ export type BreadcrumbItem = {
 export type BranchLogo = {
   src: string;
   alt: string;
+  /** Show on a dark tile, for logos with white lettering. */
+  dark?: boolean;
 };
 
 export type BranchVideo = {

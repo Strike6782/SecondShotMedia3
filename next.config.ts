@@ -6,11 +6,14 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
-  // Gallery images are pre-optimized locally (scripts/optimize-gallery.mjs).
-  // Vercel Hobby image optimization returns 402 once monthly limits are exceeded,
-  // so serve static files directly instead of routing through /_next/image.
+  // Vercel Hobby image optimization returns 402 once monthly limits are exceeded, so instead
+  // we pre-generate WebP variants at build time (scripts/build-image-variants.mjs) and point
+  // next/image at them with a custom loader.
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
+    deviceSizes: [640, 1080, 1280, 1920],
+    imageSizes: [256, 384],
   },
   trailingSlash: true,
   async redirects() {

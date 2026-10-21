@@ -11,8 +11,9 @@ import type { FaqItem } from "@/lib/types";
 export const metadata = buildPageMetadata({
   title: "Werkwijze",
   description:
-    "Van aanvraag tot levering: één aanspreekpunt, een briefing voor het hele team, een eerste selectie dezelfde dag en het volledige album binnen 24 uur. Met FPV-drone als optie.",
+    "Van aanvraag tot levering met één aanspreekpunt: briefing, eerste selectie dezelfde dag en het volledige album binnen 24 uur. Met FPV-drone als optie.",
   path: "/werkwijze/",
+  image: "/og/werkwijze.jpg",
 });
 
 const faqs: FaqItem[] = [

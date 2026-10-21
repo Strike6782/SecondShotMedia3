@@ -6,12 +6,15 @@
     "node": ">=20"
   },
   "scripts": {
+    "predev": "node scripts/build-image-variants.mjs",
     "dev": "next dev --webpack",
+    "prebuild": "node scripts/build-image-variants.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "gallery:optimize": "node scripts/optimize-gallery.mjs",
-    "reels:optimize": "node scripts/optimize-reels.mjs"
+    "reels:optimize": "node scripts/optimize-reels.mjs",
+    "images:variants": "node scripts/build-image-variants.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

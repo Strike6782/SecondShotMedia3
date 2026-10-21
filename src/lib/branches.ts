@@ -38,9 +38,9 @@ export const branches: BranchConfig[] = [
     href: "/zakelijke-evenementen/",
     title: "Zakelijke events",
     navLabel: "Zakelijk",
-    seoTitle: "Fotograaf en videograaf voor beurzen en congressen",
+    seoTitle: "Fotograaf voor beurzen en congressen",
     seoDescription:
-      "Foto en video voor beurzen, congressen, conferenties en seminars. Sprekers, standbezoek en netwerkmomenten. Eerste selectie dezelfde dag, volledig album binnen 24 uur.",
+      "Foto en video voor beurzen, congressen en seminars: sprekers, standbezoek en netwerkmomenten. Eerste selectie dezelfde dag, album binnen 24 uur.",
     summary: "Beurzen, congressen en seminars. Sprekers, standbezoek en netwerkmomenten, op tijd voor uw persbericht.",
     heroTitle: "Foto en video voor zakelijke events",
     heroSubtitle:
@@ -234,7 +234,7 @@ export const branches: BranchConfig[] = [
     logos: [
       { src: "/logos/hellendoorn.png", alt: "Avonturenpark Hellendoorn" },
       { src: "/logos/drievliet.png", alt: "Familiepark Drievliet" },
-      { src: "/logos/vlaardingen.webp", alt: "Halloween Vlaardingen" },
+      { src: "/logos/vlaardingen.webp", alt: "Halloween Vlaardingen", dark: true },
       { src: "/logos/tps.jpeg", alt: "Theme Park Science" },
     ],
     faqs: [

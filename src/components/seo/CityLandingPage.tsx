@@ -37,6 +37,15 @@ export async function CityLandingPage({ cityName, citySlug }: CityLandingPagePro
         <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
           {localContent?.highlight && <p className="heading text-3xl text-foreground">{localContent.highlight}</p>}
           {localContent?.localProof && <p>{localContent.localProof}</p>}
+          {localContent?.venues && localContent.venues.length > 0 && (
+            <p>
+              Of uw event nu in{" "}
+              {localContent.venues.length === 1
+                ? localContent.venues[0]
+                : `${localContent.venues.slice(0, -1).join(", ")} of ${localContent.venues[localContent.venues.length - 1]}`}{" "}
+              is, of op een eigen locatie: wij komen naar u toe.
+            </p>
+          )}
           <p>
             U krijgt één aanspreekpunt, een eerste selectie dezelfde dag en het volledige album binnen 24 uur. Ook
             in {cityName}.

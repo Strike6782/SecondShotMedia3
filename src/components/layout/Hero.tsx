@@ -45,11 +45,11 @@ export function Hero({
       )}
 
       <div className="container mt-auto max-w-screen-2xl pb-12 pt-28 md:pb-16">
-        <div className="max-w-4xl space-y-6">
+        <div className="max-w-5xl space-y-6">
           <h1
             className={cn(
-              "display",
-              tall ? "text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-[7.5rem]" : "text-5xl sm:text-6xl lg:text-7xl"
+              "display whitespace-pre-line",
+              tall ? "text-[3.25rem] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]" : "text-5xl sm:text-6xl lg:text-7xl"
             )}
           >
             {title}

@@ -30,7 +30,7 @@ export default function Home() {
 
       <Hero
         size="home"
-        title="Uw event in beeld. Nog dezelfde dag."
+        title={"Foto en video van uw event.\nNog dezelfde dag opgeleverd."}
         subtitle="Second Shot Media maakt foto en video voor zakelijke events, bedrijfsfeesten, festivals en pretparken. Gevestigd in Utrecht, actief in heel Nederland."
         image="/gallery/corporate/Cybersec---Second-Shot-Media-7.jpg"
         imageAlt="Spreker op het podium van een beurs voor een vol publiek"

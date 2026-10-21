@@ -21,6 +21,8 @@ export type BranchVideo = {
   title: string;
   /** Optional credit or context, e.g. "Alleen montage" or "Alleen camerawerk". */
   note?: string;
+  /** Optional own thumbnail (path under public/, e.g. /images/thumbs/naam.jpg). Defaults to YouTube's. */
+  thumbnail?: string;
   /** @deprecated Use `note` instead. Kept for backwards compatibility. */
   subtitle?: string;
   type?: "youtube" | "vimeo";

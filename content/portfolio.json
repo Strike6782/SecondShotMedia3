@@ -43,20 +43,38 @@
     },
     {
       "id": "K5gq4xvPur8",
-      "title": "Jubileum Diner DakAccent",
+      "title": "Jubileumfeest DakAccent",
       "type": "youtube",
       "branches": [
         "bedrijfsfeesten-en-galas"
       ],
-      "featuredOnHomepage": false,
-      "note": "Alleen camerawerk. Montage extern"
+      "featuredOnHomepage": false
     },
     {
       "id": "i6PQazSqF7Y",
-      "title": "DJ JSPHN op ADE Amsterdam",
+      "title": "DJ Promo op Amsterdam Dance Event",
       "type": "youtube",
       "branches": [
+        "bedrijfsfeesten-en-galas",
         "festivals"
+      ],
+      "featuredOnHomepage": false
+    },
+    {
+      "id": "Z5kD0EZ3_-s",
+      "title": "Gala Studentenvereniging U.S.V. TwintigTwintig 2025",
+      "type": "youtube",
+      "branches": [
+        "bedrijfsfeesten-en-galas"
+      ],
+      "featuredOnHomepage": false
+    },
+    {
+      "id": "ozqoEutIqKQ",
+      "title": "Gala Studentenvereniging U.S.V. TwintigTwintig 2024",
+      "type": "youtube",
+      "branches": [
+        "bedrijfsfeesten-en-galas"
       ],
       "featuredOnHomepage": false
     },

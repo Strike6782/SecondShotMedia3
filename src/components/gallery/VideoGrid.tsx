@@ -25,7 +25,14 @@ function getEmbedUrl(video: BranchVideo, autoplay: boolean) {
 // Shows a thumbnail first and loads the player only when someone presses play.
 function VideoEmbed({ video }: { video: BranchVideo }) {
   const [playing, setPlaying] = useState(video.type === "vimeo");
-  const [thumbFailed, setThumbFailed] = useState(false);
+  // Own thumbnail first, then YouTube's sharpest version, then the standard one.
+  const candidates = [
+    video.thumbnail,
+    `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`,
+  ].filter((src): src is string => Boolean(src));
+  const [thumbIndex, setThumbIndex] = useState(0);
+  const thumb = candidates[thumbIndex];
 
   if (playing) {
     return (
@@ -46,13 +53,18 @@ function VideoEmbed({ video }: { video: BranchVideo }) {
       className="group absolute inset-0 h-full w-full"
       aria-label={`Speel video af: ${video.title}`}
     >
-      {!thumbFailed && (
-        // eslint-disable-next-line @next/next/no-img-element -- external YouTube thumbnail
+      {thumb && (
+        // eslint-disable-next-line @next/next/no-img-element -- external or pre-sized thumbnail
         <img
-          src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+          key={thumb}
+          src={thumb}
           alt=""
           loading="lazy"
-          onError={() => setThumbFailed(true)}
+          onLoad={(e) => {
+            // YouTube answers a missing maxres thumbnail with a 120px placeholder instead of an error.
+            if (e.currentTarget.naturalWidth <= 120) setThumbIndex((i) => i + 1);
+          }}
+          onError={() => setThumbIndex((i) => i + 1)}
           className="h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
         />
       )}

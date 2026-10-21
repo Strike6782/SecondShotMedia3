@@ -9,6 +9,8 @@ export type PortfolioYoutubeVideo = {
   title: string;
   type?: "youtube" | "vimeo";
   note?: string;
+  /** Own thumbnail under public/, e.g. "/images/thumbs/dakaccent.jpg". Defaults to YouTube's thumbnail. */
+  thumbnail?: string;
   branches: string[];
   featuredOnHomepage?: boolean;
 };
@@ -84,6 +86,7 @@ function toBranchVideo(video: PortfolioYoutubeVideo): BranchVideo {
     title: video.title,
     type: video.type,
     note: video.note,
+    thumbnail: video.thumbnail,
   };
 }
 

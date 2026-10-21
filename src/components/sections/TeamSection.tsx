@@ -76,17 +76,22 @@ export function TeamSection({ showMoreLink = true }: TeamSectionProps) {
       </div>
 
       {hasTeamPhoto && (
-        <figure className="mt-16">
-          <div className="relative aspect-[16/9] overflow-hidden bg-muted md:aspect-[21/9]">
+        <figure className="mt-20 grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <figcaption className="space-y-3 lg:order-1 lg:col-span-4">
+            <p className="display text-4xl sm:text-5xl">Het team</p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Ivan met een deel van het team op de vakbeurs WoTS in de Jaarbeurs in Utrecht.
+            </p>
+          </figcaption>
+          <div className="relative aspect-[4/3] overflow-hidden bg-muted lg:order-2 lg:col-span-8">
             <Image
               src={TEAM_PHOTO}
-              alt="Het team van Second Shot Media"
+              alt="Het team van Second Shot Media met camera's op de vakbeurs WoTS in de Jaarbeurs Utrecht"
               fill
-              sizes="100vw"
+              sizes="(min-width: 1024px) 65vw, 100vw"
               className="object-cover"
             />
           </div>
-          <figcaption className="mt-3 text-sm text-muted-foreground">Het team van Second Shot Media</figcaption>
         </figure>
       )}
       {showTeamPlaceholder && (

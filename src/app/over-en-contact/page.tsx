@@ -93,10 +93,11 @@ export default function OverEnContactPage() {
               <dd className="text-lg">{KVK}</dd>
             </div>
             <div>
-              <dt className="text-sm text-muted-foreground">Fotograaf of videograaf?</dt>
+              <dt className="text-sm text-muted-foreground">Vacatures</dt>
               <dd className="text-lg">
+                Op dit moment geen openstaande vacatures.{" "}
                 <Link href="/werken-bij/" className="underline underline-offset-4">
-                  Werken bij Second Shot Media
+                  Werken bij
                 </Link>
               </dd>
             </div>

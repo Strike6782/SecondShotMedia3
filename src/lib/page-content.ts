@@ -167,7 +167,7 @@ export const overContactContent = {
     {
       question: "Kan ik ook met jullie samenwerken?",
       answer:
-        "Wij zoeken op dit moment een video-editor die werkt in DaVinci Resolve. Kijk op de pagina Werken bij. Voor fotografen en videografen is het team compleet.",
+        "Op dit moment zijn er geen openstaande vacatures; ons team is compleet. Komt er een plek vrij, dan staat dat op de pagina Werken bij.",
     },
   ] satisfies FaqItem[],
 };
@@ -179,12 +179,7 @@ export const werkenBijContent = {
     {
       question: "Zoeken jullie op dit moment nieuwe creators?",
       answer:
-        "Wij zoeken een video-editor die werkt in DaVinci Resolve. Voor fotografen en videografen is ons team op dit moment compleet.",
-    },
-    {
-      question: "Hoe reageer ik op de vacature voor video-editor?",
-      answer:
-        "Mail naar ivan@secondshotmedia.nl met een link naar je portfolio, bij voorkeur met aftermovies of shortform content die je zelf hebt gemonteerd.",
+        "Nee. Ons team van fotografen, videografen en editors is op dit moment compleet. Komt er een plek vrij, dan plaatsen wij de vacature op deze pagina.",
     },
     {
       question: "Zijn dit vaste banen?",
